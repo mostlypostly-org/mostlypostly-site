@@ -1,0 +1,136 @@
+.<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MostlyPostly Legal & SMS Policies</title>
+  <meta name="description" content="MostlyPostly SMS Consent, Privacy Policy, and Terms of Service" />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --text: #e6e7eb;
+      --muted: #a8adbd;
+      --accent: #7dd3fc;
+      --border: #1f2330;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 600px at 10% -10%, rgba(125,211,252,.12), transparent 60%),
+                  radial-gradient(900px 500px at 110% 20%, rgba(167,243,208,.10), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      padding: 80px 20px 20px;
+      text-align: center;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.05));
+      box-shadow: 0 1px 0 rgba(255,255,255,.06) inset, 0 10px 30px rgba(0,0,0,.35);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .brand .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, var(--accent), #38bdf8 60%, #0891b2);
+      box-shadow: 0 0 12px rgba(125,211,252,.9);
+    }
+    h1 {
+      margin-top: 24px;
+      font-size: clamp(30px, 4vw, 48px);
+      letter-spacing: .2px;
+    }
+    p.lead {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    main {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 40px;
+      display: grid;
+      gap: 20px;
+      padding: 0 20px 80px;
+    }
+    a.card {
+      display: block;
+      padding: 24px 28px;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.12));
+      box-shadow: 0 8px 30px rgba(0,0,0,.28);
+      text-decoration: none;
+      color: var(--text);
+      transition: transform .2s ease, box-shadow .2s ease, border .2s ease;
+    }
+    a.card:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+      box-shadow: 0 12px 35px rgba(125,211,252,.15);
+    }
+    h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .desc { color: var(--muted); font-size: 15px; }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255,255,255,.05);
+      width: 100%;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a class="brand" href="./" aria-label="MostlyPostly">
+      <span class="dot" aria-hidden="true"></span>
+      MostlyPostly
+    </a>
+    <h1>Legal & SMS Policies</h1>
+    <p class="lead">AI assistant policies for salon teams — transparency, privacy, and professionalism.</p>
+  </header>
+
+  <main>
+    <a href="sms-consent.html" class="card">
+      <h2>SMS Consent Policy</h2>
+      <p class="desc">Details about SMS use, message frequency, and your opt-in/opt-out rights.</p>
+    </a>
+
+    <a href="privacy.html" class="card">
+      <h2>Privacy Policy</h2>
+      <p class="desc">Learn how MostlyPostly collects, uses, and protects your personal and salon data.</p>
+    </a>
+
+    <a href="terms.html" class="card">
+      <h2>Terms & Conditions</h2>
+      <p class="desc">Read the terms governing your use of MostlyPostly’s AI-powered salon services.</p>
+    </a>
+  </main>
+
+  <footer>
+    © <span id="year"></span> MostlyPostly • Carmel, Indiana
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
