@@ -1,0 +1,11 @@
+{
+  "local": {
+    "appUrl": "http://localhost:3000"
+  },
+  "staging": {
+    "appUrl": "https://mostlypostly-app-staging.onrender.com"
+  },
+  "production": {
+    "appUrl": "https://app.mostlypostly.com"
+  }
+}
