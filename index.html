@@ -149,15 +149,34 @@
         <!-- Desktop Nav -->
         <nav class="hidden items-center gap-8 text-sm font-medium text-slate-200 md:flex" aria-label="Primary navigation">
           <a href="#features" class="hover:text-white">Features</a>
-          <a href="#value" class="hover:text-white">Why salons love it</a>
+          <a href="#value" class="hover:text-white">Why Others Love It</a>
           <a href="#pricing" class="hover:text-white">Pricing</a>
           <a href="#testimonials" class="hover:text-white">Stories</a>
           <a href="#early-access" class="hover:text-white">Early Access</a>
-          <a href="https://mostlypostly-staging.onrender.com/manager/login" class="text-slate-300 hover:text-white">Login</a>
+          <a id="mp-login" href="#" class="text-slate-300 hover:text-white">Login</a>
           <a href="#early-access" class="rounded-full bg-mpPrimary px-4 py-2 text-sm font-semibold text-white shadow-md shadow-mpPrimary/40 hover:bg-mpPrimaryDark">
             Get Early Access
           </a>
         </nav>
+
+        <!-- Mobile Nav Button (Hamburger) -->
+        <button class="md:hidden text-slate-300" id="mobileMenuBtn">☰</button>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="hidden bg-[#111827] border-b border-slate-800/20 px-6 py-4 space-y-4 md:hidden">
+          <a href="#features" class="block text-slate-300 hover:text-white">Features</a>
+          <a href="#value" class="block text-slate-300 hover:text-white">Why salons love it</a>
+          <a href="#pricing" class="block text-slate-300 hover:text-white">Pricing</a>
+          <a href="#testimonials" class="block text-slate-300 hover:text-white">Stories</a>
+          <a href="#early-access" class="block text-slate-300 hover:text-white">Early Access</a>
+
+          <!-- Mobile Login Button -->
+          <a id="mp-login-mobile"
+            href="#"
+            class="block bg-blue-600 px-3 py-2 rounded text-white text-center hover:bg-blue-700">
+            Login
+          </a>
+        </div>
 
         <!-- Mobile CTA (simple) -->
         <a href="#early-access" class="inline-flex items-center rounded-full bg-mpPrimary px-3 py-1 text-xs font-semibold text-white shadow-md shadow-mpPrimary/40 md:hidden">
@@ -731,5 +750,38 @@
       </div>
     </div>
   </footer>
+  <script>
+  fetch("/public/env-config.json")
+    .then(res => res.json())
+    .then(cfg => {
+      const host = location.hostname;
+
+      const env = host.includes("localhost")
+        ? "local"
+        : host.includes("staging")
+          ? "staging"
+          : "production";
+
+      const base = cfg[env].appUrl;
+
+      const login1 = document.getElementById("mp-login");
+      const login2 = document.getElementById("mp-login-mobile");
+      const heroBtn = document.getElementById("hero-login");
+
+      if (login1) login1.href = `${base}/manager/login`;
+      if (login2) login2.href = `${base}/manager/login`;
+      if (heroBtn) heroBtn.onclick = () => (location.href = `${base}/manager/login`);
+    });
+</script>
+<script>
+  const mobileBtn = document.getElementById("mobileMenuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (mobileBtn) {
+    mobileBtn.onclick = () => {
+      mobileMenu.classList.toggle("hidden");
+    };
+  }
+</script>
 </body>
 </html>
