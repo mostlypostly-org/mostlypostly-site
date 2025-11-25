@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>MostlyPostly — Social Media Assistant for Salons</title>
+  <meta name="description" content="MostlyPostly is a social media assistant built for salons. Stylists text a photo, MostlyPostly writes the caption, hashtags, and CTA, and your posts get scheduled to Facebook and Instagram.">
+  <meta name="keywords" content="salon marketing, salon social media, hair salon instagram, salon posting tool, salon content creator, beauty social media assistant">
+  <meta name="robots" content="index,follow" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mostlypostly.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="MostlyPostly — Social Media Assistant for Salons">
+  <meta property="og:description" content="Stylists text a photo. MostlyPostly writes the post, keeps your brand consistent, and schedules to Facebook and Instagram.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mostlypostly.com/">
+  <meta property="og:image" content="https://mostlypostly.com/assets/og-image.png">
+
+  <!-- Favicon (optional existing asset) -->
+  <link rel="icon" href="/assets/mp-logo.svg" type="image/svg+xml">
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind brand config: Palette C (modern tech + salon) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            mpPrimary: "#7486C3",
+            mpPrimaryDark: "#5C6FA8",
+            mpAccent: "#D9D9F3",
+            mpBg: "#F6F7FB",
+            mpInk: "#202330",
+            mpMuted: "#656B80"
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Simple page-level styles -->
+  <style>
+    body {
+      background: #F6F7FB;
+      color: #202330;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+    }
+    .mp-card {
+      border-radius: 1rem;
+      background: #FFFFFF;
+      box-shadow: 0 24px 60px rgba(32, 35, 48, 0.08);
+    }
+    .mp-pill {
+      border-radius: 999px;
+    }
+    .mp-section {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+    @media (min-width: 768px) {
+      .mp-section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD: Website Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MostlyPostly",
+    "applicationCategory": "MarketingApplication",
+    "description": "Social media assistant built for salons. Stylists text a photo, MostlyPostly writes the caption and schedules posts.",
+    "url": "https://mostlypostly.com/"
+  }
+  </script>
+</head>
+
+<body class="min-h-screen flex flex-col">
+  <!-- MOBILE OVERLAY MENU -->
+  <div id="mobileMenu"
+       class="fixed inset-0 z-40 hidden flex-col bg-mpInk text-slate-50 md:hidden">
+    <!-- Header row -->
+    <div class="flex items-center justify-between px-6 py-4 border-b border-slate-800">
+      <a href="/" class="flex items-center gap-2">
+        <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-tr from-mpPrimary to-mpPrimaryDark text-xs font-semibold text-white">
+          MP
+        </div>
+        <span class="text-lg font-semibold tracking-tight">MostlyPostly</span>
+      </a>
+      <button id="mobileMenuClose"
+              class="text-slate-300 text-3xl leading-none focus:outline-none">
+        ×
+      </button>
+    </div>
+
+    <!-- Nav links -->
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-lg">
+      <a href="#features" class="block py-1 border-b border-slate-800 hover:text-white">Features</a>
+      <a href="#value" class="block py-1 border-b border-slate-800 hover:text-white">Why salons love it</a>
+      <a href="#pricing" class="block py-1 border-b border-slate-800 hover:text-white">Pricing</a>
+      <a href="#testimonials" class="block py-1 border-b border-slate-800 hover:text-white">Stories</a>
+      <a href="#early-access" class="block py-1 hover:text-white">Early access</a>
+    </nav>
+
+    <!-- Bottom CTAs -->
+    <div class="px-6 pb-8 space-y-4 border-t border-slate-800">
+      <a id="mp-login-mobile"
+         href="#"
+         class="block w-full text-center border border-slate-500 py-3 mp-pill text-slate-100 font-medium hover:bg-slate-900">
+        Log in
+      </a>
+      <a id="mp-signup-mobile"
+         href="#"
+         class="block w-full text-center bg-white py-3 mp-pill text-mpInk font-semibold shadow-lg shadow-black/30 hover:bg-slate-100">
+        Start free
+      </a>
+    </div>
+  </div>
+
+  <!-- PAGE WRAPPER -->
+  <div class="flex-1">
+    <!-- HEADER -->
+    <header class="border-b border-slate-200/60 bg-white/80 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 lg:px-0">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3">
+          <div class="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-tr from-mpPrimary to-mpPrimaryDark text-sm font-semibold text-white">
+            MP
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-base font-semibold tracking-tight text-mpInk">MostlyPostly</span>
+            <span class="text-xs text-mpMuted">Social posts for salons</span>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden items-center gap-8 text-sm text-mpMuted md:flex" aria-label="Primary navigation">
+          <a href="#features" class="hover:text-mpInk">Features</a>
+          <a href="#value" class="hover:text-mpInk">Why salons love it</a>
+          <a href="#pricing" class="hover:text-mpInk">Pricing</a>
+          <a href="#testimonials" class="hover:text-mpInk">Stories</a>
+          <a href="#early-access" class="hover:text-mpInk">Early access</a>
+
+          <div class="flex items-center gap-4">
+            <a id="mp-login"
+               href="#"
+               class="text-mpMuted hover:text-mpInk">
+              Log in
+            </a>
+            <a id="mp-signup"
+               href="#"
+               class="mp-pill bg-mpPrimary px-4 py-2 text-sm font-semibold text-white shadow-md shadow-mpPrimary/40 hover:bg-mpPrimaryDark">
+              Start free
+            </a>
+          </div>
+        </nav>
+
+        <!-- Mobile Nav Button -->
+        <button id="mobileMenuBtn"
+                class="md:hidden text-mpInk text-2xl focus:outline-none"
+                aria-label="Open navigation">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="bg-gradient-to-b from-mpBg via-mpBg to-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-12 md:flex-row md:items-center md:py-16 lg:px-0">
+        <!-- Text -->
+        <div class="md:w-1/2 space-y-6">
+          <p class="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-medium text-mpMuted shadow-sm ring-1 ring-slate-200">
+            <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
+            Built in a busy salon, for busy salons.
+          </p>
+
+          <h1 class="text-3xl font-semibold leading-tight text-mpInk sm:text-4xl lg:text-5xl">
+            Start posting like a <span class="text-mpPrimary">$2M salon</span>,
+            even if you don’t have a marketing team.
+          </h1>
+
+          <p class="max-w-xl text-[15px] text-mpMuted">
+            Stylists text a photo. MostlyPostly writes the caption, hashtags, and call-to-action,
+            keeps everything on brand, and schedules to Facebook and Instagram.
+            You approve from your phone in a few seconds.
+          </p>
+
+          <!-- Hero CTA -->
+          <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <button
+              id="hero-login"
+              class="mp-pill bg-mpPrimary px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-mpPrimary/40 hover:bg-mpPrimaryDark">
+              Start free for salons
+            </button>
+            <p class="text-xs text-mpMuted">
+              No payment required for pilot salons. Get consistent posts in under a week.
+            </p>
+          </div>
+
+          <!-- Trust row -->
+          <div class="mt-4 flex flex-wrap items-center gap-4 text-xs text-mpMuted">
+            <span>Built with real salon teams at</span>
+            <span class="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-medium ring-1 ring-slate-200">
+              <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+              Rejuve Salon Spa · Studio 500
+            </span>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="md:w-1/2">
+          <div class="mp-card relative overflow-hidden border border-slate-200/70">
+            <div class="absolute -right-20 -top-20 h-48 w-48 rounded-full bg-mpAccent blur-3xl opacity-60"></div>
+            <div class="relative p-6 space-y-4">
+              <p class="text-xs font-medium text-mpMuted uppercase tracking-[0.18em]">
+                How MostlyPostly works
+              </p>
+              <ol class="space-y-3 text-sm text-mpInk">
+                <li class="flex gap-3">
+                  <span class="mt-0.5 h-6 w-6 flex-none rounded-full bg-mpPrimary text-xs font-semibold text-white flex items-center justify-center">1</span>
+                  <span><strong>Stylist texts a photo</strong> to your salon’s MostlyPostly number right after the service.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-0.5 h-6 w-6 flex-none rounded-full bg-mpPrimary text-xs font-semibold text-white flex items-center justify-center">2</span>
+                  <span><strong>MostlyPostly drafts the post</strong> — service type, caption, hashtags, and call-to-action.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="mt-0.5 h-6 w-6 flex-none rounded-full bg-mpPrimary text-xs font-semibold text-white flex items-center justify-center">3</span>
+                  <span><strong>Manager taps approve</strong> from a simple queue. Posts are scheduled into your best time windows.</span>
+                </li>
+              </ol>
+              <p class="text-xs text-mpMuted">
+                No new app for stylists to learn. Just their camera and text messages.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="mp-section bg-white">
+      <div class="mx-auto max-w-6xl px-4 lg:px-0">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 class="text-2xl font-semibold text-mpInk">What MostlyPostly handles for you</h2>
+            <p class="mt-2 max-w-xl text-sm text-mpMuted">
+              Everything between the stylist taking a photo and your salon showing up consistently on social.
+            </p>
+          </div>
+          <p class="text-xs text-mpMuted">
+            Designed around real workflows in a high-volume salon.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-3">
+          <div class="mp-card border border-slate-200/70 p-5">
+            <h3 class="text-sm font-semibold text-mpInk">Smart captions & hashtags</h3>
+            <p class="mt-2 text-sm text-mpMuted">
+              MostlyPostly analyzes the photo and suggests a full caption, service type, and salon-appropriate hashtags — including your branded tags and <span class="font-medium text-mpInk">#MostlyPostly</span>.
+            </p>
+          </div>
+
+          <div class="mp-card border border-slate-200/70 p-5">
+            <h3 class="text-sm font-semibold text-mpInk">Manager approvals, not chaos</h3>
+            <p class="mt-2 text-sm text-mpMuted">
+              Every post lands in a simple approval queue. Managers can edit, approve, or hold a post from their phone in seconds.
+            </p>
+          </div>
+
+          <div class="mp-card border border-slate-200/70 p-5">
+            <h3 class="text-sm font-semibold text-mpInk">Scheduling that respects your brand</h3>
+            <p class="mt-2 text-sm text-mpMuted">
+              Posts are scheduled inside windows you control, with spacing that feels human — not spammy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUE / WHY SALONS LOVE IT -->
+    <section id="value" class="mp-section bg-mpBg">
+      <div class="mx-auto max-w-6xl px-4 lg:px-0 space-y-10">
+        <div class="max-w-xl">
+          <h2 class="text-2xl font-semibold text-mpInk">Built to feel like a salon manager, not a robot.</h2>
+          <p class="mt-3 text-sm text-mpMuted">
+            You already run huddles, service standards, and education. MostlyPostly is the same mindset for your social media — consistent, on brand, and easy for your team to follow.
+          </p>
+        </div>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <div class="space-y-2">
+            <p class="text-sm font-semibold text-mpInk">Stylists stay in their zone</p>
+            <p class="text-sm text-mpMuted">
+              No extra apps or Canva templates. They just send the photo and a quick word or two.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-sm font-semibold text-mpInk">Managers keep the brand tight</p>
+            <p class="text-sm text-mpMuted">
+              Approve posts from a single queue with your tone, pricing, and promos baked in.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <p class="text-sm font-semibold text-mpInk">Owners finally see consistency</p>
+            <p class="text-sm text-mpMuted">
+              Your salon account stops going quiet for weeks at a time and starts looking like the business you actually run.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING (early pilot style) -->
+    <section id="pricing" class="mp-section bg-white">
+      <div class="mx-auto max-w-6xl px-4 lg:px-0">
+        <div class="max-w-xl">
+          <h2 class="text-2xl font-semibold text-mpInk">Pilot pricing for early salons</h2>
+          <p class="mt-3 text-sm text-mpMuted">
+            MostlyPostly is currently in pilot with a small group of salons. Pricing is simple while we learn together.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
+          <div class="mp-card border border-slate-200/70 p-6 md:p-7">
+            <h3 class="text-sm font-semibold text-mpInk">Founding Salon Plan</h3>
+            <p class="mt-1 text-xs uppercase tracking-[0.16em] text-emerald-600">Pilot only</p>
+            <p class="mt-4 flex items-baseline gap-1">
+              <span class="text-3xl font-semibold text-mpInk">$0</span>
+              <span class="text-xs text-mpMuted">for first 60 days</span>
+            </p>
+            <p class="mt-2 text-sm text-mpMuted">
+              Then a simple flat monthly fee once MostlyPostly is saving your team time and driving bookings.
+            </p>
+            <ul class="mt-4 space-y-2 text-sm text-mpMuted">
+              <li>• Unlimited stylist uploads</li>
+              <li>• Manager approval dashboard</li>
+              <li>• Facebook & Instagram scheduling</li>
+              <li>• Guardrails to protect your brand</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-sm text-mpMuted">
+            <p class="font-semibold text-mpInk">Want MostlyPostly when it goes fully live?</p>
+            <p class="mt-2">
+              We’re shaping pricing with our founding salons to fit real margins in this industry. You’ll never be surprised by add-on fees or “per post” charges.
+            </p>
+            <p class="mt-3">
+              Join the early access list and we’ll reach out when we’re ready for the next cohort of salons.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS / STORIES -->
+    <section id="testimonials" class="mp-section bg-mpInk text-slate-50">
+      <div class="mx-auto max-w-6xl px-4 lg:px-0 space-y-8">
+        <div class="max-w-xl">
+          <h2 class="text-2xl font-semibold">Real salon owners, real posting problems.</h2>
+          <p class="mt-3 text-sm text-slate-200">
+            MostlyPostly was born from the pain of running a multi-location, multi-million dollar salon with stylists at every experience level.
+          </p>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-3">
+          <div class="rounded-2xl bg-white/5 p-5 text-sm text-slate-100">
+            <p>
+              “We tried ‘remember to post’ meetings, templates, even paying people to manage content. MostlyPostly finally matches how stylists actually work.”
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/5 p-5 text-sm text-slate-100">
+            <p>
+              “I want our feeds to look like our standards behind the chair. Having approvals and a queue gives me that without living on my phone.”
+            </p>
+          </div>
+          <div class="rounded-2xl bg-white/5 p-5 text-sm text-slate-100">
+            <p>
+              “Seeing our team’s work show up consistently online has already helped with recruiting. It finally reflects the culture we talk about.”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EARLY ACCESS CTA -->
+    <section id="early-access" class="mp-section bg-white">
+      <div class="mx-auto max-w-4xl px-4 text-center lg:px-0">
+        <h2 class="text-2xl font-semibold text-mpInk">Be part of the MostlyPostly pilot.</h2>
+        <p class="mt-3 text-sm text-mpMuted max-w-xl mx-auto">
+          We’re onboarding a handful of salons who care about education, culture, and brand as much as bookings.
+          If that sounds like you, share a few details and we’ll reach out.
+        </p>
+
+        <form class="mx-auto mt-6 flex max-w-xl flex-col gap-3 sm:flex-row">
+          <input
+            type="email"
+            name="email"
+            placeholder="Your best email"
+            class="w-full rounded-full border border-slate-300 bg-white px-4 py-3 text-sm text-mpInk placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-mpPrimary/60" />
+          <button
+            type="button"
+            class="mp-pill bg-mpPrimary px-6 py-3 text-sm font-semibold text-white shadow-md shadow-mpPrimary/40 hover:bg-mpPrimaryDark">
+            Join the early access list
+          </button>
+        </form>
+        <p class="mt-3 text-xs text-mpMuted">
+          No spam. We’ll only email when we’re ready to onboard new salons.
+        </p>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-6 text-xs text-mpMuted lg:px-0">
+      <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+        <p>© <span id="year"></span> MostlyPostly. Built with salon teams in mind.</p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/legal/privacy.html" class="hover:text-mpInk">Privacy</a>
+          <a href="/legal/terms.html" class="hover:text-mpInk">Terms</a>
+          <a href="/legal/sms-policy.html" class="hover:text-mpInk">SMS Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ENV-BASED LOGIN/SIGNUP ROUTING -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    fetch("/public/env-config.json")
+      .then(res => res.json())
+      .then(cfg => {
+        const host = location.hostname;
+
+        const env = host.includes("localhost")
+          ? "local"
+          : host.includes("staging")
+            ? "staging"
+            : "production";
+
+        const base = cfg[env].appUrl;
+
+        const login1 = document.getElementById("mp-login");
+        const login2 = document.getElementById("mp-login-mobile");
+        const signup1 = document.getElementById("mp-signup");
+        const signup2 = document.getElementById("mp-signup-mobile");
+        const heroBtn = document.getElementById("hero-login");
+
+        if (login1) login1.href = `${base}/manager/login`;
+        if (login2) login2.href = `${base}/manager/login`;
+
+        if (signup1) signup1.href = `${base}/manager/signup`;
+        if (signup2) signup2.href = `${base}/manager/signup`;
+
+        if (heroBtn) heroBtn.onclick = () => (location.href = `${base}/manager/signup`);
+      });
+  </script>
+
+  <!-- MOBILE MENU TOGGLE -->
+  <script>
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const mobileMenuClose = document.getElementById("mobileMenuClose");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.onclick = () => mobileMenu.classList.remove("hidden");
+    }
+    if (mobileMenuClose && mobileMenu) {
+      mobileMenuClose.onclick = () => mobileMenu.classList.add("hidden");
+    }
+  </script>
+</body>
+</html>
