@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Marketing site for MostlyPostly",
   "scripts": {
+    "start": "serve -l 3001 .",
     "dev": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify"
   },
