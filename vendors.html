@@ -175,6 +175,129 @@
       </div>
     </section>
 
+    <!-- ============================================================ CSV IMPORT -->
+    <section class="border-b border-mpBorder bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 items-center">
+
+          <!-- Left: copy -->
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">Bulk Campaign Upload</p>
+            <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mpCharcoal sm:text-4xl">
+              Prefer to import a CSV?<br/>We've got you.
+            </h2>
+            <p class="mt-4 text-sm text-mpMuted sm:text-base leading-relaxed">
+              If you manage multiple products, seasonal campaigns, or promotional calendars, uploading a CSV is the fastest way to get everything into the Vendor Repository at once. One file. All your campaigns. Instantly available to participating salons.
+            </p>
+            <ul class="mt-6 space-y-3 text-sm text-mpMuted">
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-mpAccent font-bold text-xs">✓</span>
+                <span>Map columns to repository fields in seconds — product name, description, hashtags, tone, frequency, expiration, CTA, and more</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-mpAccent font-bold text-xs">✓</span>
+                <span>Upload an entire seasonal promotion schedule in one shot — each row becomes its own scheduled campaign entry</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-mpAccent font-bold text-xs">✓</span>
+                <span>Review, edit, and activate individual campaigns from the clean toggle interface before anything goes live</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-mpAccent font-bold text-xs">✓</span>
+                <span>Re-upload anytime to refresh your catalog — ideal for distributors managing dozens of brands at once</span>
+              </li>
+            </ul>
+            <p class="mt-6 text-xs text-mpMuted italic">
+              Supported format: <code class="bg-mpBg border border-mpBorder px-1.5 py-0.5 rounded text-mpCharcoal">.csv</code> with a provided column template. Contact us to receive the vendor import template.
+            </p>
+          </div>
+
+          <!-- Right: mock CSV + toggle UI -->
+          <div class="space-y-5">
+
+            <!-- CSV preview mockup -->
+            <div class="rounded-2xl border border-mpBorder bg-mpBg p-5 shadow-sm">
+              <div class="flex items-center justify-between mb-3">
+                <p class="text-xs font-bold uppercase tracking-widest text-mpMuted">campaign-spring-2026.csv</p>
+                <span class="rounded-full bg-green-100 px-2.5 py-0.5 text-[10px] font-bold text-green-700 uppercase">3 campaigns imported</span>
+              </div>
+              <div class="overflow-x-auto">
+                <table class="w-full text-[11px] text-mpMuted font-mono">
+                  <thead>
+                    <tr class="border-b border-mpBorder text-mpCharcoal font-bold">
+                      <th class="text-left pb-2 pr-3">product_name</th>
+                      <th class="text-left pb-2 pr-3">discount</th>
+                      <th class="text-left pb-2 pr-3">expires_at</th>
+                      <th class="text-left pb-2">frequency</th>
+                    </tr>
+                  </thead>
+                  <tbody class="space-y-1">
+                    <tr class="border-b border-mpBorder/50">
+                      <td class="py-1.5 pr-3">Hydra Boost Serum</td>
+                      <td class="py-1.5 pr-3">20% off</td>
+                      <td class="py-1.5 pr-3">2026-05-31</td>
+                      <td class="py-1.5">2x/month</td>
+                    </tr>
+                    <tr class="border-b border-mpBorder/50">
+                      <td class="py-1.5 pr-3">Volume Root Spray</td>
+                      <td class="py-1.5 pr-3">BOGO</td>
+                      <td class="py-1.5 pr-3">2026-04-15</td>
+                      <td class="py-1.5">1x/month</td>
+                    </tr>
+                    <tr>
+                      <td class="py-1.5 pr-3">Bond Repair Kit</td>
+                      <td class="py-1.5 pr-3">$10 off</td>
+                      <td class="py-1.5 pr-3">2026-06-30</td>
+                      <td class="py-1.5">3x/month</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Toggle interface mockup -->
+            <div class="rounded-2xl border border-mpBorder bg-white p-5 shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-widest text-mpMuted mb-4">Salon Campaign Manager — Imported Feeds</p>
+              <div class="space-y-3">
+                <div class="flex items-center justify-between py-2 border-b border-mpBorder">
+                  <div>
+                    <p class="text-sm font-semibold text-mpCharcoal">Hydra Boost Serum</p>
+                    <p class="text-xs text-mpMuted">Expires May 31 · 2×/month</p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs text-mpMuted">Active</span>
+                    <div class="h-5 w-10 rounded-full bg-mpAccent relative"><div class="absolute right-0.5 top-0.5 h-4 w-4 rounded-full bg-white shadow"></div></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between py-2 border-b border-mpBorder">
+                  <div>
+                    <p class="text-sm font-semibold text-mpCharcoal">Volume Root Spray</p>
+                    <p class="text-xs text-mpMuted">Expires Apr 15 · 1×/month</p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs text-mpMuted">Paused</span>
+                    <div class="h-5 w-10 rounded-full bg-mpBorder relative"><div class="absolute left-0.5 top-0.5 h-4 w-4 rounded-full bg-white shadow"></div></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between py-2">
+                  <div>
+                    <p class="text-sm font-semibold text-mpCharcoal">Bond Repair Kit</p>
+                    <p class="text-xs text-mpMuted">Expires Jun 30 · 3×/month</p>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs text-mpMuted">Active</span>
+                    <div class="h-5 w-10 rounded-full bg-mpAccent relative"><div class="absolute right-0.5 top-0.5 h-4 w-4 rounded-full bg-white shadow"></div></div>
+                  </div>
+                </div>
+              </div>
+              <p class="mt-4 text-[10px] text-mpMuted text-center">Each salon controls which campaigns run in their feed</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============================================================ REPOSITORY EXAMPLE -->
     <section class="border-b border-mpBorder bg-white">
       <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
