@@ -274,46 +274,18 @@
       <div class="mx-auto max-w-6xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-8">
         <div class="grid gap-4 lg:grid-cols-3 lg:items-stretch">
 
-          <!-- Panel 1: The snap -->
-          <div class="mp-animate mp-delay-1 mp-panel relative rounded-3xl overflow-hidden bg-gradient-to-br from-mpAccentLight via-[#e8b8a9] to-mpAccent min-h-[420px] flex flex-col justify-between p-8">
-            <!-- Illustration: phone taking photo -->
-            <div class="flex-1 flex items-center justify-center py-4">
-              <div class="relative">
-                <!-- Outer phone glow -->
-                <div class="absolute inset-0 rounded-[28px] bg-mpAccent/30 blur-xl scale-110"></div>
-                <!-- Phone body -->
-                <div class="relative w-32 h-52 rounded-[28px] border-4 border-white/40 bg-white/15 backdrop-blur-sm flex flex-col items-center justify-center shadow-2xl">
-                  <!-- Camera viewfinder -->
-                  <div class="w-20 h-20 rounded-xl border-2 border-white/60 flex items-center justify-center mb-2">
-                    <div class="w-10 h-10 rounded-full border-2 border-white/80 flex items-center justify-center">
-                      <div class="w-5 h-5 rounded-full bg-white/70"></div>
-                    </div>
-                  </div>
-                  <!-- Shutter button -->
-                  <div class="w-10 h-10 rounded-full border-2 border-white/50 flex items-center justify-center mt-1">
-                    <div class="w-7 h-7 rounded-full bg-white/80"></div>
-                  </div>
-                  <!-- Top speaker -->
-                  <div class="absolute top-3 w-8 h-1 rounded-full bg-white/30"></div>
-                </div>
-                <!-- Flash pulse -->
-                <div class="absolute -top-1 right-4 w-3 h-3 rounded-full bg-white shadow-lg shadow-white/60 animate-pulse"></div>
-                <!-- Scene dots (photo subjects) -->
-                <div class="absolute -right-10 top-6 flex flex-col gap-2 opacity-50">
-                  <div class="w-2 h-2 rounded-full bg-white/70"></div>
-                  <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
-                  <div class="w-2 h-2 rounded-full bg-white/70"></div>
-                </div>
-              </div>
-            </div>
+          <!-- Panel 1: The snap — lifestyle photo -->
+          <div class="mp-animate mp-delay-1 mp-panel relative rounded-3xl overflow-hidden min-h-[420px] flex flex-col justify-end" style="background-image:url('/images/stylist-taking-photo.png');background-size:cover;background-position:center top;">
+            <!-- Gradient overlay: transparent top → dark bottom for text readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent"></div>
             <!-- Copy -->
-            <div>
-              <div class="inline-flex items-center gap-1.5 rounded-full bg-white/25 backdrop-blur-sm px-3 py-1 mb-3">
-                <span class="w-1.5 h-1.5 rounded-full bg-mpCharcoal"></span>
-                <span class="text-[11px] font-semibold text-mpCharcoal">Step 1 — Stylist</span>
+            <div class="relative p-8">
+              <div class="inline-flex items-center gap-1.5 rounded-full bg-white/20 backdrop-blur-sm px-3 py-1 mb-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-mpAccent"></span>
+                <span class="text-[11px] font-semibold text-white">Step 1 — Stylist</span>
               </div>
-              <h3 class="text-xl font-extrabold text-mpCharcoal leading-tight">Snap. Text.<br/>That's the whole job.</h3>
-              <p class="mt-2 text-sm text-mpCharcoal/70 leading-relaxed">
+              <h3 class="text-xl font-extrabold text-white leading-tight">Snap. Text.<br/>That's the whole job.</h3>
+              <p class="mt-2 text-sm text-white/75 leading-relaxed">
                 Between clients, snap a photo and text it in. No app to open, no login, no caption to write.
               </p>
             </div>
@@ -377,33 +349,20 @@
             </div>
           </div>
 
-          <!-- Panel 3: Published -->
-          <div class="mp-animate mp-delay-3 mp-panel relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#EDE7E4] via-mpAccentLight to-[#F2DDD9] min-h-[420px] flex flex-col justify-between p-8">
-            <!-- Published illustration -->
-            <div class="flex-1 flex items-center justify-center py-4">
-              <div class="text-center">
-                <!-- FB + IG platform orbs -->
-                <div class="relative inline-flex items-end gap-1">
-                  <div class="w-20 h-20 rounded-2xl bg-[#1877F2]/10 border-2 border-[#1877F2]/20 flex items-center justify-center shadow-lg">
-                    <svg class="w-10 h-10 text-[#1877F2]/60" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                    </svg>
-                  </div>
-                  <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#E4405F]/10 to-[#833AB4]/10 border-2 border-[#E4405F]/20 flex items-center justify-center shadow-lg -ml-3 mb-2">
-                    <svg class="w-10 h-10 text-[#E4405F]/60" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                  </div>
-                  <!-- Live badge -->
-                  <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full bg-green-500 px-3 py-1 shadow-lg shadow-green-500/30">
-                    <div class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
-                    <span class="text-[10px] font-bold text-white">LIVE</span>
-                  </div>
-                </div>
-                <!-- Time note -->
-                <div class="mt-8 text-center">
-                  <p class="text-sm font-bold text-mpCharcoal">Posted at 2:30 PM</p>
-                  <p class="text-xs text-mpMuted mt-0.5">While Jasmine was with her next client</p>
+          <!-- Panel 3: Published — social post mockup photo -->
+          <div class="mp-animate mp-delay-3 mp-panel relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#EDE7E4] to-[#F2DDD9] min-h-[420px] flex flex-col justify-between p-8">
+            <!-- Phone mockup showing the live post -->
+            <div class="flex-1 flex items-center justify-center py-2">
+              <div class="relative">
+                <img
+                  src="/images/social-post-on-phone.png"
+                  alt="Finished post live on Instagram"
+                  class="w-52 h-auto drop-shadow-2xl"
+                />
+                <!-- Live badge over the phone -->
+                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full bg-green-500 px-3 py-1 shadow-lg shadow-green-500/30">
+                  <div class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
+                  <span class="text-[10px] font-bold text-white">LIVE</span>
                 </div>
               </div>
             </div>
@@ -884,8 +843,19 @@
 
           </div>
 
-          <!-- Right: "What owners see" card -->
+          <!-- Right: manager photo + role cards -->
           <div class="flex flex-col gap-4">
+            <!-- Manager lifestyle photo -->
+            <div class="mp-animate mp-delay-2 rounded-2xl overflow-hidden relative">
+              <img
+                src="/images/manager-with-tablet.png"
+                alt="Salon owner reviewing posts on tablet"
+                class="w-full h-64 object-cover object-top"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-mpCharcoal/60 to-transparent flex items-end p-5">
+                <p class="text-sm font-semibold text-white leading-snug">"Consistent posting, zero effort from me."</p>
+              </div>
+            </div>
             <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
               <p class="text-xs font-bold uppercase tracking-widest text-mpMuted mb-4">Built for every role</p>
               <div class="space-y-4">
@@ -1386,10 +1356,8 @@
     (function () {
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            io.unobserve(e.target);
-          }
+          // Add 'visible' when entering viewport, remove when leaving so it replays on scroll back
+          e.target.classList.toggle('visible', e.isIntersecting);
         });
       }, { threshold: 0.12 });
 
