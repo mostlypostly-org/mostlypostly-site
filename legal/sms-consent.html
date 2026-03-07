@@ -1,175 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>MostlyPostly — SMS Consent Policy</title>
+  <title>SMS Consent Policy — MostlyPostly</title>
   <meta name="description" content="SMS communication and consent policy for MostlyPostly and participating salons." />
-
-  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" />
-
-  <!-- TailwindCSS CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Tailwind brand config (same as marketing homepage) -->
   <script>
     tailwind.config = {
       theme: {
         extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
           colors: {
-            mpPrimary: "#6366F1",
-            mpPrimaryDark: "#4F46E5",
-            mpAccent: "#F97316",
-            mpBg: "#020617"
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#D4897A", mpAccentLight: "#F2DDD9",
+            mpBg: "#FDF8F6", mpCard: "#FFFFFF",
+            mpBorder: "#EDE7E4", mpMuted: "#7A7C85",
           }
         }
       }
     };
   </script>
+  <style>body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }</style>
 </head>
 
-<body class="bg-slate-950 text-slate-50 antialiased">
-  <!-- Top Navigation -->
-  <header class="border-b border-slate-800/80 bg-slate-950/80 backdrop-blur">
+<body class="bg-mpBg text-mpCharcoal antialiased">
+
+  <header class="border-b border-mpBorder bg-white/90 backdrop-blur sticky top-0 z-30">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between py-4">
-        <!-- Logo -->
-        <a href="/" class="flex items-center gap-2">
-          <div class="flex h-8 w-8 items-center justify-center rounded-xl bg-gradient-to-tr from-mpPrimary to-mpAccent text-xs font-semibold">
-            MP
-          </div>
-          <span class="text-lg font-semibold tracking-tight">MostlyPostly</span>
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-64 h-auto" />
         </a>
-
-        <!-- Legal Nav -->
-        <nav class="hidden items-center gap-6 text-sm font-medium text-slate-200 md:flex">
-          <a href="/legal/privacy.html" class="hover:text-white">Privacy</a>
-          <a href="/legal/terms.html" class="hover:text-white">Terms</a>
-          <a href="/legal/sms-consent.html" class="hover:text-white">SMS Consent</a>
+        <nav class="hidden items-center gap-6 text-sm font-medium text-mpMuted md:flex">
+          <a href="/legal/privacy.html"    class="hover:text-mpCharcoal transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-mpCharcoal transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="text-mpCharcoal font-semibold border-b-2 border-mpAccent pb-0.5">SMS Policy</a>
+          <a href="/" class="rounded-full bg-mpCharcoal px-4 py-2 text-xs font-semibold text-white hover:bg-mpCharcoalDark transition-colors">&larr; Home</a>
         </nav>
-
-        <!-- Mobile -->
-        <div class="md:hidden">
-          <a href="/legal/sms-consent.html" class="text-xs text-slate-300 underline">SMS Consent</a>
-        </div>
+        <a href="/" class="md:hidden text-xs font-semibold text-mpAccent">&larr; Home</a>
       </div>
     </div>
   </header>
 
-  <main class="relative">
-    <!-- Background glow (same as marketing homepage) -->
-    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(99,102,241,0.20)_0,_transparent_55%),radial-gradient(circle_at_bottom,_rgba(248,250,252,0.04)_0,_transparent_55%)]"></div>
+  <main>
+    <section class="mx-auto max-w-3xl px-4 py-12 sm:py-16 lg:py-20">
 
-    <section class="relative mx-auto max-w-4xl px-4 py-12 sm:py-16 lg:py-20">
-      <!-- Page Header -->
       <header class="mb-10 text-center">
-        <p class="text-xs font-semibold uppercase tracking-wide text-mpAccent">
-          Legal
-        </p>
-        <h1 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          SMS Consent Policy
-        </h1>
-        <p class="mt-2 text-sm text-slate-400">
-          Effective Date: October 2025 • Last Updated: October 2025
-        </p>
+        <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">Legal</p>
+        <h1 class="mt-3 text-3xl font-extrabold tracking-tight text-mpCharcoal sm:text-4xl">SMS Consent Policy</h1>
+        <p class="mt-2 text-sm text-mpMuted">Effective Date: October 2025 &bull; Last Updated: October 2025</p>
       </header>
 
-      <!-- Content Card -->
-      <div class="space-y-6 rounded-3xl border border-slate-800 bg-slate-950/80 p-6 shadow-xl shadow-black/50 sm:p-8">
+      <!-- Callout badges -->
+      <div class="flex flex-wrap gap-2 mb-8 justify-center">
+        <span class="rounded-full border border-mpBorder bg-white px-3 py-1 text-xs font-semibold text-mpMuted">Transactional only</span>
+        <span class="rounded-full border border-mpBorder bg-white px-3 py-1 text-xs font-semibold text-mpMuted">Opt-out anytime</span>
+        <span class="rounded-full border border-mpBorder bg-white px-3 py-1 text-xs font-semibold text-mpMuted">No marketing SMS</span>
+      </div>
 
-        <!-- Intro -->
-        <section id="about" class="space-y-3">
-          <h2 class="text-lg font-semibold text-white">What is MostlyPostly?</h2>
-          <p class="text-sm leading-relaxed text-slate-200">
+      <div class="space-y-8 rounded-3xl border border-mpBorder bg-white p-6 shadow-sm sm:p-10">
+
+        <section class="space-y-3">
+          <h2 class="text-base font-bold text-mpCharcoal">What is MostlyPostly?</h2>
+          <p class="text-sm leading-relaxed text-mpMuted">
             MostlyPostly is an AI assistant that helps salon teams create, preview, and approve social media posts via text/chat.
             By providing your mobile number to MostlyPostly (e.g., during onboarding or by messaging our service number), you consent to receive automated text messages related to caption/post creation, approvals, and operational updates for your salon.
           </p>
-
-          <div class="flex flex-wrap gap-2 pt-1">
-            <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-xs text-slate-300">Transactional only</span>
-            <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-xs text-slate-300">Opt-out anytime</span>
-            <span class="rounded-full border border-slate-700 bg-slate-900/60 px-3 py-1 text-xs text-slate-300">No marketing SMS</span>
-          </div>
         </section>
 
-        <!-- Purpose -->
-        <section id="purpose" class="space-y-2">
-          <h2 class="text-lg font-semibold text-white">Message Purpose (Transactional Only)</h2>
-          <p class="text-sm text-slate-200">
-            Messages are transactional, used only for:
-          </p>
-          <ul class="ml-4 list-disc space-y-1 text-sm text-slate-200">
+        <section class="space-y-2 border-t border-mpBorder pt-6">
+          <h2 class="text-base font-bold text-mpCharcoal">Message Purpose (Transactional Only)</h2>
+          <p class="text-sm text-mpMuted leading-relaxed">Messages are transactional, used only for:</p>
+          <ul class="ml-4 list-disc space-y-1.5 text-sm text-mpMuted">
             <li>Sending AI-generated captions or post previews</li>
-            <li>Confirming post approvals/denials or edits</li>
+            <li>Confirming post approvals, denials, or edits</li>
             <li>System notifications related to your use of MostlyPostly</li>
           </ul>
-          <p class="text-sm text-slate-300">
-            <strong class="text-mpPrimary">We do not send unsolicited marketing messages.</strong>
-          </p>
+          <p class="text-sm font-semibold text-mpCharcoal mt-2">We do not send unsolicited marketing messages.</p>
         </section>
 
-        <!-- Frequency & Privacy (two-column on desktop) -->
-        <div class="grid gap-6 md:grid-cols-2">
+        <div class="grid gap-6 md:grid-cols-2 border-t border-mpBorder pt-6">
 
-          <section id="frequency" class="space-y-2">
-            <h2 class="text-lg font-semibold text-white">Frequency &amp; Rates</h2>
-            <ul class="ml-4 list-disc space-y-1 text-sm text-slate-200">
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-mpCharcoal">Frequency &amp; Rates</h2>
+            <ul class="ml-4 list-disc space-y-1.5 text-sm text-mpMuted">
               <li>Message frequency varies based on your usage and team activity.</li>
               <li>Message &amp; data rates may apply per your mobile plan.</li>
             </ul>
           </section>
 
-          <section id="privacy" class="space-y-2">
-            <h2 class="text-lg font-semibold text-white">Mobile Information &amp; SMS (Privacy Commitment)</h2>
-            <ul class="ml-4 list-disc space-y-2 text-sm text-slate-200">
-              <li>We do not sell, rent, or share mobile subscriber information (phone numbers, SMS opt-in/opt-out status, message metadata) with third parties or affiliates for marketing or promotional purposes.</li>
-              <li>Mobile information may be shared only with service providers acting on our behalf (e.g., SMS carriers/platforms) to deliver and maintain the messaging service, under confidentiality obligations.</li>
-              <li>
-                <span class="text-emerald-300">Text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">STOP</code> to opt out;</span>
-                <span class="text-amber-200"> text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">HELP</code> for help</span>.
-              </li>
+          <section class="space-y-2">
+            <h2 class="text-base font-bold text-mpCharcoal">Privacy Commitment</h2>
+            <ul class="ml-4 list-disc space-y-1.5 text-sm text-mpMuted">
+              <li>We do not sell, rent, or share mobile subscriber information for marketing or promotional purposes.</li>
+              <li>Mobile information may be shared only with service providers acting on our behalf under confidentiality obligations.</li>
+              <li>Text <code class="rounded border border-mpBorder bg-mpBg px-1.5 py-0.5 text-xs font-mono text-mpCharcoal">STOP</code> to opt out; text <code class="rounded border border-mpBorder bg-mpBg px-1.5 py-0.5 text-xs font-mono text-mpCharcoal">HELP</code> for help.</li>
             </ul>
-
-            <p class="pt-1 text-sm text-slate-300">
-              For details, see:
+            <p class="text-sm text-mpMuted mt-2">
+              See also: <a href="/legal/privacy.html" class="text-mpAccent hover:underline">Privacy Policy</a> &bull; <a href="/legal/terms.html" class="text-mpAccent hover:underline">Terms of Service</a>
             </p>
-            <ul class="ml-4 list-disc space-y-1 text-sm text-slate-200">
-              <li><a href="/legal/privacy.html" class="text-mpAccent hover:text-mpPrimary">Privacy Policy</a></li>
-              <li><a href="/legal/terms.html" class="text-mpAccent hover:text-mpPrimary">Terms of Service</a></li>
-            </ul>
           </section>
 
         </div>
 
-        <!-- Opt-In -->
-        <section id="opt-in" class="space-y-2">
-          <h2 class="text-lg font-semibold text-white">Opt-In</h2>
-          <p class="text-sm text-slate-200">
-            By providing your mobile number or replying “AGREE” (or “YES”) via text, you consent to receive automated SMS through the MostlyPostly platform for post approvals, previews, and operational updates.
+        <section class="space-y-2 border-t border-mpBorder pt-6">
+          <h2 class="text-base font-bold text-mpCharcoal">Opt-In</h2>
+          <p class="text-sm text-mpMuted leading-relaxed">
+            By providing your mobile number or replying "AGREE" (or "YES") via text, you consent to receive automated SMS through the MostlyPostly platform for post approvals, previews, and operational updates.
             Msg &amp; data rates may apply. Consent is not a condition of purchase.
           </p>
         </section>
 
-        <!-- Opt-Out -->
-        <section id="opt-out" class="space-y-2">
-          <h2 class="text-lg font-semibold text-white">Opt-Out / Help</h2>
-          <ul class="ml-4 list-disc space-y-1 text-sm text-slate-200">
-            <li>Text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">STOP</code> to stop receiving messages.</li>
-            <li>Text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">HELP</code> for help.</li>
-            <li>To re-enroll, text <code class="rounded border border-slate-600 bg-slate-900 px-1.5 py-0.5 text-xs font-mono">START</code>.</li>
+        <section class="space-y-2 border-t border-mpBorder pt-6">
+          <h2 class="text-base font-bold text-mpCharcoal">Opt-Out / Help</h2>
+          <ul class="ml-4 list-disc space-y-1.5 text-sm text-mpMuted">
+            <li>Text <code class="rounded border border-mpBorder bg-mpBg px-1.5 py-0.5 text-xs font-mono text-mpCharcoal">STOP</code> to stop receiving messages.</li>
+            <li>Text <code class="rounded border border-mpBorder bg-mpBg px-1.5 py-0.5 text-xs font-mono text-mpCharcoal">HELP</code> for assistance.</li>
+            <li>To re-enroll, text <code class="rounded border border-mpBorder bg-mpBg px-1.5 py-0.5 text-xs font-mono text-mpCharcoal">START</code>.</li>
           </ul>
         </section>
 
-        <!-- Contact -->
-        <section id="contact" class="space-y-2">
-          <h2 class="text-lg font-semibold text-white">Contact</h2>
-          <p class="text-sm text-slate-200">
-            <strong>MostlyPostly</strong><br />
-            📧 <a href="mailto:support@mostlypostly.com" class="text-mpAccent hover:text-mpPrimary">support@mostlypostly.com</a><br />
-            📍 Carmel, Indiana
+        <section class="border-t border-mpBorder pt-6">
+          <h2 class="text-base font-bold text-mpCharcoal">Contact</h2>
+          <p class="text-sm text-mpMuted leading-relaxed mt-2">
+            <strong class="text-mpCharcoal">MostlyPostly</strong><br />
+            <a href="mailto:support@mostlypostly.com" class="text-mpAccent hover:underline">support@mostlypostly.com</a><br />
+            Carmel, Indiana
           </p>
         </section>
 
@@ -177,21 +138,51 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-800 bg-slate-950">
-    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-slate-500 sm:flex-row">
-      <p>© <span id="year"></span> MostlyPostly — All Rights Reserved.</p>
-      <div class="flex gap-4">
-        <a href="/legal/privacy.html" class="hover:text-slate-300">Privacy</a>
-        <a href="/legal/terms.html" class="hover:text-slate-300">Terms</a>
-        <a href="/legal/sms-consent.html" class="hover:text-slate-300">SMS Consent</a>
+  <footer class="bg-mpCharcoal text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-12">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div class="max-w-sm">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-8 w-auto brightness-0 invert opacity-90" />
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">AI-powered social posting for salons. Spend more time behind the chair, not behind the screen.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Product</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/#post-types"  class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#pricing"     class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/vendors.html" class="hover:text-white transition-colors">Vendor Partners</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Company</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/about" class="hover:text-white transition-colors">About</a></li>
+              <li><a href="mailto:partnerships@mostlypostly.com" class="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="mailto:support@mostlypostly.com" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/legal/terms.html"      class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/legal/privacy.html"    class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-5 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MostlyPostly &mdash; All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html"    class="hover:text-slate-300 transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-slate-300 transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300 transition-colors">SMS Policy</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>

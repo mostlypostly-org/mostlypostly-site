@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vendor Brand Integrations — MostlyPostly</title>
+  <meta name="description" content="MostlyPostly Vendor Partners program — automatically deliver approved brand campaigns to your entire salon network. Built for Aveda, Redken, Wella, and beyond." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://mostlypostly.com/vendors" />
+  <meta property="og:title" content="Vendor Brand Integrations — MostlyPostly" />
+  <meta property="og:description" content="Deploy your brand campaigns directly to thousands of salon social feeds — automatically, on-brand, and on schedule." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#D4897A", mpAccentLight: "#F2DDD9",
+            mpBg: "#FDF8F6", mpCard: "#FFFFFF",
+            mpBorder: "#EDE7E4", mpMuted: "#7A7C85",
+          }
+        }
+      }
+    };
+  </script>
+  <style>body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }</style>
+</head>
+
+<body class="bg-mpBg text-mpCharcoal antialiased">
+
+  <!-- ============================================================ HEADER -->
+  <header class="border-b border-mpBorder bg-white/90 backdrop-blur sticky top-0 z-30">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" />
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-mpMuted md:flex">
+          <a href="/#post-types" class="hover:text-mpCharcoal transition-colors">Features</a>
+          <a href="/#pricing"    class="hover:text-mpCharcoal transition-colors">Pricing</a>
+          <a href="/vendors.html" class="text-mpCharcoal font-semibold border-b-2 border-mpAccent pb-0.5">Vendors</a>
+          <a href="/about"       class="hover:text-mpCharcoal transition-colors">About</a>
+          <div class="flex items-center gap-3 ml-1">
+            <a id="mp-login" href="#" class="text-mpMuted hover:text-mpCharcoal transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-full bg-mpCharcoal px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+          </div>
+        </nav>
+        <button class="md:hidden text-mpCharcoal text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-mpCharcoal md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-mpBorder">
+      <img src="logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-mpMuted text-3xl leading-none">&times;</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
+      <a href="/#post-types" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Features</a>
+      <a href="/#pricing"    class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Pricing</a>
+      <a href="/vendors.html" class="block py-2 border-b border-mpBorder text-mpAccent font-semibold">Vendors</a>
+      <a href="/about"       class="block py-2 hover:text-mpAccent transition-colors">About</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-mpBg transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============================================================ HERO -->
+    <section class="relative overflow-hidden border-b border-mpBorder bg-gradient-to-br from-mpBg via-[#FAF0EC] to-[#F5EAE6]">
+      <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(212,137,122,0.14)_0,_transparent_60%)]"></div>
+      <div class="relative mx-auto max-w-6xl px-4 py-16 sm:py-20 lg:py-28">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 rounded-full border border-mpAccent/30 bg-mpAccentLight/60 px-3.5 py-1.5 text-xs font-semibold text-mpAccent">
+            <span class="inline-flex h-1.5 w-1.5 rounded-full bg-mpAccent"></span>
+            Pro Plan Feature &mdash; Available Now
+          </div>
+          <h1 class="mt-5 text-4xl font-extrabold tracking-tight text-mpCharcoal sm:text-5xl lg:text-6xl leading-tight">
+            Put your brand in<br class="hidden sm:block" />
+            <span class="text-mpAccent">every salon chair.</span>
+          </h1>
+          <p class="mt-5 max-w-2xl text-base text-mpMuted sm:text-lg leading-relaxed">
+            MostlyPostly Vendor Brand Integrations let professional beauty brands deploy approved marketing campaigns directly into participating salons' posting schedules — automatically, on-brand, and aligned to your marketing calendar.
+          </p>
+          <p class="mt-3 max-w-2xl text-base text-mpMuted sm:text-lg leading-relaxed">
+            One campaign brief from you. Thousands of salon posts across Facebook and Instagram. Zero additional work for the stylists.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="mailto:partnerships@mostlypostly.com" class="rounded-full bg-mpCharcoal px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">
+              Contact Us to Partner &rarr;
+            </a>
+            <a href="#how-it-works" class="rounded-full border border-mpBorder bg-white px-6 py-3 text-sm font-semibold text-mpCharcoal hover:bg-mpBg transition-colors">
+              See How It Works
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ STAT BAR -->
+    <section class="border-b border-mpBorder bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 gap-6 sm:grid-cols-4 text-center">
+          <div>
+            <p class="text-3xl font-extrabold text-mpCharcoal">100%</p>
+            <p class="text-xs text-mpMuted mt-1">brand-approved content only</p>
+          </div>
+          <div>
+            <p class="text-3xl font-extrabold text-mpCharcoal">0</p>
+            <p class="text-xs text-mpMuted mt-1">extra logins for stylists</p>
+          </div>
+          <div>
+            <p class="text-3xl font-extrabold text-mpCharcoal">FB + IG</p>
+            <p class="text-xs text-mpMuted mt-1">simultaneous delivery</p>
+          </div>
+          <div>
+            <p class="text-3xl font-extrabold text-mpCharcoal">Pro</p>
+            <p class="text-xs text-mpMuted mt-1">plan subscribers only</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ HOW IT WORKS -->
+    <section id="how-it-works" class="border-b border-mpBorder bg-mpBg">
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div class="max-w-2xl">
+          <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">How It Works</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mpCharcoal sm:text-4xl">
+            From your brand desk to salon feeds &mdash; automatically.
+          </h2>
+          <p class="mt-4 text-sm text-mpMuted sm:text-base leading-relaxed">
+            The MostlyPostly Vendor Repository is a curated content library maintained by professional beauty brands. Salons on the Pro plan opt in and choose which vendor feeds to enable. From there, approved campaign posts flow seamlessly into their existing scheduling queue.
+          </p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-mpAccentLight text-mpAccent font-extrabold text-sm mb-4">1</div>
+            <h3 class="font-bold text-mpCharcoal">You submit a campaign</h3>
+            <p class="mt-2 text-sm text-mpMuted leading-relaxed">Your marketing team uploads campaign assets — product photos, copy direction, hashtag sets, expiration dates, and posting frequency — to the MostlyPostly Vendor Repository.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-mpAccentLight text-mpAccent font-extrabold text-sm mb-4">2</div>
+            <h3 class="font-bold text-mpCharcoal">Salons opt in</h3>
+            <p class="mt-2 text-sm text-mpMuted leading-relaxed">Pro-plan salons toggle your brand feed on inside their MostlyPostly settings. Each salon chooses which vendor partnerships they want active. No unwanted content, ever.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-mpAccentLight text-mpAccent font-extrabold text-sm mb-4">3</div>
+            <h3 class="font-bold text-mpCharcoal">AI adapts to each salon</h3>
+            <p class="mt-2 text-sm text-mpMuted leading-relaxed">MostlyPostly's AI takes your brand direction and adapts the caption to each salon's unique tone of voice, hashtag set, and CTA — so every post feels local and authentic, not copy-pasted.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-mpAccentLight text-mpAccent font-extrabold text-sm mb-4">4</div>
+            <h3 class="font-bold text-mpCharcoal">Posts go live on schedule</h3>
+            <p class="mt-2 text-sm text-mpMuted leading-relaxed">Campaigns are distributed according to your defined frequency and expiration rules. Posts respect each salon's posting window — never flooding feeds, never posting after the campaign ends.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ REPOSITORY EXAMPLE -->
+    <section class="border-b border-mpBorder bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div class="max-w-2xl mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">Sample Repository Entry</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mpCharcoal sm:text-4xl">
+            What a vendor campaign looks like.
+          </h2>
+          <p class="mt-4 text-sm text-mpMuted sm:text-base leading-relaxed">
+            Every entry in the Vendor Repository includes structured data that MostlyPostly uses to generate, schedule, and distribute posts with full brand control.
+          </p>
+        </div>
+
+        <div class="grid gap-8 lg:grid-cols-2">
+
+          <!-- Product card mockup -->
+          <div class="rounded-2xl border border-mpBorder bg-mpBg p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <p class="text-xs font-bold uppercase tracking-widest text-mpMuted">Vendor Repository Entry</p>
+              <span class="rounded-full bg-mpAccentLight px-2.5 py-0.5 text-[10px] font-bold text-mpAccent uppercase">Active</span>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div class="w-20 h-20 flex-shrink-0 rounded-xl bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center text-3xl">🧴</div>
+                <div>
+                  <p class="text-xs font-bold uppercase tracking-widest text-mpMuted">Product</p>
+                  <p class="font-bold text-mpCharcoal mt-0.5">Hydra Boost Color Serum</p>
+                  <p class="text-xs text-mpMuted">Professional Color Collection — Spring/Summer 2026</p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 text-sm">
+                <div class="rounded-xl bg-white border border-mpBorder p-3">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-mpMuted">Campaign Name</p>
+                  <p class="font-semibold text-mpCharcoal mt-0.5 text-xs">Vivid Spring '26 Launch</p>
+                </div>
+                <div class="rounded-xl bg-white border border-mpBorder p-3">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-mpMuted">Expiration</p>
+                  <p class="font-semibold text-mpCharcoal mt-0.5 text-xs">June 30, 2026</p>
+                </div>
+                <div class="rounded-xl bg-white border border-mpBorder p-3">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-mpMuted">Frequency</p>
+                  <p class="font-semibold text-mpCharcoal mt-0.5 text-xs">2&times; per month max</p>
+                </div>
+                <div class="rounded-xl bg-white border border-mpBorder p-3">
+                  <p class="text-[10px] font-bold uppercase tracking-widest text-mpMuted">Priority</p>
+                  <p class="font-semibold text-mpCharcoal mt-0.5 text-xs">Standard distribution</p>
+                </div>
+              </div>
+
+              <div class="rounded-xl bg-white border border-mpBorder p-3">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-mpMuted mb-1.5">Product Description</p>
+                <p class="text-xs text-mpMuted leading-relaxed">A lightweight, multi-action color serum enriched with hyaluronic acid and amino complex. Enhances vibrancy, protects from UV fade, and leaves hair with a mirror-shine finish. Ideal for vivid, fashion, and pastel color services.</p>
+              </div>
+
+              <div class="rounded-xl bg-white border border-mpBorder p-3">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-mpMuted mb-1.5">Brand Hashtags</p>
+                <div class="flex flex-wrap gap-1">
+                  <span class="rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-semibold text-mpAccent">#HydraBoost</span>
+                  <span class="rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-semibold text-mpAccent">#VividColor</span>
+                  <span class="rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-semibold text-mpAccent">#ProfessionalColor</span>
+                  <span class="rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-semibold text-mpAccent">#ColorTreatment</span>
+                  <span class="rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-semibold text-mpAccent">#SalonExclusive</span>
+                </div>
+              </div>
+
+              <div class="rounded-xl bg-white border border-mpBorder p-3">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-mpMuted mb-1.5">Tone Direction</p>
+                <p class="text-xs text-mpMuted leading-relaxed italic">"Celebrate vivid color as a form of self-expression. Highlight the professional-grade quality available exclusively at salons. Aspirational but approachable."</p>
+              </div>
+
+              <div class="rounded-xl bg-white border border-mpBorder p-3">
+                <p class="text-[10px] font-bold uppercase tracking-widest text-mpMuted mb-1.5">CTA Instruction</p>
+                <p class="text-xs text-mpMuted">"Direct clients to book a color consultation via the salon's booking link."</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Generated post output mockup -->
+          <div class="flex flex-col gap-6">
+            <div class="rounded-2xl border border-mpBorder bg-mpBg p-6 shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-widest text-mpMuted mb-4">Generated Post (Salon A — Luxury Tone)</p>
+              <div class="rounded-xl bg-mpCharcoal p-4">
+                <p class="text-[11px] text-slate-100 leading-relaxed">Spring is here and so is the glow-up your hair deserves. We're now using the <span class="font-semibold text-mpAccent">Hydra Boost Color Serum</span> — a salon-exclusive treatment that keeps vivid color looking freshly done, weeks longer. Ask us about adding it to your next color service.</p>
+                <p class="mt-2 text-[11px] text-slate-300">#HydraBoost #VividColor #balayage #salonlife #carmelindiana</p>
+              </div>
+              <p class="mt-3 text-[10px] text-mpMuted">Adapted to salon tone: <span class="font-semibold text-mpCharcoal">Luxury &amp; Refined</span></p>
+            </div>
+
+            <div class="rounded-2xl border border-mpBorder bg-mpBg p-6 shadow-sm">
+              <p class="text-xs font-bold uppercase tracking-widest text-mpMuted mb-4">Generated Post (Salon B — Bold &amp; Edgy Tone)</p>
+              <div class="rounded-xl bg-mpCharcoal p-4">
+                <p class="text-[11px] text-slate-100 leading-relaxed">Color that stays VIVID. We're obsessed with the new <span class="font-semibold text-mpAccent">Hydra Boost Serum</span>. It's the secret weapon behind color that doesn't quit — rich, glossy, and fully saturated until your next appointment. Book a consult and let's talk about your next bold look.</p>
+                <p class="mt-2 text-[11px] text-slate-300">#HydraBoost #BoldColor #VividHair #salonlife</p>
+              </div>
+              <p class="mt-3 text-[10px] text-mpMuted">Adapted to salon tone: <span class="font-semibold text-mpCharcoal">Bold &amp; Edgy</span></p>
+            </div>
+
+            <div class="rounded-2xl border border-mpAccent/30 bg-mpAccentLight/20 p-5">
+              <p class="text-xs font-bold text-mpCharcoal">Same campaign. Different salons. Different voices.</p>
+              <p class="text-xs text-mpMuted mt-1 leading-relaxed">Your brand message stays consistent. Each salon's personality stays intact. Guests see content that feels genuine — not a mass broadcast.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ WHAT'S IN THE REPOSITORY -->
+    <section class="border-b border-mpBorder bg-mpBg">
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div class="max-w-2xl mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">Repository Data</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mpCharcoal sm:text-4xl">
+            Everything you bring. We handle the rest.
+          </h2>
+          <p class="mt-4 text-sm text-mpMuted sm:text-base leading-relaxed">
+            The Vendor Repository accepts rich campaign data, so posts come out accurate, well-written, and timed correctly. Here's what each campaign entry supports.
+          </p>
+        </div>
+
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="mb-3 text-2xl">🖼️</div>
+            <h3 class="font-bold text-mpCharcoal">Product Photos</h3>
+            <p class="mt-1.5 text-sm text-mpMuted leading-relaxed">Upload high-resolution, brand-approved product imagery. MostlyPostly attaches the correct photo to each distributed post automatically.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="mb-3 text-2xl">📝</div>
+            <h3 class="font-bold text-mpCharcoal">Product Name &amp; Description</h3>
+            <p class="mt-1.5 text-sm text-mpMuted leading-relaxed">Full product name, category, key ingredients or benefits, and usage context. Used by the AI to generate accurate, benefit-driven copy that educates and converts.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="mb-3 text-2xl">📅</div>
+            <h3 class="font-bold text-mpCharcoal">Campaign Window &amp; Expiration</h3>
+            <p class="mt-1.5 text-sm text-mpMuted leading-relaxed">Set start dates, end dates, and expiration rules. Posts will never be distributed after a campaign ends — seasonal launches, limited-time offers, and event windows are respected automatically.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="mb-3 text-2xl">🔁</div>
+            <h3 class="font-bold text-mpCharcoal">Posting Frequency</h3>
+            <p class="mt-1.5 text-sm text-mpMuted leading-relaxed">Define how often each salon can post about your campaign — once a week, twice a month, or tied to launch windows. Your reach is controlled, not random.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="mb-3 text-2xl">#️⃣</div>
+            <h3 class="font-bold text-mpCharcoal">Brand Hashtags</h3>
+            <p class="mt-1.5 text-sm text-mpMuted leading-relaxed">Your proprietary campaign hashtags are blended with each salon's local set — ensuring brand-level discoverability without overriding the salon's local SEO strategy.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="mb-3 text-2xl">🎨</div>
+            <h3 class="font-bold text-mpCharcoal">Tone &amp; Messaging Direction</h3>
+            <p class="mt-1.5 text-sm text-mpMuted leading-relaxed">Provide copy direction, key messages, and words to avoid. The AI follows your guardrails while still adapting to each salon's individual tone — premium, playful, educational, or bold.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="mb-3 text-2xl">🔗</div>
+            <h3 class="font-bold text-mpCharcoal">CTA &amp; Booking Instructions</h3>
+            <p class="mt-1.5 text-sm text-mpMuted leading-relaxed">Specify the action you want clients to take — book a service, ask about the product, or learn more. MostlyPostly weaves the CTA into each post naturally, linked to the salon's own booking page.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="mb-3 text-2xl">📊</div>
+            <h3 class="font-bold text-mpCharcoal">Campaign Analytics</h3>
+            <p class="mt-1.5 text-sm text-mpMuted leading-relaxed">Track reach, engagement, and post volume across every participating salon. Understand which markets are most active and where your campaign is resonating — without chasing individual salons for data.</p>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="mb-3 text-2xl">🏷️</div>
+            <h3 class="font-bold text-mpCharcoal">Service &amp; Retail Pairing</h3>
+            <p class="mt-1.5 text-sm text-mpMuted leading-relaxed">Tie your product to specific services (e.g., "pairs with color correction" or "recommended for balayage maintenance"). Helps generate content that drives both retail sales and service bookings simultaneously.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ WHO IT'S FOR -->
+    <section class="border-b border-mpBorder bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div class="max-w-2xl mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">Who It's Built For</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mpCharcoal sm:text-4xl">
+            Built for every level of the beauty industry.
+          </h2>
+        </div>
+
+        <div class="grid gap-6 lg:grid-cols-3">
+
+          <div class="rounded-2xl border border-mpBorder bg-mpBg p-6 shadow-sm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-mpAccentLight text-2xl mb-4">🤝</div>
+            <h3 class="font-bold text-mpCharcoal">Professional Beauty Brands</h3>
+            <p class="mt-2 text-sm text-mpMuted leading-relaxed">Aveda, Redken, Wella, Schwarzkopf, Olaplex, Matrix, and others who distribute through salon channels. Reach your retail partners' social feeds at scale without building a separate platform.</p>
+            <ul class="mt-4 space-y-1.5 text-sm text-mpMuted">
+              <li class="flex items-center gap-2"><span class="inline-flex h-4 w-4 items-center justify-center rounded-full bg-mpAccentLight text-[10px] text-mpAccent font-bold">&#10003;</span> Scale social presence across thousands of salons</li>
+              <li class="flex items-center gap-2"><span class="inline-flex h-4 w-4 items-center justify-center rounded-full bg-mpAccentLight text-[10px] text-mpAccent font-bold">&#10003;</span> Control messaging without micromanaging</li>
+              <li class="flex items-center gap-2"><span class="inline-flex h-4 w-4 items-center justify-center rounded-full bg-mpAccentLight text-[10px] text-mpAccent font-bold">&#10003;</span> Drive retail sell-through from the chair</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-mpBg p-6 shadow-sm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-mpAccentLight text-2xl mb-4">💇</div>
+            <h3 class="font-bold text-mpCharcoal">Pro-Plan Salons</h3>
+            <p class="mt-2 text-sm text-mpMuted leading-relaxed">Salons that carry professional brands and want their social content to reflect their product partnerships — without their team needing to create brand-specific posts from scratch.</p>
+            <ul class="mt-4 space-y-1.5 text-sm text-mpMuted">
+              <li class="flex items-center gap-2"><span class="inline-flex h-4 w-4 items-center justify-center rounded-full bg-mpAccentLight text-[10px] text-mpAccent font-bold">&#10003;</span> More variety in your posting calendar</li>
+              <li class="flex items-center gap-2"><span class="inline-flex h-4 w-4 items-center justify-center rounded-full bg-mpAccentLight text-[10px] text-mpAccent font-bold">&#10003;</span> Brand-approved content, zero extra effort</li>
+              <li class="flex items-center gap-2"><span class="inline-flex h-4 w-4 items-center justify-center rounded-full bg-mpAccentLight text-[10px] text-mpAccent font-bold">&#10003;</span> Drives retail upsell from the social feed</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-mpBorder bg-mpBg p-6 shadow-sm">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-mpAccentLight text-2xl mb-4">🏢</div>
+            <h3 class="font-bold text-mpCharcoal">Distributor Networks</h3>
+            <p class="mt-2 text-sm text-mpMuted leading-relaxed">Beauty distributors who represent multiple brands across regional salon networks. Coordinate multi-brand campaigns from a single dashboard and roll out marketing to all your accounts simultaneously.</p>
+            <ul class="mt-4 space-y-1.5 text-sm text-mpMuted">
+              <li class="flex items-center gap-2"><span class="inline-flex h-4 w-4 items-center justify-center rounded-full bg-mpAccentLight text-[10px] text-mpAccent font-bold">&#10003;</span> Multi-brand campaign management</li>
+              <li class="flex items-center gap-2"><span class="inline-flex h-4 w-4 items-center justify-center rounded-full bg-mpAccentLight text-[10px] text-mpAccent font-bold">&#10003;</span> Regional rollouts at scale</li>
+              <li class="flex items-center gap-2"><span class="inline-flex h-4 w-4 items-center justify-center rounded-full bg-mpAccentLight text-[10px] text-mpAccent font-bold">&#10003;</span> Consolidated analytics across accounts</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ SALON PRO CONFIG -->
+    <section class="border-b border-mpBorder bg-mpBg">
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">For Pro Salons</p>
+            <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mpCharcoal sm:text-4xl">
+              Full control for salon owners. Zero extra work for stylists.
+            </h2>
+            <p class="mt-4 text-sm text-mpMuted sm:text-base leading-relaxed">
+              Vendor integrations are enabled and managed entirely inside the MostlyPostly Admin panel. Stylists don't need to do anything — vendor posts are generated and queued automatically alongside their regular content.
+            </p>
+            <div class="mt-6 space-y-4">
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 flex h-9 w-9 items-center justify-center rounded-xl bg-mpAccentLight text-mpAccent text-base">⚙️</div>
+                <div>
+                  <h3 class="font-bold text-mpCharcoal text-sm">Toggle on per vendor</h3>
+                  <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Enable or disable individual brand feeds from your Admin dashboard. You're never locked into a partnership.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 flex h-9 w-9 items-center justify-center rounded-xl bg-mpAccentLight text-mpAccent text-base">🗓️</div>
+                <div>
+                  <h3 class="font-bold text-mpCharcoal text-sm">Respects your posting schedule</h3>
+                  <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Vendor posts honor your salon's existing posting windows and spacing rules. Your feed cadence is never disrupted.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 flex h-9 w-9 items-center justify-center rounded-xl bg-mpAccentLight text-mpAccent text-base">✅</div>
+                <div>
+                  <h3 class="font-bold text-mpCharcoal text-sm">Optional manager review</h3>
+                  <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Choose whether vendor posts auto-queue or require manager approval before going live. You stay in control of every post.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 flex h-9 w-9 items-center justify-center rounded-xl bg-mpAccentLight text-mpAccent text-base">🔒</div>
+                <div>
+                  <h3 class="font-bold text-mpCharcoal text-sm">Pro plan exclusive</h3>
+                  <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Vendor brand integrations are available exclusively to salons on the MostlyPostly Pro plan. Upgrade any time from your account settings.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mock settings panel -->
+          <div class="rounded-2xl border border-mpBorder bg-white p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-5">
+              <p class="text-xs font-bold uppercase tracking-widest text-mpMuted">Admin &rsaquo; Vendor Feeds</p>
+              <span class="rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-bold text-mpAccent">Pro</span>
+            </div>
+            <div class="space-y-3">
+
+              <div class="flex items-center justify-between rounded-xl border border-mpBorder px-4 py-3">
+                <div>
+                  <p class="text-sm font-bold text-mpCharcoal">Hydra Boost — Spring '26</p>
+                  <p class="text-xs text-mpMuted">Expires June 30, 2026 &bull; 2&times;/month</p>
+                </div>
+                <div class="flex h-6 w-11 items-center rounded-full bg-mpAccent px-0.5 cursor-pointer">
+                  <div class="h-5 w-5 rounded-full bg-white shadow-sm translate-x-5"></div>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between rounded-xl border border-mpBorder px-4 py-3">
+                <div>
+                  <p class="text-sm font-bold text-mpCharcoal">BondReset Treatment Kit</p>
+                  <p class="text-xs text-mpMuted">Ongoing &bull; 1&times;/month</p>
+                </div>
+                <div class="flex h-6 w-11 items-center rounded-full bg-mpAccent px-0.5 cursor-pointer">
+                  <div class="h-5 w-5 rounded-full bg-white shadow-sm translate-x-5"></div>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between rounded-xl border border-mpBorder px-4 py-3 opacity-60">
+                <div>
+                  <p class="text-sm font-bold text-mpCharcoal">Summer Highlights Campaign</p>
+                  <p class="text-xs text-mpMuted">Starts July 1, 2026</p>
+                </div>
+                <div class="flex h-6 w-11 items-center rounded-full bg-mpBorder px-0.5 cursor-pointer">
+                  <div class="h-5 w-5 rounded-full bg-white shadow-sm"></div>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between rounded-xl border border-mpBorder px-4 py-3 opacity-60">
+                <div>
+                  <p class="text-sm font-bold text-mpCharcoal">Scalp Health Awareness Week</p>
+                  <p class="text-xs text-mpMuted">Starts August 15, 2026</p>
+                </div>
+                <div class="flex h-6 w-11 items-center rounded-full bg-mpBorder px-0.5 cursor-pointer">
+                  <div class="h-5 w-5 rounded-full bg-white shadow-sm"></div>
+                </div>
+              </div>
+
+            </div>
+            <p class="mt-4 text-[11px] text-mpMuted">Posts from enabled feeds are auto-generated and queued within your posting schedule. Manager approval optional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ WHY IT MATTERS -->
+    <section class="border-b border-mpBorder bg-white">
+      <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div class="max-w-2xl mb-12">
+          <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">Why It Matters</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-mpCharcoal sm:text-4xl">
+            The gap between vendor campaigns and salon feeds.
+          </h2>
+          <p class="mt-4 text-sm text-mpMuted sm:text-base leading-relaxed">
+            Brands spend millions on product launches and seasonal campaigns. But getting that content to actually appear on individual salon social pages? That's historically been impossible to scale.
+          </p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-3">
+          <div class="rounded-2xl border border-mpBorder bg-mpBg p-6">
+            <p class="text-4xl font-extrabold text-mpCharcoal">~12%</p>
+            <p class="text-sm font-bold text-mpCharcoal mt-2">of salons consistently post brand content</p>
+            <p class="text-sm text-mpMuted mt-1.5 leading-relaxed">Most salons want to support the brands they carry but lack the time and systems to do it consistently.</p>
+          </div>
+          <div class="rounded-2xl border border-mpBorder bg-mpBg p-6">
+            <p class="text-4xl font-extrabold text-mpCharcoal">3&times;</p>
+            <p class="text-sm font-bold text-mpCharcoal mt-2">higher retail conversion when service + product are promoted together</p>
+            <p class="text-sm text-mpMuted mt-1.5 leading-relaxed">Social content that pairs a service with the product used drives retail sell-through at the chair.</p>
+          </div>
+          <div class="rounded-2xl border border-mpBorder bg-mpBg p-6">
+            <p class="text-4xl font-extrabold text-mpCharcoal">0</p>
+            <p class="text-sm font-bold text-mpCharcoal mt-2">extra hours required from salon staff</p>
+            <p class="text-sm text-mpMuted mt-1.5 leading-relaxed">Vendor posts are generated and queued without any action from stylists or managers. The feed just gets richer.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ CTA -->
+    <section id="vendor-contact" class="border-b border-mpBorder bg-gradient-to-br from-mpBg to-[#F5EAE6]">
+      <div class="mx-auto max-w-4xl px-4 py-20 sm:py-24 text-center">
+        <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">Get Started</p>
+        <h2 class="mt-4 text-3xl font-extrabold tracking-tight text-mpCharcoal sm:text-4xl">
+          Interested in joining the Vendor Repository?
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-base text-mpMuted leading-relaxed">
+          We're onboarding professional beauty brands and distributor networks into the MostlyPostly Vendor Program. Reach is growing every week. Contact us to learn about partnership tiers, campaign setup, analytics access, and what's included at each level.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-4 justify-center">
+          <a href="mailto:partnerships@mostlypostly.com" class="rounded-full bg-mpCharcoal px-8 py-3.5 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">
+            Contact Us for Partnership Info &rarr;
+          </a>
+          <a href="/#pricing" class="rounded-full border border-mpBorder bg-white px-8 py-3.5 text-sm font-semibold text-mpCharcoal hover:bg-mpBg transition-colors">
+            View Salon Pricing
+          </a>
+        </div>
+        <p class="mt-5 text-xs text-mpMuted">
+          For salons: Vendor integrations are available on the <strong class="text-mpCharcoal">Pro plan</strong>. Enable them from your Admin &rsaquo; Vendor Feeds dashboard.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="bg-mpCharcoal text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:py-14">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div class="max-w-sm">
+          <img src="logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-8 w-auto brightness-0 invert opacity-90" />
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">AI-powered social posting for salons. Spend more time behind the chair, not behind the screen.</p>
+        </div>
+        <div class="grid flex-1 grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Product</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/#post-types"  class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#pricing"     class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/vendors.html" class="text-white font-semibold">Vendor Partners</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Company</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/about"        class="hover:text-white transition-colors">About</a></li>
+              <li><a href="mailto:partnerships@mostlypostly.com" class="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="mailto:support@mostlypostly.com"      class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/legal/terms.html"      class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/legal/privacy.html"    class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-5 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MostlyPostly &mdash; All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html"    class="hover:text-slate-300 transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-slate-300 transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300 transition-colors">SMS Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const btn   = document.getElementById("mobileMenuBtn");
+    const close = document.getElementById("mobileMenuClose");
+    const menu  = document.getElementById("mobileMenu");
+    if (btn)   btn.onclick   = () => menu.classList.remove("hidden");
+    if (close) close.onclick = () => menu.classList.add("hidden");
+  </script>
+
+  <script>
+    fetch("/public/env-config.json")
+      .then(r => r.json())
+      .then(cfg => {
+        const host = location.hostname;
+        const env  = host.includes("localhost") ? "local" : host.includes("staging") ? "staging" : "production";
+        const base = cfg[env].appUrl;
+        ["mp-login","mp-login-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/login`; });
+        ["mp-signup","mp-signup-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/signup`; });
+      }).catch(() => {});
+  </script>
+</body>
+</html>
