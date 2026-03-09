@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Approving & Denying Posts — MostlyPostly Help Center</title>
+  <meta name="description" content="How managers review, approve, edit, deny, and immediately publish stylist-submitted posts from the MostlyPostly dashboard." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://mostlypostly.com/kb/manager-approvals" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#D4897A", mpAccentLight: "#F2DDD9",
+            mpBg: "#FDF8F6", mpCard: "#FFFFFF",
+            mpBorder: "#EDE7E4", mpMuted: "#7A7C85",
+          }
+        }
+      }
+    };
+  </script>
+  <style>body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }</style>
+</head>
+
+<body class="bg-mpBg text-mpCharcoal antialiased">
+
+  <header class="border-b border-mpBorder bg-white/90 backdrop-blur sticky top-0 z-30">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" />
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-mpMuted md:flex">
+          <a href="/#post-types"       class="hover:text-mpCharcoal transition-colors">Features</a>
+          <a href="/#connect"          class="hover:text-mpCharcoal transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="hover:text-mpCharcoal transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="hover:text-mpCharcoal transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="hover:text-mpCharcoal transition-colors">Pricing</a>
+          <a href="/about"             class="hover:text-mpCharcoal transition-colors">About</a>
+          <div class="flex items-center gap-3 ml-1">
+            <a id="mp-login" href="#" class="text-mpMuted hover:text-mpCharcoal transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-full bg-mpCharcoal px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+          </div>
+        </nav>
+        <button class="md:hidden text-mpCharcoal text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-mpCharcoal md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-mpBorder">
+      <img src="../logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-mpMuted text-3xl leading-none">&times;</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
+      <a href="/#post-types"       class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Features</a>
+      <a href="/#connect"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Connect</a>
+      <a href="/#stylist-workflow" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">How It Works</a>
+      <a href="/#brand-dna"        class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Brand Tools</a>
+      <a href="/#pricing"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Pricing</a>
+      <a href="/about"             class="block py-2 hover:text-mpAccent transition-colors">About</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-mpBg transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+    </div>
+  </div>
+
+  <main style="background:#FDF8F6;">
+
+    <!-- Breadcrumb -->
+    <div class="mx-auto max-w-3xl px-4 pt-8">
+      <nav class="text-xs text-mpMuted mb-6">
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">Help Center</a>
+        <span class="mx-2">›</span>
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">For Owners &amp; Managers</a>
+        <span class="mx-2">›</span>
+        <span class="text-mpCharcoal">Approving &amp; Denying Posts</span>
+      </nav>
+    </div>
+
+    <!-- Article -->
+    <article class="mx-auto max-w-3xl px-4 pb-16">
+      <h1 class="text-3xl font-extrabold text-mpCharcoal mb-2">Approving &amp; Denying Posts</h1>
+      <p class="text-mpMuted text-sm mb-10 pb-8 border-b border-mpBorder">How to use the manager dashboard to review pending posts, make edits, schedule them for later, or publish immediately.</p>
+
+      <!-- Section 1 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">1. Getting Notified</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">When a stylist submits a photo and approves their caption, MostlyPostly automatically sends you an SMS notification — typically something like: <em>"A new post from [Stylist Name] is waiting for your review."</em></p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">The notification includes a direct link to your dashboard. You can also log in at any time at <strong class="text-mpCharcoal">app.mostlypostly.com/manager/login</strong>. If you've previously logged in on this device, you may still be logged in — just navigate to the dashboard directly.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">You can log in with:</p>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span><strong class="text-mpCharcoal">One-time SMS link</strong> — a login link is texted to your phone number. No password needed. Valid for 7 days.</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span><strong class="text-mpCharcoal">Email + password</strong> — use the credentials you set during onboarding. Forgot your password? Use the "Forgot Password" link to receive a reset link via SMS.</span></li>
+      </ul>
+
+      <!-- Section 2 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">2. The Approval Dashboard</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Your manager dashboard shows all posts organized by status. Posts waiting for your approval appear at the top under <strong class="text-mpCharcoal">Pending Approval</strong>.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Each post card displays:</p>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>The photo the stylist submitted</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>The AI-generated caption draft (or edited caption if the stylist modified it)</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>The stylist's name</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>The post type (standard post, before/after, availability, or promotion)</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Action buttons: Approve, Post Now, and Deny</span></li>
+      </ul>
+
+      <!-- Section 3 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">3. Approving a Post</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Click <strong class="text-mpCharcoal">Approve</strong> to add the post to your publishing queue. The post will be scheduled based on your salon's posting rules — specifically your defined posting window (e.g., 9:00 AM–8:00 PM) and the minimum and maximum spacing between posts.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">MostlyPostly automatically picks the next available slot that respects these rules. You don't need to set a specific time manually.</p>
+
+      <div class="rounded-xl p-4 mb-6" style="background:#F2DDD9;border-left:3px solid #D4897A;">
+        <p class="text-sm font-semibold text-mpCharcoal mb-1">Pro Tip</p>
+        <p class="text-sm text-mpCharcoal leading-relaxed">Approve posts throughout the day as they come in. The scheduler fills in available time slots automatically, so you'll never accidentally post twice in a row or publish outside your preferred hours.</p>
+      </div>
+
+      <!-- Section 4 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">4. Editing a Post Before Approving</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">You can modify the caption before it goes live. On the post card, click the caption text to make it editable. Make your changes directly in the field, then click <strong class="text-mpCharcoal">Approve</strong> — your edited version will be used.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Common edits managers make before approving:</p>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Adding a specific product name or technique that the AI didn't mention</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Adjusting tone or language to better match brand voice</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Updating hashtags for a seasonal promotion or event</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Removing anything that feels off-brand before it goes live</span></li>
+      </ul>
+
+      <!-- Section 5 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">5. Denying a Post</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Click <strong class="text-mpCharcoal">Deny</strong> to remove the post from the queue. The post will be marked as denied and will not be published. The stylist is not automatically notified — if you'd like to let them know why, follow up with them directly.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Common reasons to deny a post:</p>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Photo quality isn't up to the salon's standard</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Duplicate or very similar post already in the queue</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Content doesn't fit the current brand or campaign direction</span></li>
+      </ul>
+
+      <!-- Section 6 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">6. Post Now</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">If you want a post to go live immediately instead of waiting in the schedule, click <strong class="text-mpCharcoal">Post Now</strong>. This bypasses the normal scheduling queue and publishes to Facebook and Instagram right away.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Use Post Now for:</p>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Time-sensitive content (flash sales, last-minute openings)</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Posts that should go up before the next scheduled slot opens</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Testing that your Facebook and Instagram connections are working</span></li>
+      </ul>
+
+      <!-- Section 7 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">7. Auto-Publish Setting</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">If you'd prefer not to manually approve every post, you can enable <strong class="text-mpCharcoal">Auto-Publish</strong> in Admin &rarr; Settings. With auto-publish on, posts go directly from stylist approval into the scheduling queue — no manager review required.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Auto-publish is best for established teams where you fully trust every stylist's judgment on what to post. If you're onboarding new stylists or running a highly branded salon, keeping manager approval on gives you an important quality checkpoint.</p>
+
+      <div class="rounded-xl p-4 mb-6" style="background:#F2DDD9;border-left:3px solid #D4897A;">
+        <p class="text-sm font-semibold text-mpCharcoal mb-1">Pro Tip</p>
+        <p class="text-sm text-mpCharcoal leading-relaxed">You can run in a hybrid mode — keep manager approval on but use the dashboard's quick-approve flow to review posts in batches during your morning or lunch break. Most approvals take less than 10 seconds per post.</p>
+      </div>
+
+      <!-- Related articles -->
+      <div class="mt-12 pt-8 border-t border-mpBorder">
+        <h3 class="text-sm font-bold text-mpCharcoal mb-4">Related Articles</h3>
+        <div class="space-y-2">
+          <a href="/kb/promotions.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Creating a Promotion Post
+          </a>
+          <a href="/kb/analytics.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Understanding Your Analytics
+          </a>
+          <a href="/kb/stylist-texting.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> How Stylists Submit Posts via Text
+          </a>
+          <a href="/kb/getting-started.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Setting Up Your Salon Account
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-mpCharcoal text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:py-14">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div class="max-w-sm">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-8 w-auto brightness-0 invert opacity-90" />
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">AI-powered social posting for salons. Spend more time behind the chair, not behind the screen.</p>
+        </div>
+        <div class="grid flex-1 grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Product</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/#post-types"  class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#pricing"     class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/vendors.html" class="hover:text-white transition-colors">Vendor Partners</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Company</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/about"        class="hover:text-white transition-colors">About</a></li>
+              <li><a href="mailto:partnerships@mostlypostly.com" class="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="mailto:support@mostlypostly.com"      class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/legal/terms.html"      class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/legal/privacy.html"    class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-5 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MostlyPostly &mdash; All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html"    class="hover:text-slate-300 transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-slate-300 transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300 transition-colors">SMS Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const btn   = document.getElementById("mobileMenuBtn");
+    const close = document.getElementById("mobileMenuClose");
+    const menu  = document.getElementById("mobileMenu");
+    if (btn)   btn.onclick   = () => menu.classList.remove("hidden");
+    if (close) close.onclick = () => menu.classList.add("hidden");
+  </script>
+
+  <script>
+    fetch("/public/env-config.json")
+      .then(r => r.json())
+      .then(cfg => {
+        const host = location.hostname;
+        const env  = host.includes("localhost") ? "local" : host.includes("staging") ? "staging" : "production";
+        const base = cfg[env].appUrl;
+        ["mp-login","mp-login-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/login`; });
+        ["mp-signup","mp-signup-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/signup`; });
+      }).catch(() => {});
+  </script>
+</body>
+</html>

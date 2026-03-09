@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Help Center & Knowledge Base — MostlyPostly</title>
+  <meta name="description" content="Find answers, step-by-step guides, and tips for getting the most out of MostlyPostly — the AI social media assistant for hair salons." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://mostlypostly.com/kb" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#D4897A", mpAccentLight: "#F2DDD9",
+            mpBg: "#FDF8F6", mpCard: "#FFFFFF",
+            mpBorder: "#EDE7E4", mpMuted: "#7A7C85",
+          }
+        }
+      }
+    };
+  </script>
+  <style>body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }</style>
+</head>
+
+<body class="bg-mpBg text-mpCharcoal antialiased">
+
+  <header class="border-b border-mpBorder bg-white/90 backdrop-blur sticky top-0 z-30">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" />
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-mpMuted md:flex">
+          <a href="/#post-types"       class="hover:text-mpCharcoal transition-colors">Features</a>
+          <a href="/#connect"          class="hover:text-mpCharcoal transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="hover:text-mpCharcoal transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="hover:text-mpCharcoal transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="hover:text-mpCharcoal transition-colors">Pricing</a>
+          <a href="/about"             class="hover:text-mpCharcoal transition-colors">About</a>
+          <div class="flex items-center gap-3 ml-1">
+            <a id="mp-login" href="#" class="text-mpMuted hover:text-mpCharcoal transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-full bg-mpCharcoal px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+          </div>
+        </nav>
+        <button class="md:hidden text-mpCharcoal text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-mpCharcoal md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-mpBorder">
+      <img src="logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-mpMuted text-3xl leading-none">&times;</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
+      <a href="/#post-types"       class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Features</a>
+      <a href="/#connect"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Connect</a>
+      <a href="/#stylist-workflow" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">How It Works</a>
+      <a href="/#brand-dna"        class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Brand Tools</a>
+      <a href="/#pricing"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Pricing</a>
+      <a href="/about"             class="block py-2 hover:text-mpAccent transition-colors">About</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-mpBg transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+    </div>
+  </div>
+
+  <main style="background:#FDF8F6;">
+
+    <!-- Hero -->
+    <section class="border-b border-mpBorder bg-gradient-to-br from-mpBg via-[#FAF0EC] to-[#F5EAE6]">
+      <div class="mx-auto max-w-4xl px-4 py-14 sm:py-18 text-center">
+        <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">Help Center</p>
+        <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-mpCharcoal sm:text-5xl leading-tight">
+          Knowledge Base
+        </h1>
+        <p class="mt-4 max-w-xl mx-auto text-base text-mpMuted sm:text-lg leading-relaxed">
+          Everything you need to get the most out of MostlyPostly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Article categories -->
+    <div class="mx-auto max-w-5xl px-4 py-12">
+
+      <!-- Category 1: Getting Started -->
+      <div class="mb-12">
+        <div class="mb-6">
+          <p class="text-xs font-bold uppercase tracking-widest text-mpAccent mb-1">Category 1</p>
+          <h2 class="text-xl font-bold text-mpCharcoal">Getting Started</h2>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <a href="/kb/getting-started.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📋</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Setting Up Your Salon Account</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">Step-by-step walkthrough of the signup and onboarding process.</p>
+              </div>
+            </div>
+          </a>
+          <a href="/kb/connect-social.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📱</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Connecting Facebook &amp; Instagram</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to link your social accounts so posts publish automatically.</p>
+              </div>
+            </div>
+          </a>
+          <a href="/kb/adding-stylists.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">👥</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Adding Your Stylists</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to register stylists so they can start submitting posts via text.</p>
+              </div>
+            </div>
+          </a>
+          <a href="/kb/onboarding-guide.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🗺️</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Understanding the Onboarding Steps</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">A guide to each of the 7 onboarding steps and what to expect.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Category 2: For Stylists -->
+      <div class="mb-12">
+        <div class="mb-6">
+          <p class="text-xs font-bold uppercase tracking-widest text-mpAccent mb-1">Category 2</p>
+          <h2 class="text-xl font-bold text-mpCharcoal">For Stylists</h2>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <a href="/kb/stylist-texting.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">💬</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">How to Submit a Post via Text</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">Text a photo to your salon's dedicated number — no app needed.</p>
+              </div>
+            </div>
+          </a>
+          <a href="/kb/stylist-captions.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">✏️</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Editing &amp; Approving Your Caption</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to approve, edit, or ask the AI to rewrite your caption draft.</p>
+              </div>
+            </div>
+          </a>
+          <a href="/kb/what-happens.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🔄</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">What Happens After You Send a Photo</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">Follow your post from the moment you hit send through to publishing.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Category 3: For Owners & Managers -->
+      <div class="mb-12">
+        <div class="mb-6">
+          <p class="text-xs font-bold uppercase tracking-widest text-mpAccent mb-1">Category 3</p>
+          <h2 class="text-xl font-bold text-mpCharcoal">For Owners &amp; Managers</h2>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <a href="/kb/manager-approvals.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">✅</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Approving &amp; Denying Posts</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to review, edit, approve, deny, or immediately publish pending posts.</p>
+              </div>
+            </div>
+          </a>
+          <a href="/kb/promotions.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🎁</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Creating a Promotion Post</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">Generate a branded AI promotion image and schedule it in seconds.</p>
+              </div>
+            </div>
+          </a>
+          <a href="/kb/analytics.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📊</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Understanding Your Analytics</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">What the metrics mean and how to use them to improve your content.</p>
+              </div>
+            </div>
+          </a>
+          <a href="/kb/locations.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+            <div class="flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📍</div>
+              <div>
+                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Managing Multiple Locations</h3>
+                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How the Growth and Pro plans support multiple salon locations.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Still need help? -->
+      <div class="rounded-2xl border border-mpBorder bg-white p-8 text-center">
+        <h3 class="text-lg font-bold text-mpCharcoal mb-2">Still need help?</h3>
+        <p class="text-sm text-mpMuted mb-5 leading-relaxed">Our team is happy to help you get set up and answer any questions.</p>
+        <a href="mailto:support@mostlypostly.com" class="inline-flex items-center justify-center rounded-full bg-mpCharcoal px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">
+          Email Support &rarr;
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="bg-mpCharcoal text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:py-14">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div class="max-w-sm">
+          <img src="logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-8 w-auto brightness-0 invert opacity-90" />
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">AI-powered social posting for salons. Spend more time behind the chair, not behind the screen.</p>
+        </div>
+        <div class="grid flex-1 grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Product</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/#post-types"  class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#pricing"     class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/vendors.html" class="hover:text-white transition-colors">Vendor Partners</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Company</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/about"        class="hover:text-white transition-colors">About</a></li>
+              <li><a href="mailto:partnerships@mostlypostly.com" class="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="mailto:support@mostlypostly.com"      class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/legal/terms.html"      class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/legal/privacy.html"    class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-5 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MostlyPostly &mdash; All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html"    class="hover:text-slate-300 transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-slate-300 transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300 transition-colors">SMS Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const btn   = document.getElementById("mobileMenuBtn");
+    const close = document.getElementById("mobileMenuClose");
+    const menu  = document.getElementById("mobileMenu");
+    if (btn)   btn.onclick   = () => menu.classList.remove("hidden");
+    if (close) close.onclick = () => menu.classList.add("hidden");
+  </script>
+
+  <script>
+    fetch("/public/env-config.json")
+      .then(r => r.json())
+      .then(cfg => {
+        const host = location.hostname;
+        const env  = host.includes("localhost") ? "local" : host.includes("staging") ? "staging" : "production";
+        const base = cfg[env].appUrl;
+        ["mp-login","mp-login-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/login`; });
+        ["mp-signup","mp-signup-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/signup`; });
+      }).catch(() => {});
+  </script>
+</body>
+</html>
