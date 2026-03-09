@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vendor Brand Integrations (Pro Plan) — MostlyPostly Help Center</title>
+  <meta name="description" content="Learn how MostlyPostly Vendor Brand Integrations work for Pro plan salons — automatically receive and post approved campaigns from brands like Aveda, Redken, and Wella." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://mostlypostly.com/kb/vendors" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#D4897A", mpAccentLight: "#F2DDD9",
+            mpBg: "#FDF8F6", mpCard: "#FFFFFF",
+            mpBorder: "#EDE7E4", mpMuted: "#7A7C85",
+          }
+        }
+      }
+    };
+  </script>
+  <style>body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }</style>
+</head>
+
+<body class="bg-mpBg text-mpCharcoal antialiased">
+
+  <header class="border-b border-mpBorder bg-white/90 backdrop-blur sticky top-0 z-30">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" />
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-mpMuted md:flex">
+          <a href="/#post-types"       class="hover:text-mpCharcoal transition-colors">Features</a>
+          <a href="/#connect"          class="hover:text-mpCharcoal transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="hover:text-mpCharcoal transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="hover:text-mpCharcoal transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="hover:text-mpCharcoal transition-colors">Pricing</a>
+          <a href="/about"             class="hover:text-mpCharcoal transition-colors">About</a>
+          <div class="flex items-center gap-3 ml-1">
+            <a id="mp-login" href="#" class="text-mpMuted hover:text-mpCharcoal transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-full bg-mpCharcoal px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+          </div>
+        </nav>
+        <button class="md:hidden text-mpCharcoal text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-mpCharcoal md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-mpBorder">
+      <img src="../logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-mpMuted text-3xl leading-none">&times;</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
+      <a href="/#post-types"       class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Features</a>
+      <a href="/#connect"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Connect</a>
+      <a href="/#stylist-workflow" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">How It Works</a>
+      <a href="/#brand-dna"        class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Brand Tools</a>
+      <a href="/#pricing"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Pricing</a>
+      <a href="/about"             class="block py-2 hover:text-mpAccent transition-colors">About</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-mpBg transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+    </div>
+  </div>
+
+  <main style="background:#FDF8F6;">
+
+    <!-- Breadcrumb -->
+    <div class="mx-auto max-w-3xl px-4 pt-8">
+      <nav class="text-xs text-mpMuted mb-6">
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">Help Center</a>
+        <span class="mx-2">›</span>
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">Advanced &amp; Pro Features</a>
+        <span class="mx-2">›</span>
+        <span class="text-mpCharcoal">Vendor Brand Integrations</span>
+      </nav>
+    </div>
+
+    <!-- Article -->
+    <article class="mx-auto max-w-3xl px-4 pb-16">
+      <h1 class="text-3xl font-extrabold text-mpCharcoal mb-2">Vendor Brand Integrations (Pro Plan)</h1>
+      <p class="text-mpMuted text-sm mb-10 pb-8 border-b border-mpBorder">How Pro salons can automatically receive and post professionally produced campaigns from beauty brands like Aveda, Redken, and Wella — adapted to your salon's own voice.</p>
+
+      <!-- Section 1 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">What Are Vendor Feeds?</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Vendor Feeds are a Pro plan feature that connects your salon to the MostlyPostly Vendor Repository — a curated library of campaigns submitted by professional beauty brands including Aveda, Redken, Wella, and more.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">When a brand submits a campaign, Pro salons can enable that brand's feed and MostlyPostly will automatically create posts using the brand's product photos and campaign details. Every post is adapted to match your salon's individual tone of voice — so it sounds like you, not a press release.</p>
+
+      <!-- Section 2 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Why It Matters</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Brand-sponsored content gives your salon a stream of professional, product-focused posts without creating anything from scratch. You get polished campaign imagery and copy that's already been developed by the brand — all you do is flip a toggle.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">For brands, it's a direct channel into thousands of salon social feeds, reaching real guests at the point of service. For salons, it's effortless content that positions your team as knowledgeable professionals who carry leading product lines.</p>
+
+      <!-- Section 3 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">This Feature Is Coming Soon</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Vendor Brand Integrations are available on the Pro plan and currently being actively developed. The toggle interface to enable or disable individual brands will appear in <strong class="text-mpCharcoal">Admin → Vendor Feeds</strong> once your salon is on the Pro plan.</p>
+
+      <div class="rounded-xl p-4 mb-6" style="background:#F2DDD9;border-left:3px solid #D4897A;">
+        <p class="text-sm font-semibold text-mpCharcoal mb-1">💡 Pro Tip</p>
+        <p class="text-sm text-mpCharcoal leading-relaxed">You don't need to do anything to get ready. Once the feature launches, all Pro salons will see a new Vendor Feeds section in their Admin panel. You choose which brands to activate — you're always in control of what gets posted.</p>
+      </div>
+
+      <!-- Section 4 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">How It Works (When Available)</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Here's the end-to-end flow once Vendor Feeds are live:</p>
+      <ol class="space-y-4 mb-6">
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">1</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Brand submits a campaign</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">The brand provides product photos, product name and description, campaign name, expiration date, posting frequency cap, brand hashtags, tone and messaging direction, CTA instructions, and service pairing notes.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">2</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Pro salon enables the brand feed</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">From Admin → Vendor Feeds, you'll see all available brands in the repository. Toggle any brand on to start receiving its campaigns.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">3</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">AI adapts each post to your salon's voice</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">MostlyPostly uses the brand's campaign details along with your salon's configured tone of voice to generate a caption that feels native to your salon — not generic brand copy.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">4</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Posts queue within your schedule</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Vendor posts respect your existing posting window, spacing rules, and frequency cap settings. They don't override or flood your schedule.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">5</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Expiration dates are enforced</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">No posts are published after a campaign's expiration date. You'll never accidentally post a holiday promotion in January.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">6</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Manager approval (if required)</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">If your salon requires manager approval, vendor posts go through the same approval queue as stylist-submitted posts. You review and approve before anything goes live.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">7</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Campaign analytics shared</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Performance data for vendor posts is available in your Analytics dashboard. Brands also receive aggregated campaign performance data across participating salons.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Section 5 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Upgrading to Pro</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Vendor Feeds are exclusive to the Pro plan at <strong class="text-mpCharcoal">$249/month</strong> (or $224/month on annual billing). The Pro plan also includes unlimited stylists, 500 posts per month, and support for up to 5 salon locations.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-6">To upgrade, visit your <a href="/manager/billing" class="text-mpAccent hover:underline font-medium">Billing page</a> and select the Pro plan. The upgrade takes effect immediately.</p>
+
+      <!-- Section 6 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">For Beauty Brands</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">If you're a brand looking to join the MostlyPostly Vendor Repository and get your campaigns in front of salon audiences, we'd love to hear from you. Reach out to <a href="mailto:partnerships@mostlypostly.com" class="text-mpAccent hover:underline font-medium">partnerships@mostlypostly.com</a> and include your brand name, product line, and target salon network.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">You can also download the CSV import template from the <a href="/vendors.html" class="text-mpAccent hover:underline font-medium">Vendor Partners page</a> to see the campaign data format and get started quickly.</p>
+
+      <!-- Related articles -->
+      <div class="mt-12 pt-8 border-t border-mpBorder">
+        <h3 class="text-sm font-bold text-mpCharcoal mb-4">Related Articles</h3>
+        <div class="space-y-2">
+          <a href="/kb/dashboard-guide.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Understanding Your Dashboard &amp; Menus
+          </a>
+          <a href="/kb/analytics.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Understanding Your Analytics
+          </a>
+          <a href="/kb/promotions.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Creating a Promotion Post
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-mpCharcoal text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:py-14">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div class="max-w-sm">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-8 w-auto brightness-0 invert opacity-90" />
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">AI-powered social posting for salons. Spend more time behind the chair, not behind the screen.</p>
+        </div>
+        <div class="grid flex-1 grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Product</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/#post-types"  class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#pricing"     class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/vendors.html" class="hover:text-white transition-colors">Vendor Partners</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Company</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/about"        class="hover:text-white transition-colors">About</a></li>
+              <li><a href="mailto:partnerships@mostlypostly.com" class="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="mailto:support@mostlypostly.com"      class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/legal/terms.html"      class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/legal/privacy.html"    class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-5 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MostlyPostly &mdash; All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html"    class="hover:text-slate-300 transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-slate-300 transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300 transition-colors">SMS Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const btn   = document.getElementById("mobileMenuBtn");
+    const close = document.getElementById("mobileMenuClose");
+    const menu  = document.getElementById("mobileMenu");
+    if (btn)   btn.onclick   = () => menu.classList.remove("hidden");
+    if (close) close.onclick = () => menu.classList.add("hidden");
+  </script>
+
+  <script>
+    fetch("/public/env-config.json")
+      .then(r => r.json())
+      .then(cfg => {
+        const host = location.hostname;
+        const env  = host.includes("localhost") ? "local" : host.includes("staging") ? "staging" : "production";
+        const base = cfg[env].appUrl;
+        ["mp-login","mp-login-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/login`; });
+        ["mp-signup","mp-signup-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/signup`; });
+      }).catch(() => {});
+  </script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Understanding Your Analytics — MostlyPostly Help Center</title>
+  <meta name="description" content="What analytics MostlyPostly tracks, how and when data syncs from Facebook and Instagram, and how to use insights to improve your salon's social content." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://mostlypostly.com/kb/analytics" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#D4897A", mpAccentLight: "#F2DDD9",
+            mpBg: "#FDF8F6", mpCard: "#FFFFFF",
+            mpBorder: "#EDE7E4", mpMuted: "#7A7C85",
+          }
+        }
+      }
+    };
+  </script>
+  <style>body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }</style>
+</head>
+
+<body class="bg-mpBg text-mpCharcoal antialiased">
+
+  <header class="border-b border-mpBorder bg-white/90 backdrop-blur sticky top-0 z-30">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" />
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-mpMuted md:flex">
+          <a href="/#post-types"       class="hover:text-mpCharcoal transition-colors">Features</a>
+          <a href="/#connect"          class="hover:text-mpCharcoal transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="hover:text-mpCharcoal transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="hover:text-mpCharcoal transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="hover:text-mpCharcoal transition-colors">Pricing</a>
+          <a href="/about"             class="hover:text-mpCharcoal transition-colors">About</a>
+          <div class="flex items-center gap-3 ml-1">
+            <a id="mp-login" href="#" class="text-mpMuted hover:text-mpCharcoal transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-full bg-mpCharcoal px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+          </div>
+        </nav>
+        <button class="md:hidden text-mpCharcoal text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-mpCharcoal md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-mpBorder">
+      <img src="../logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-mpMuted text-3xl leading-none">&times;</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
+      <a href="/#post-types"       class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Features</a>
+      <a href="/#connect"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Connect</a>
+      <a href="/#stylist-workflow" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">How It Works</a>
+      <a href="/#brand-dna"        class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Brand Tools</a>
+      <a href="/#pricing"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Pricing</a>
+      <a href="/about"             class="block py-2 hover:text-mpAccent transition-colors">About</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-mpBg transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+    </div>
+  </div>
+
+  <main style="background:#FDF8F6;">
+
+    <!-- Breadcrumb -->
+    <div class="mx-auto max-w-3xl px-4 pt-8">
+      <nav class="text-xs text-mpMuted mb-6">
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">Help Center</a>
+        <span class="mx-2">›</span>
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">For Owners &amp; Managers</a>
+        <span class="mx-2">›</span>
+        <span class="text-mpCharcoal">Understanding Your Analytics</span>
+      </nav>
+    </div>
+
+    <!-- Article -->
+    <article class="mx-auto max-w-3xl px-4 pb-16">
+      <h1 class="text-3xl font-extrabold text-mpCharcoal mb-2">Understanding Your Analytics</h1>
+      <p class="text-mpMuted text-sm mb-10 pb-8 border-b border-mpBorder">What metrics MostlyPostly tracks for every published post, when and how data syncs from Facebook and Instagram, and how to use this data to improve your content strategy.</p>
+
+      <!-- Section 1 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">What's Tracked</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">For every published post, MostlyPostly syncs the following from Facebook and Instagram. Not every metric is available on both platforms — see the platform differences section below.</p>
+      <div class="space-y-3 mb-6">
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Reach</p>
+          <p class="text-xs text-mpMuted leading-relaxed">The number of unique people who saw your post. This is the primary measure of how far your content traveled.</p>
+        </div>
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Likes / Reactions</p>
+          <p class="text-xs text-mpMuted leading-relaxed">Instagram Likes plus Facebook Reactions (all types combined — likes, loves, hahas, etc.) shown as a single combined figure in your dashboard.</p>
+        </div>
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Comments</p>
+          <p class="text-xs text-mpMuted leading-relaxed">Total comments left on the post on each platform.</p>
+        </div>
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Shares (Facebook only)</p>
+          <p class="text-xs text-mpMuted leading-relaxed">How many times your post was shared on Facebook. Instagram does not expose share counts via the API.</p>
+        </div>
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Saves (Instagram only)</p>
+          <p class="text-xs text-mpMuted leading-relaxed">How many users saved your post to their Instagram Collections. A strong signal of high-value content.</p>
+        </div>
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Engaged Users</p>
+          <p class="text-xs text-mpMuted leading-relaxed">The number of unique people who took any action on your post (liked, commented, shared, clicked, etc.).</p>
+        </div>
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Engagement Rate</p>
+          <p class="text-xs text-mpMuted leading-relaxed">Calculated as: engaged users ÷ reach × 100. A higher engagement rate means more of the people who saw your post actually interacted with it.</p>
+        </div>
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Link Clicks (Facebook only)</p>
+          <p class="text-xs text-mpMuted leading-relaxed">How many times people clicked the booking link included in your Facebook caption.</p>
+        </div>
+      </div>
+
+      <!-- Section 2 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">When Data Syncs</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Analytics data is synced automatically on a schedule. However, there is an inherent delay — <strong class="text-mpCharcoal">fresh posts may take 24–48 hours</strong> before Facebook and Instagram report meaningful reach and engagement data. Their APIs do not return real-time numbers.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">This means a post published this morning may show 0 reach until tomorrow — that's normal. The data will populate once the platforms process and expose it through their API.</p>
+
+      <!-- Section 3 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Sync Insights Button</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Click <strong class="text-mpCharcoal">Sync Insights</strong> on the Analytics page to manually trigger a sync for your salon at any time. This pulls the latest available data from Facebook and Instagram and updates your dashboard immediately.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Use this when:</p>
+      <ul class="space-y-1.5 mb-4 ml-4 list-disc text-sm text-mpMuted">
+        <li>You just published a post and want to check if data is available yet</li>
+        <li>A post is showing 0 reach even though it's been more than 48 hours</li>
+        <li>It's been more than a day since your last sync and you want fresh numbers</li>
+      </ul>
+
+      <div class="rounded-xl p-4 mb-6" style="background:#F2DDD9;border-left:3px solid #D4897A;">
+        <p class="text-sm font-semibold text-mpCharcoal mb-1">💡 Pro Tip</p>
+        <p class="text-sm text-mpCharcoal leading-relaxed">Check your analytics once or twice per week rather than daily. Social data stabilizes over 3–5 days after a post goes live — early numbers can be misleading.</p>
+      </div>
+
+      <!-- Section 4 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Reset &amp; Relink Facebook Post IDs</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">This is an advanced tool available on the Analytics page. <strong class="text-mpCharcoal">Use it only if your analytics look wrong</strong> after reconnecting your Facebook account.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">What it does: clears all stored Facebook post IDs in MostlyPostly's database and re-fetches them from your Facebook Page's live feed. Posts are matched by publish timestamp (within a 5-minute window) to re-link your MostlyPostly records to the correct Facebook posts.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Use this when:</p>
+      <ul class="space-y-1.5 mb-4 ml-4 list-disc text-sm text-mpMuted">
+        <li>You reconnected your Facebook account with a new OAuth token</li>
+        <li>Posts are consistently showing 0 reach even after multiple syncs</li>
+        <li>Analytics appear mismatched or out of order after a Facebook reconnect</li>
+      </ul>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">This is not needed for routine use. A normal Sync Insights is sufficient for day-to-day data updates.</p>
+
+      <!-- Section 5 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Top Performing Posts</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">The Analytics dashboard highlights your highest-reach posts in a dedicated section. Only posts with at least one real engagement signal (reach, likes, comments, or engaged users) appear here — zero-engagement posts are filtered out automatically so you're looking at real results, not noise.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Use this section to spot patterns: which post types get the most reach? Which stylists' work performs best? What time of year sees the highest engagement?</p>
+
+      <!-- Section 6 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Instagram vs. Facebook Differences</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">The two platforms expose different metrics through their APIs. Here's what to expect:</p>
+      <div class="space-y-3 mb-6">
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Impressions vs. Reach</p>
+          <p class="text-xs text-mpMuted leading-relaxed">Instagram deprecated the Impressions metric in API v22+. MostlyPostly uses Reach (unique viewers) for Instagram instead. Facebook still reports both.</p>
+        </div>
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Reactions vs. Likes</p>
+          <p class="text-xs text-mpMuted leading-relaxed">Facebook reports Reactions (all emoji types combined). Instagram reports Likes. MostlyPostly combines them into a single "Likes" column in your dashboard.</p>
+        </div>
+        <div class="rounded-xl border border-mpBorder bg-white p-4">
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Shares and Saves</p>
+          <p class="text-xs text-mpMuted leading-relaxed">Shares are Facebook only. Saves are Instagram only. Neither platform exposes the other's metric via the API.</p>
+        </div>
+      </div>
+
+      <!-- Section 7 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Tips for Better Analytics</h2>
+      <ul class="space-y-2 mb-6">
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Post at consistent times using the Scheduler settings. A predictable cadence trains your audience to expect and look for your content.</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Use high-quality photos — good lighting and clear focus dramatically affect engagement. Before/after posts tend to generate the highest reach and saves.</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Check which post types perform best specifically for your salon. Results vary by audience, location, and clientele — use your own data as the guide.</span></li>
+        <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Look at engagement rate, not just reach. A post seen by 500 people with 50 engagements outperforms a post seen by 2,000 people with 10 engagements.</span></li>
+      </ul>
+
+      <!-- Related articles -->
+      <div class="mt-12 pt-8 border-t border-mpBorder">
+        <h3 class="text-sm font-bold text-mpCharcoal mb-4">Related Articles</h3>
+        <div class="space-y-2">
+          <a href="/kb/connect-social.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Connecting Facebook &amp; Instagram
+          </a>
+          <a href="/kb/dashboard-guide.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Understanding Your Dashboard &amp; Menus
+          </a>
+          <a href="/kb/manager-approvals.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Approving &amp; Denying Posts
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-mpCharcoal text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:py-14">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div class="max-w-sm">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-8 w-auto brightness-0 invert opacity-90" />
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">AI-powered social posting for salons. Spend more time behind the chair, not behind the screen.</p>
+        </div>
+        <div class="grid flex-1 grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Product</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/#post-types"  class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#pricing"     class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/vendors.html" class="hover:text-white transition-colors">Vendor Partners</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Company</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/about"        class="hover:text-white transition-colors">About</a></li>
+              <li><a href="mailto:partnerships@mostlypostly.com" class="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="mailto:support@mostlypostly.com"      class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/legal/terms.html"      class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/legal/privacy.html"    class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-5 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MostlyPostly &mdash; All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html"    class="hover:text-slate-300 transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-slate-300 transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300 transition-colors">SMS Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const btn   = document.getElementById("mobileMenuBtn");
+    const close = document.getElementById("mobileMenuClose");
+    const menu  = document.getElementById("mobileMenu");
+    if (btn)   btn.onclick   = () => menu.classList.remove("hidden");
+    if (close) close.onclick = () => menu.classList.add("hidden");
+  </script>
+
+  <script>
+    fetch("/public/env-config.json")
+      .then(r => r.json())
+      .then(cfg => {
+        const host = location.hostname;
+        const env  = host.includes("localhost") ? "local" : host.includes("staging") ? "staging" : "production";
+        const base = cfg[env].appUrl;
+        ["mp-login","mp-login-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/login`; });
+        ["mp-signup","mp-signup-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/signup`; });
+      }).catch(() => {});
+  </script>
+</body>
+</html>

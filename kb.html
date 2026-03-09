@@ -93,132 +93,196 @@
     <!-- Article categories -->
     <div class="mx-auto max-w-5xl px-4 py-12">
 
+      <!-- Search bar -->
+      <div class="mb-10">
+        <div class="relative max-w-lg mx-auto">
+          <input type="text" id="kb-search" placeholder="Search the knowledge base…"
+            class="w-full rounded-xl border border-mpBorder bg-white px-4 py-3 text-sm text-mpCharcoal focus:outline-none focus:ring-2 focus:border-mpAccent shadow-sm"
+            style="padding-left:2.5rem;" />
+          <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#7A7C85;font-size:16px;">🔍</span>
+        </div>
+      </div>
+
       <!-- Category 1: Getting Started -->
-      <div class="mb-12">
+      <div class="mb-12" id="cat-getting-started">
         <div class="mb-6">
           <p class="text-xs font-bold uppercase tracking-widest text-mpAccent mb-1">Category 1</p>
           <h2 class="text-xl font-bold text-mpCharcoal">Getting Started</h2>
         </div>
         <div class="grid gap-4 sm:grid-cols-2">
-          <a href="/kb/getting-started.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📋</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Setting Up Your Salon Account</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">Step-by-step walkthrough of the signup and onboarding process.</p>
+          <div class="kb-card-wrap">
+            <a href="/kb/getting-started.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📋</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Setting Up Your Salon Account</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">Step-by-step walkthrough of the signup and onboarding process.</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="/kb/connect-social.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📱</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Connecting Facebook &amp; Instagram</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to link your social accounts so posts publish automatically.</p>
+            </a>
+          </div>
+          <div class="kb-card-wrap">
+            <a href="/kb/connect-social.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📱</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Connecting Facebook &amp; Instagram</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to link your social accounts so posts publish automatically.</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="/kb/adding-stylists.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">👥</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Adding Your Stylists</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to register stylists so they can start submitting posts via text.</p>
+            </a>
+          </div>
+          <div class="kb-card-wrap">
+            <a href="/kb/adding-stylists.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">👥</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Adding Your Stylists</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to register stylists so they can start submitting posts via text.</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="/kb/onboarding-guide.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🗺️</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Understanding the Onboarding Steps</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">A guide to each of the 7 onboarding steps and what to expect.</p>
+            </a>
+          </div>
+          <div class="kb-card-wrap">
+            <a href="/kb/onboarding-guide.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🗺️</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Understanding the Onboarding Steps</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">A guide to each of the 7 onboarding steps and what to expect.</p>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Category 2: For Stylists -->
-      <div class="mb-12">
+      <div class="mb-12" id="cat-stylists">
         <div class="mb-6">
           <p class="text-xs font-bold uppercase tracking-widest text-mpAccent mb-1">Category 2</p>
           <h2 class="text-xl font-bold text-mpCharcoal">For Stylists</h2>
         </div>
         <div class="grid gap-4 sm:grid-cols-2">
-          <a href="/kb/stylist-texting.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">💬</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">How to Submit a Post via Text</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">Text a photo to your salon's dedicated number — no app needed.</p>
+          <div class="kb-card-wrap">
+            <a href="/kb/stylist-texting.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">💬</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">How to Submit a Post via Text</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">Text a photo to your salon's dedicated number — no app needed.</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="/kb/stylist-captions.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">✏️</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Editing &amp; Approving Your Caption</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to approve, edit, or ask the AI to rewrite your caption draft.</p>
+            </a>
+          </div>
+          <div class="kb-card-wrap">
+            <a href="/kb/stylist-captions.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">✏️</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Editing Captions &amp; Before/After Posts</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to approve, edit, or ask the AI to rewrite your caption — and how to submit before/after transformation posts.</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="/kb/what-happens.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🔄</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">What Happens After You Send a Photo</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">Follow your post from the moment you hit send through to publishing.</p>
+            </a>
+          </div>
+          <div class="kb-card-wrap">
+            <a href="/kb/what-happens.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🔄</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">What Happens After You Send a Photo</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">Follow your post from the moment you hit send through to publishing.</p>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </div>
 
       <!-- Category 3: For Owners & Managers -->
-      <div class="mb-12">
+      <div class="mb-12" id="cat-managers">
         <div class="mb-6">
           <p class="text-xs font-bold uppercase tracking-widest text-mpAccent mb-1">Category 3</p>
           <h2 class="text-xl font-bold text-mpCharcoal">For Owners &amp; Managers</h2>
         </div>
         <div class="grid gap-4 sm:grid-cols-2">
-          <a href="/kb/manager-approvals.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">✅</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Approving &amp; Denying Posts</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to review, edit, approve, deny, or immediately publish pending posts.</p>
+          <div class="kb-card-wrap">
+            <a href="/kb/manager-approvals.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">✅</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Approving &amp; Denying Posts</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">How to review, edit, approve, deny, or immediately publish pending posts.</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="/kb/promotions.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🎁</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Creating a Promotion Post</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">Generate a branded AI promotion image and schedule it in seconds.</p>
+            </a>
+          </div>
+          <div class="kb-card-wrap">
+            <a href="/kb/promotions.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🎁</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Creating a Promotion Post</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">Generate a branded AI promotion image and schedule it in seconds.</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="/kb/analytics.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📊</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Understanding Your Analytics</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">What the metrics mean and how to use them to improve your content.</p>
+            </a>
+          </div>
+          <div class="kb-card-wrap">
+            <a href="/kb/dashboard-guide.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🖥️</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Understanding Your Dashboard &amp; Menus</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">A guide to every section in your manager dashboard and what each menu does.</p>
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="/kb/locations.html" class="block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
-            <div class="flex items-start gap-3">
-              <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📍</div>
-              <div>
-                <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Managing Multiple Locations</h3>
-                <p class="text-xs text-mpMuted mt-1 leading-relaxed">How the Growth and Pro plans support multiple salon locations.</p>
+            </a>
+          </div>
+          <div class="kb-card-wrap">
+            <a href="/kb/analytics.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📊</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Understanding Your Analytics</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">What the metrics mean and how to use them to improve your content.</p>
+                </div>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
+          <div class="kb-card-wrap">
+            <a href="/kb/locations.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">📍</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Managing Multiple Locations</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">How the Growth and Pro plans support multiple salon locations.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4: Advanced & Pro Features -->
+      <div class="mb-12" id="cat-advanced">
+        <div class="mb-6">
+          <p class="text-xs font-bold uppercase tracking-widest text-mpAccent mb-1">Category 4</p>
+          <h2 class="text-xl font-bold text-mpCharcoal">Advanced &amp; Pro Features</h2>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div class="kb-card-wrap">
+            <a href="/kb/vendors.html" class="kb-article-card block rounded-2xl border border-mpBorder bg-white p-5 hover:border-mpAccent hover:shadow-sm transition-all group">
+              <div class="flex items-start gap-3">
+                <div class="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 text-base" style="background:#F2DDD9;">🏷️</div>
+                <div>
+                  <h3 class="font-semibold text-mpCharcoal text-sm group-hover:text-mpAccent transition-colors">Vendor Brand Integrations</h3>
+                  <p class="text-xs text-mpMuted mt-1 leading-relaxed">How Pro salons can receive and post brand campaigns from Aveda, Redken, Wella, and more — adapted to your salon's voice.</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
 
@@ -286,6 +350,16 @@
     const menu  = document.getElementById("mobileMenu");
     if (btn)   btn.onclick   = () => menu.classList.remove("hidden");
     if (close) close.onclick = () => menu.classList.add("hidden");
+  </script>
+
+  <script>
+    document.getElementById('kb-search').addEventListener('input', function() {
+      const q = this.value.toLowerCase();
+      document.querySelectorAll('.kb-article-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.closest('.kb-card-wrap').style.display = text.includes(q) ? '' : 'none';
+      });
+    });
   </script>
 
   <script>
