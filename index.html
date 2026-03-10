@@ -1041,33 +1041,20 @@
           </p>
         </div>
 
-        <!-- Scrolling ticker — two rows, opposite directions -->
+        <!-- Scrolling ticker — single row -->
         <div class="mp-animate" style="mask-image:linear-gradient(to right,transparent,black 80px,black calc(100% - 80px),transparent);-webkit-mask-image:linear-gradient(to right,transparent,black 80px,black calc(100% - 80px),transparent);">
-
-          <!-- Row 1 — scrolls left -->
-          <div class="flex gap-4 mb-4 ticker-row" id="ticker-1">
+          <div class="flex gap-4 ticker-row" id="ticker-1">
             <!-- cards injected by JS -->
           </div>
-
-          <!-- Row 2 — scrolls right -->
-          <div class="flex gap-4 ticker-row ticker-reverse" id="ticker-2">
-            <!-- cards injected by JS -->
-          </div>
-
         </div>
-
-        <!-- Dot nav -->
-        <div class="flex justify-center gap-2 mt-10" id="t-dots"></div>
 
       </div>
     </section>
 
     <style>
-      @keyframes ticker-left  { from { transform: translateX(0) }    to { transform: translateX(-50%) } }
-      @keyframes ticker-right { from { transform: translateX(-50%) } to { transform: translateX(0) }    }
-      .ticker-row          { animation: ticker-left  48s linear infinite; width: max-content; }
-      .ticker-reverse      { animation: ticker-right 56s linear infinite; }
-      .ticker-row:hover    { animation-play-state: paused; }
+      @keyframes ticker-left { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+      .ticker-row       { animation: ticker-left 52s linear infinite; width: max-content; }
+      .ticker-row:hover { animation-play-state: paused; }
       .t-card {
         flex-shrink: 0; width: 360px; background: #fff;
         border: 1px solid #EDE7E4; border-radius: 14px;
@@ -1155,17 +1142,12 @@
         return div;
       }
 
-      // Split into two rows — odd indices row1, even indices row2
-      const row1 = testimonials.filter((_,i) => i % 2 === 0);
-      const row2 = testimonials.filter((_,i) => i % 2 === 1);
-
       function fillRow(el, items) {
         // Duplicate for seamless loop
         [...items, ...items].forEach(t => el.appendChild(makeCard(t)));
       }
 
-      fillRow(document.getElementById('ticker-1'), row1);
-      fillRow(document.getElementById('ticker-2'), row2);
+      fillRow(document.getElementById('ticker-1'), testimonials);
     })();
     </script>
 
