@@ -24,9 +24,9 @@
           fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
           colors: {
             mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
-            mpAccent: "#D4897A", mpAccentLight: "#F2DDD9",
-            mpBg: "#FDF8F6", mpCard: "#FFFFFF",
-            mpBorder: "#EDE7E4", mpMuted: "#7A7C85",
+            mpAccent: "#3B72B9", mpAccentLight: "#EBF3FF",
+            mpBg: "#FFFFFF", mpCard: "#FFFFFF",
+            mpBorder: "#E2E8F0", mpMuted: "#6B7280",
           }
         }
       }
@@ -48,25 +48,25 @@
 
 <body class="bg-mpBg text-mpCharcoal antialiased">
 
-  <header class="border-b border-mpBorder bg-white/90 backdrop-blur sticky top-0 z-30">
+  <header style="background:#3B72B9;" class="border-b border-blue-700 sticky top-0 z-30">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-3">
         <a href="/" class="flex items-center" aria-label="MostlyPostly home">
-          <img src="logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" />
+          <img src="logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" style="filter: brightness(0) invert(1);" />
         </a>
-        <nav class="hidden items-center gap-7 text-sm font-medium text-mpMuted md:flex">
-          <a href="/#post-types"       class="hover:text-mpCharcoal transition-colors">Features</a>
-          <a href="/#connect"          class="hover:text-mpCharcoal transition-colors">Connect</a>
-          <a href="/#stylist-workflow" class="hover:text-mpCharcoal transition-colors">How It Works</a>
-          <a href="/#brand-dna"        class="hover:text-mpCharcoal transition-colors">Brand Tools</a>
-          <a href="/#pricing"          class="hover:text-mpCharcoal transition-colors">Pricing</a>
-          <a href="/about"             class="text-mpCharcoal font-semibold border-b-2 border-mpAccent pb-0.5">About</a>
+        <nav class="hidden items-center gap-7 text-sm font-medium md:flex">
+          <a href="/#post-types"       class="text-white/80 hover:text-white transition-colors">Features</a>
+          <a href="/#connect"          class="text-white/80 hover:text-white transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="text-white/80 hover:text-white transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="text-white/80 hover:text-white transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="text-white/80 hover:text-white transition-colors">Pricing</a>
+          <a href="/about"             class="text-white font-semibold border-b-2 border-white pb-0.5">About</a>
           <div class="flex items-center gap-3 ml-1">
-            <a id="mp-login" href="#" class="text-mpMuted hover:text-mpCharcoal transition-colors">Login</a>
-            <a id="mp-signup" href="#" class="rounded-full bg-mpCharcoal px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+            <a id="mp-login" href="#" class="text-white/80 hover:text-white transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-full border border-white text-white px-5 py-2 text-sm font-semibold shadow-sm hover:bg-white hover:text-[#3B72B9] transition-colors">Sign Up</a>
           </div>
         </nav>
-        <button class="md:hidden text-mpCharcoal text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+        <button class="md:hidden text-white text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
       </div>
     </div>
   </header>
@@ -83,10 +83,10 @@
       <a href="/#stylist-workflow" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">How It Works</a>
       <a href="/#brand-dna"        class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Brand Tools</a>
       <a href="/#pricing"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Pricing</a>
-      <a href="/about"             class="block py-2 hover:text-mpAccent transition-colors text-mpAccent font-semibold">About</a>
+      <a href="/about"             class="block py-2 hover:text-mpAccent transition-colors text-[#3B72B9] font-semibold">About</a>
     </nav>
     <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
-      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-mpBg transition-colors">Login</a>
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-[#F4F7FA] transition-colors">Login</a>
       <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
     </div>
   </div>
@@ -94,7 +94,7 @@
   <main>
 
     <!-- Hero -->
-    <section class="border-b border-mpBorder bg-gradient-to-br from-mpBg via-[#FAF0EC] to-[#F5EAE6]">
+    <section class="border-b border-mpBorder bg-gradient-to-br from-[#EBF3FF] via-[#F4F7FA] to-[#EBF3FF]">
       <div class="mx-auto max-w-4xl px-4 py-16 sm:py-20 text-center">
         <p class="text-xs font-bold uppercase tracking-widest text-mpAccent">About MostlyPostly</p>
         <h1 class="mt-4 text-4xl font-extrabold tracking-tight text-mpCharcoal sm:text-5xl leading-tight">
@@ -225,7 +225,7 @@
             <a href="/#early-access" class="inline-flex items-center justify-center rounded-full bg-mpCharcoal px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">
               Request Early Access &rarr;
             </a>
-            <a href="mailto:support@mostlypostly.com" class="inline-flex items-center justify-center rounded-full border border-mpBorder bg-mpBg px-6 py-3 text-sm font-semibold text-mpCharcoal hover:border-mpAccent hover:bg-white transition-colors">
+            <a href="mailto:support@mostlypostly.com" class="inline-flex items-center justify-center rounded-full border border-mpBorder bg-white px-6 py-3 text-sm font-semibold text-mpCharcoal hover:border-mpAccent hover:bg-white transition-colors">
               Email the founder
             </a>
           </div>
