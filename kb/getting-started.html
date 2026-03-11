@@ -19,9 +19,9 @@
           fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
           colors: {
             mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
-            mpAccent: "#D4897A", mpAccentLight: "#F2DDD9",
-            mpBg: "#FDF8F6", mpCard: "#FFFFFF",
-            mpBorder: "#EDE7E4", mpMuted: "#7A7C85",
+            mpAccent: "#3B72B9", mpAccentLight: "#EBF3FF",
+            mpBg: "#FFFFFF", mpCard: "#FFFFFF",
+            mpBorder: "#E2E8F0", mpMuted: "#6B7280",
           }
         }
       }
@@ -32,25 +32,25 @@
 
 <body class="bg-mpBg text-mpCharcoal antialiased">
 
-  <header class="border-b border-mpBorder bg-white/90 backdrop-blur sticky top-0 z-30">
+  <header class="border-b border-mpBorder sticky top-0 z-30" style="background:#3B72B9;">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-3">
         <a href="/" class="flex items-center" aria-label="MostlyPostly home">
           <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" />
         </a>
-        <nav class="hidden items-center gap-7 text-sm font-medium text-mpMuted md:flex">
-          <a href="/#post-types"       class="hover:text-mpCharcoal transition-colors">Features</a>
-          <a href="/#connect"          class="hover:text-mpCharcoal transition-colors">Connect</a>
-          <a href="/#stylist-workflow" class="hover:text-mpCharcoal transition-colors">How It Works</a>
-          <a href="/#brand-dna"        class="hover:text-mpCharcoal transition-colors">Brand Tools</a>
-          <a href="/#pricing"          class="hover:text-mpCharcoal transition-colors">Pricing</a>
-          <a href="/about"             class="hover:text-mpCharcoal transition-colors">About</a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-white/80 md:flex">
+          <a href="/#post-types"       class="hover:text-white transition-colors">Features</a>
+          <a href="/#connect"          class="hover:text-white transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="hover:text-white transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="hover:text-white transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="hover:text-white transition-colors">Pricing</a>
+          <a href="/about"             class="hover:text-white transition-colors">About</a>
           <div class="flex items-center gap-3 ml-1">
-            <a id="mp-login" href="#" class="text-mpMuted hover:text-mpCharcoal transition-colors">Login</a>
-            <a id="mp-signup" href="#" class="rounded-full bg-mpCharcoal px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+            <a id="mp-login" href="#" class="text-white/80 hover:text-white transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-lg border border-white px-4 py-1.5 text-xs font-semibold text-white hover:bg-white hover:text-[#3B72B9] transition-colors">Sign Up</a>
           </div>
         </nav>
-        <button class="md:hidden text-mpCharcoal text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+        <button class="md:hidden text-white text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
       </div>
     </div>
   </header>
@@ -75,7 +75,7 @@
     </div>
   </div>
 
-  <main style="background:#FDF8F6;">
+  <main style="background:#FFFFFF;">
 
     <!-- Breadcrumb -->
     <div class="mx-auto max-w-3xl px-4 pt-8">
@@ -99,21 +99,21 @@
       <p class="text-sm text-mpMuted leading-relaxed mb-4">You'll be asked for:</p>
       <ol class="space-y-4 mb-6">
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">1</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">1</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Business Name</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Your salon's official name. This becomes part of your unique salon URL (called a "slug") used throughout the system.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">2</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">2</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Your Name, Email &amp; Phone</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Used for manager login and for receiving approval notifications via SMS when stylists submit posts.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">3</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">3</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Password</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">You can also log in via a one-time link sent to your phone — no password required for day-to-day use.</p>
@@ -121,7 +121,7 @@
         </li>
       </ol>
 
-      <div class="rounded-xl p-4 mb-6" style="background:#F2DDD9;border-left:3px solid #D4897A;">
+      <div class="rounded-xl p-4 mb-6" style="background:#EBF3FF;border-left:3px solid #3B72B9;">
         <p class="text-sm font-semibold text-mpCharcoal mb-1">Pro Tip</p>
         <p class="text-sm text-mpCharcoal leading-relaxed">Use the phone number you actually check for text messages. Approval notifications and login links are sent via SMS to this number.</p>
       </div>
@@ -159,49 +159,49 @@
       <p class="text-sm text-mpMuted leading-relaxed mb-4">After activating your plan, you'll be guided through a 7-step onboarding flow. You can return to any step later from the Admin panel.</p>
       <ol class="space-y-4 mb-6">
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">1</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">1</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Salon Basics</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Enter your salon name, website URL, timezone, and address. The website URL is used to auto-extract your brand colors in the next step.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">2</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">2</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Brand Colors</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">MostlyPostly reads your website and automatically extracts your primary, secondary, accent, and CTA colors. These are used in AI-generated promotion and availability images. You can edit the colors manually if needed.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">3</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">3</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Posting Rules</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Set your posting window (e.g., 9:00 AM–8:00 PM), minimum and maximum spacing between posts, and your salon's tone of voice (e.g., "warm and nurturing" or "fun and upbeat"). Also set up to 5 default hashtags that appear on every post.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">4</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">4</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Manager Info</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Confirm your manager profile details and set your approval preferences — whether posts require your sign-off or can auto-publish once a stylist approves.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">5</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">5</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Adding Stylists</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Add your stylists by name and mobile phone number. Each stylist gets a unique number to text photos to. You can add more stylists at any time from the Admin panel.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">6</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">6</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Review</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">A summary of everything you've set up. Review and go back to edit anything before finalizing.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">7</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">7</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Complete</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Your account is ready. You'll be taken to your manager dashboard.</p>
@@ -219,7 +219,7 @@
         <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span><strong class="text-mpCharcoal">Text your stylists their salon number</strong> — let each stylist know the phone number they should text photos to. That's all they need to get started.</span></li>
       </ul>
 
-      <div class="rounded-xl p-4 mb-6" style="background:#F2DDD9;border-left:3px solid #D4897A;">
+      <div class="rounded-xl p-4 mb-6" style="background:#EBF3FF;border-left:3px solid #3B72B9;">
         <p class="text-sm font-semibold text-mpCharcoal mb-1">Pro Tip</p>
         <p class="text-sm text-mpCharcoal leading-relaxed">You can re-run the brand color extraction at any time by visiting <strong>/onboarding/brand?reset=1</strong> — useful if your website has been redesigned since you first signed up.</p>
       </div>

@@ -19,9 +19,9 @@
           fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
           colors: {
             mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
-            mpAccent: "#D4897A", mpAccentLight: "#F2DDD9",
-            mpBg: "#FDF8F6", mpCard: "#FFFFFF",
-            mpBorder: "#EDE7E4", mpMuted: "#7A7C85",
+            mpAccent: "#3B72B9", mpAccentLight: "#EBF3FF",
+            mpBg: "#FFFFFF", mpCard: "#FFFFFF",
+            mpBorder: "#E2E8F0", mpMuted: "#6B7280",
           }
         }
       }
@@ -32,25 +32,25 @@
 
 <body class="bg-mpBg text-mpCharcoal antialiased">
 
-  <header class="border-b border-mpBorder bg-white/90 backdrop-blur sticky top-0 z-30">
+  <header class="border-b border-mpBorder sticky top-0 z-30" style="background:#3B72B9;">
     <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between py-3">
         <a href="/" class="flex items-center" aria-label="MostlyPostly home">
           <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" />
         </a>
-        <nav class="hidden items-center gap-7 text-sm font-medium text-mpMuted md:flex">
-          <a href="/#post-types"       class="hover:text-mpCharcoal transition-colors">Features</a>
-          <a href="/#connect"          class="hover:text-mpCharcoal transition-colors">Connect</a>
-          <a href="/#stylist-workflow" class="hover:text-mpCharcoal transition-colors">How It Works</a>
-          <a href="/#brand-dna"        class="hover:text-mpCharcoal transition-colors">Brand Tools</a>
-          <a href="/#pricing"          class="hover:text-mpCharcoal transition-colors">Pricing</a>
-          <a href="/about"             class="hover:text-mpCharcoal transition-colors">About</a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-white/80 md:flex">
+          <a href="/#post-types"       class="hover:text-white transition-colors">Features</a>
+          <a href="/#connect"          class="hover:text-white transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="hover:text-white transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="hover:text-white transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="hover:text-white transition-colors">Pricing</a>
+          <a href="/about"             class="hover:text-white transition-colors">About</a>
           <div class="flex items-center gap-3 ml-1">
-            <a id="mp-login" href="#" class="text-mpMuted hover:text-mpCharcoal transition-colors">Login</a>
-            <a id="mp-signup" href="#" class="rounded-full bg-mpCharcoal px-5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+            <a id="mp-login" href="#" class="text-white/80 hover:text-white transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-lg border border-white px-4 py-1.5 text-xs font-semibold text-white hover:bg-white hover:text-[#3B72B9] transition-colors">Sign Up</a>
           </div>
         </nav>
-        <button class="md:hidden text-mpCharcoal text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+        <button class="md:hidden text-white text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
       </div>
     </div>
   </header>
@@ -75,7 +75,7 @@
     </div>
   </div>
 
-  <main style="background:#FDF8F6;">
+  <main style="background:#FFFFFF;">
 
     <!-- Breadcrumb -->
     <div class="mx-auto max-w-3xl px-4 pt-8">
@@ -109,35 +109,35 @@
       <p class="text-sm text-mpMuted leading-relaxed mb-4">From your manager dashboard, click <strong class="text-mpCharcoal">Create Promotion</strong> in the sidebar or navigation. You'll see a short form with the following fields:</p>
       <ol class="space-y-4 mb-6">
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">1</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">1</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Product or Service <span class="font-normal text-mpMuted">(required)</span></p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">What are you promoting? Examples: "Balayage Special," "Keratin Treatment," "Color + Cut Combo."</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">2</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">2</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Discount <span class="font-normal text-mpMuted">(optional)</span></p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">The offer amount. Examples: "20% off," "$15 off," "Free gloss add-on." Leave blank if you don't want a specific discount shown.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">3</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">3</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Special Text <span class="font-normal text-mpMuted">(optional)</span></p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">A short supporting line for the image. Examples: "This week only!," "New clients only," "Limited spots available."</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">4</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">4</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Offer Expiration Date <span class="font-normal text-mpMuted">(required)</span></p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">The date your promotion ends. MostlyPostly will never publish this post after the expiration date — even if it's still in the queue.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">5</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">5</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Design Style &amp; Mood <span class="font-normal text-mpMuted">(optional)</span></p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">A free-text description of the colors, mood, or aesthetic you want for the background image. Only used when no stock photo is available. Examples: "warm and golden, soft bokeh," "clean and minimal, white tones," "moody dark salon vibes."</p>
@@ -151,21 +151,21 @@
       <p class="text-sm text-mpMuted leading-relaxed mb-4">MostlyPostly selects the background for your promotion image in this priority order:</p>
       <ol class="space-y-4 mb-6">
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">1</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">1</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Your salon's stock photos</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">If you've uploaded salon-level photos (not tied to a specific stylist) in Admin &rarr; Stock Photos, one of those is used as the background. This produces the most on-brand result.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">2</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">2</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">AI-generated background via DALL-E</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">If no stock photos exist, MostlyPostly uses the Design Style &amp; Mood field (or a default glamour salon prompt) to generate a background image using DALL-E 3.</p>
           </div>
         </li>
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#D4897A;">3</span>
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">3</span>
           <div>
             <p class="text-sm font-semibold text-mpCharcoal">Solid color fallback</p>
             <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">In rare cases where image generation fails, a clean dark background is used so the post is still presentable.</p>
@@ -185,7 +185,7 @@
         <li class="flex items-start gap-2 text-sm text-mpMuted"><span class="text-mpAccent font-bold mt-0.5">→</span><span>Leave visual "breathing room" — the overlay will occupy the center and lower portion of the image</span></li>
       </ul>
 
-      <div class="rounded-xl p-4 mb-6" style="background:#F2DDD9;border-left:3px solid #D4897A;">
+      <div class="rounded-xl p-4 mb-6" style="background:#EBF3FF;border-left:3px solid #3B72B9;">
         <p class="text-sm font-semibold text-mpCharcoal mb-1">Pro Tip</p>
         <p class="text-sm text-mpCharcoal leading-relaxed">Upload 3–5 diverse stock photos so MostlyPostly can vary the background across multiple promotion posts. This prevents the same background from appearing in every promo.</p>
       </div>
@@ -204,7 +204,7 @@
       <p class="text-sm text-mpMuted leading-relaxed mb-4">The expiration date you enter is strictly enforced. If a promotion post is still waiting in the queue after its expiration date passes, the scheduler will skip it automatically. It will never go live after the offer expires.</p>
       <p class="text-sm text-mpMuted leading-relaxed mb-4">This means you can create promotions in advance and set realistic expiration dates without worrying about a stale offer appearing after the fact.</p>
 
-      <div class="rounded-xl p-4 mb-6" style="background:#F2DDD9;border-left:3px solid #D4897A;">
+      <div class="rounded-xl p-4 mb-6" style="background:#EBF3FF;border-left:3px solid #3B72B9;">
         <p class="text-sm font-semibold text-mpCharcoal mb-1">Pro Tip</p>
         <p class="text-sm text-mpCharcoal leading-relaxed">Set your expiration date to the last day you want the promotion to be active — not the day you create it. If a promotion runs through the end of the month, set the expiration to the last day of the month.</p>
       </div>
