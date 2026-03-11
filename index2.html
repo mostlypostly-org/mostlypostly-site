@@ -342,25 +342,24 @@
             </div>
           </div>
 
-          <!-- Panel 3: Published — social post mockup photo -->
-          <div class="mp-animate mp-delay-3 mp-panel relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#12202E] to-[#0D1A27] min-h-[420px] flex flex-col justify-between p-8">
-            <!-- Phone mockup showing the live post -->
-            <div class="flex-1 flex items-center justify-center py-2">
-              <div class="relative">
-                <img
-                  src="/images/social-post-on-phone.png"
-                  alt="Finished post live on Instagram"
-                  class="w-52 h-auto drop-shadow-2xl"
-                />
-                <!-- Live badge over the phone -->
-                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full bg-green-500 px-3 py-1 shadow-lg shadow-green-500/30">
-                  <div class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
-                  <span class="text-[10px] font-bold text-white">LIVE</span>
-                </div>
+          <!-- Panel 3: Published — real Instagram post photo -->
+          <div class="mp-animate mp-delay-3 mp-panel relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#12202E] to-[#0D1A27] min-h-[420px] flex flex-col justify-between">
+            <!-- Instagram post image fills the top portion -->
+            <div class="relative flex-1 overflow-hidden">
+              <img
+                src="/images/instagram-post-1.png"
+                alt="Finished MostlyPostly post live on Instagram"
+                class="w-full h-full object-cover object-top"
+                style="max-height:300px;"
+              />
+              <!-- Live badge pinned to top-right of the photo -->
+              <div class="absolute top-3 right-3 flex items-center gap-1.5 rounded-full bg-green-500 px-3 py-1 shadow-lg shadow-green-500/40">
+                <div class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></div>
+                <span class="text-[10px] font-bold text-white">LIVE</span>
               </div>
             </div>
             <!-- Copy -->
-            <div>
+            <div class="p-8 pt-5">
               <div class="inline-flex items-center gap-1.5 rounded-full bg-green-900/40 border border-green-700/50 px-3 py-1 mb-3">
                 <span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
                 <span class="text-[11px] font-semibold text-green-400">Published automatically</span>
@@ -817,25 +816,37 @@
 
           </div>
 
-          <!-- Right: manager photo — full portrait -->
+          <!-- Right: hairstyle photo grid -->
           <div class="flex flex-col gap-4">
-            <div class="mp-animate mp-delay-2 rounded-2xl overflow-hidden relative shadow-sm">
-              <img
-                src="/images/manager-with-tablet.png"
-                alt="Salon owner reviewing posts on tablet"
-                class="w-full h-auto block"
-              />
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent p-6 pt-16">
-                <p class="text-xs font-bold uppercase tracking-widest text-mpAccent mb-1.5">For owners</p>
-                <p class="text-base font-semibold text-white leading-snug">"Set your brand once. Post consistently — without lifting a finger."</p>
+
+            <!-- 2-photo grid: real hairstyle results -->
+            <div class="mp-animate mp-delay-2 grid grid-cols-2 gap-3">
+              <!-- Long copper color result -->
+              <div class="rounded-2xl overflow-hidden aspect-[3/4] shadow-lg">
+                <img
+                  src="/images/instagram-post-1.png"
+                  alt="Auburn copper balayage result"
+                  class="w-full h-full object-cover object-top"
+                />
+              </div>
+              <!-- Stylist photographing long blonde waves — swap for barber cut when available -->
+              <div class="rounded-2xl overflow-hidden aspect-[3/4] shadow-lg">
+                <img
+                  src="/images/stylist-taking-photo.png"
+                  alt="Stylist photographing blonde balayage result"
+                  class="w-full h-full object-cover object-top"
+                />
               </div>
             </div>
-            <div class="rounded-2xl border border-white/15 bg-white/8 p-5">
-              <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-3">Posting schedule control</p>
+
+            <!-- Caption card -->
+            <div class="rounded-2xl border border-white/15 p-5" style="background:rgba(255,255,255,0.06);">
+              <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-2">Real content. Consistent brand.</p>
               <p class="text-sm text-slate-400 leading-relaxed">
-                Set your preferred posting window and spacing per salon. MostlyPostly queues approved posts within your hours and spreads them naturally — never flooding your feed, never going silent.
+                Every photo your stylists send becomes a polished, on-brand post. MostlyPostly writes the caption, applies your hashtags, and schedules — automatically.
               </p>
             </div>
+
           </div>
         </div>
       </div>
