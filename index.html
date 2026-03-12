@@ -1245,17 +1245,18 @@
 
         <!-- Billing toggle -->
         <div class="mt-8 flex items-center justify-center gap-3">
-          <span id="lbl-monthly" class="text-sm font-semibold text-mpCharcoal">Monthly</span>
+          <span id="lbl-monthly" class="text-sm font-medium text-mpMuted">Monthly</span>
           <button
             id="billing-toggle"
             role="switch"
-            aria-checked="false"
-            class="relative inline-flex h-6 w-11 items-center rounded-full border-2 border-mpBorder bg-mpBg transition-colors focus:outline-none"
+            aria-checked="true"
+            class="relative inline-flex h-6 w-11 items-center rounded-full border-2 transition-colors focus:outline-none"
+            style="background-color:#3B72B9;border-color:#3B72B9;"
             onclick="toggleBilling()"
           >
-            <span id="toggle-knob" class="inline-block h-4 w-4 translate-x-0.5 rounded-full bg-mpMuted transition-transform"></span>
+            <span id="toggle-knob" class="inline-block h-4 w-4 rounded-full bg-white transition-transform" style="transform:translateX(20px);"></span>
           </button>
-          <span id="lbl-annual" class="text-sm font-medium text-mpMuted">Annual <span class="ml-1 rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-bold text-mpAccent uppercase tracking-wide">Save 10%</span></span>
+          <span id="lbl-annual" class="text-sm font-semibold text-mpCharcoal">Annual <span class="ml-1 rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-bold text-mpAccent uppercase tracking-wide">Save 10%</span></span>
         </div>
 
         <!-- Pricing cards -->
@@ -1276,10 +1277,10 @@
             <!-- Price -->
             <div class="mt-5">
               <div class="flex items-baseline gap-2">
-                <span id="price-starter" class="text-4xl font-extrabold text-mpCharcoal">$99</span>
+                <span id="price-starter" class="text-4xl font-extrabold text-mpCharcoal">$89</span>
                 <span class="text-sm text-mpMuted">/mo</span>
               </div>
-              <p id="annual-note-starter" class="mt-1 text-xs text-mpMuted hidden">Billed as <strong class="text-mpCharcoal">$529/yr</strong> — save $59 vs monthly</p>
+              <p id="annual-note-starter" class="mt-1 text-xs text-mpMuted">Billed as <strong class="text-mpCharcoal">$1,068/yr</strong> — save $120 vs monthly</p>
             </div>
 
             <ul class="mt-6 space-y-2.5 text-sm text-mpCharcoal flex-1">
@@ -1313,10 +1314,10 @@
 
             <div class="mt-5">
               <div class="flex items-baseline gap-2">
-                <span id="price-growth" class="text-4xl font-extrabold text-white">$149</span>
+                <span id="price-growth" class="text-4xl font-extrabold text-white">$134</span>
                 <span class="text-sm text-slate-400">/mo</span>
               </div>
-              <p id="annual-note-growth" class="mt-1 text-xs text-slate-400 hidden">Billed as <strong class="text-white">$1,609/yr</strong> — save $179 vs monthly</p>
+              <p id="annual-note-growth" class="mt-1 text-xs text-slate-400">Billed as <strong class="text-white">$1,609/yr</strong> — save $179 vs monthly</p>
               <p class="mt-1.5 text-[11px] text-mpAccent font-semibold invisible">&#8203;</p>
             </div>
 
@@ -1349,10 +1350,10 @@
 
             <div class="mt-5">
               <div class="flex items-baseline gap-2">
-                <span id="price-pro" class="text-4xl font-extrabold text-mpCharcoal">$249</span>
+                <span id="price-pro" class="text-4xl font-extrabold text-mpCharcoal">$224</span>
                 <span class="text-sm text-mpMuted">/mo</span>
               </div>
-              <p id="annual-note-pro" class="mt-1 text-xs text-mpMuted hidden">Billed as <strong class="text-mpCharcoal">$2,689/yr</strong> — save $299 vs monthly</p>
+              <p id="annual-note-pro" class="mt-1 text-xs text-mpMuted">Billed as <strong class="text-mpCharcoal">$2,689/yr</strong> — save $299 vs monthly</p>
               <p class="mt-1.5 text-[11px] text-mpMuted invisible">&#8203;</p>
             </div>
 
@@ -1391,7 +1392,7 @@
     </section>
 
     <script>
-      let isAnnual = false;
+      let isAnnual = true;
       function toggleBilling() {
         isAnnual = !isAnnual;
         const knob = document.getElementById('toggle-knob');
@@ -1410,12 +1411,12 @@
         lblAnnual.classList.toggle('font-semibold', isAnnual);
         lblAnnual.classList.toggle('text-mpMuted', !isAnnual);
 
-        document.getElementById('price-starter').textContent = isAnnual ? '$44' : '$49';
+        document.getElementById('price-starter').textContent = isAnnual ? '$89' : '$99';
         document.getElementById('price-growth').textContent  = isAnnual ? '$134' : '$149';
         document.getElementById('price-pro').textContent     = isAnnual ? '$224' : '$249';
 
         ['starter','growth','pro'].forEach(t => {
-          document.getElementById('annual-note-' + t).classList.toggle('hidden', !isAnnual);
+          document.getElementById('annual-note-' + t).style.display = isAnnual ? '' : 'none';
         });
       }
     </script>
