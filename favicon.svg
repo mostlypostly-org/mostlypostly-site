@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Speech bubble body -->
+  <path d="M3 5 Q3 3 5 3 H27 Q29 3 29 5 V20 Q29 22 27 22 H17.5 L13 28 L13 22 H5 Q3 22 3 20 Z" fill="#3B72B9"/>
+  <!-- Camera body -->
+  <rect x="8.5" y="9.5" width="15" height="9" rx="1.8" fill="white"/>
+  <!-- Viewfinder bump -->
+  <path d="M13 9.5 L14.2 7.5 H17.8 L19 9.5 Z" fill="white"/>
+  <!-- Lens ring -->
+  <circle cx="16" cy="14" r="3.2" fill="#3B72B9"/>
+  <!-- Lens highlight -->
+  <circle cx="16" cy="14" r="1.8" fill="white"/>
+</svg>
