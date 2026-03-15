@@ -146,7 +146,7 @@
   <!-- MOBILE MENU -->
   <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-[#1F2933] md:hidden">
     <div class="flex items-center justify-between px-6 py-4 border-b border-[#E2E8F0]" style="background:#3B72B9;">
-      <img src="logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" style="filter: brightness(0) invert(1);" />
+      <img src="logo/MostlyPostly%20Logo%20-%20White%20Transparent.svg" alt="MostlyPostly" class="h-9 w-auto" />
       <button id="mobileMenuClose" class="text-white text-3xl leading-none" aria-label="Close navigation">×</button>
     </div>
     <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
@@ -1290,16 +1290,18 @@
         <!-- Billing toggle -->
         <div class="mt-8 flex items-center justify-center gap-3">
           <span id="lbl-monthly" class="text-sm font-medium text-mpMuted">Monthly</span>
-          <button
-            id="billing-toggle"
-            role="switch"
-            aria-checked="true"
-            class="relative inline-flex h-6 w-11 items-center rounded-full border-2 transition-colors focus:outline-none"
-            style="background-color:#3B72B9;border-color:#3B72B9;"
-            onclick="toggleBilling()"
-          >
-            <span id="toggle-knob" class="inline-block h-4 w-4 rounded-full bg-white transition-transform" style="transform:translateX(20px);"></span>
-          </button>
+          <span onclick="toggleBilling()" style="display:inline-flex;padding:10px;margin:-10px;cursor:pointer;" aria-label="Toggle billing period">
+            <button
+              id="billing-toggle"
+              role="switch"
+              aria-checked="true"
+              class="relative inline-flex h-6 w-11 items-center rounded-full border-2 transition-colors focus:outline-none"
+              style="background-color:#3B72B9;border-color:#3B72B9;pointer-events:none;"
+              tabindex="-1"
+            >
+              <span id="toggle-knob" class="inline-block h-4 w-4 rounded-full bg-white transition-transform" style="transform:translateX(20px);"></span>
+            </button>
+          </span>
           <span id="lbl-annual" class="text-sm font-semibold text-mpCharcoal">Annual <span class="ml-1 rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-bold text-mpAccent uppercase tracking-wide">Save 10%</span></span>
         </div>
 
