@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Founding Member Offer — MostlyPostly</title>
+  <meta name="description" content="Join as a MostlyPostly founding member. Get 30 days free + $50 off any plan, locked in for life. Limited spots available." />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            mpCharcoal:     "#1F2933",
+            mpCharcoalDark: "#151D25",
+            mpAccent:       "#3B72B9",
+            mpAccentLight:  "#EBF3FF",
+            mpBg:           "#FFFFFF",
+            mpCard:         "#FFFFFF",
+            mpBorder:       "#E2E8F0",
+            mpMuted:        "#6B7280",
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }
+    .mp-animate {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .mp-animate.visible { opacity: 1; transform: none; }
+    .mp-delay-1 { transition-delay: 0.10s; }
+    .mp-delay-2 { transition-delay: 0.20s; }
+    .mp-delay-3 { transition-delay: 0.32s; }
+    .mp-delay-4 { transition-delay: 0.44s; }
+    .promo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1F2933;
+      color: #fff;
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+    .promo-code {
+      display: inline-block;
+      font-family: monospace;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      background: #EBF3FF;
+      color: #2E5E9E;
+      border: 2px dashed #3B72B9;
+      border-radius: 8px;
+      padding: 10px 24px;
+      cursor: pointer;
+      user-select: all;
+      transition: background 0.15s;
+    }
+    .promo-code:hover { background: #DBEEFF; }
+  </style>
+</head>
+
+<body class="bg-white text-mpCharcoal antialiased">
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="sticky top-0 z-30" style="background:#3B72B9;">
+    <div class="mx-auto max-w-6xl pl-0 pr-4 sm:pr-6 lg:pr-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img
+            src="logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png"
+            alt="MostlyPostly"
+            class="w-56 h-auto"
+            style="filter: brightness(0) invert(1);"
+          />
+        </a>
+        <nav class="hidden items-center gap-5 text-xs font-medium text-white/80 md:flex" aria-label="Primary navigation">
+          <a href="/#post-types"       class="hover:text-white transition-colors">Features</a>
+          <a href="/#pricing"          class="hover:text-white transition-colors">Pricing</a>
+          <a href="/kb.html"           class="hover:text-white transition-colors">Help</a>
+          <div class="flex items-center gap-2 ml-1">
+            <a id="mp-login" href="#" class="text-white/80 hover:text-white transition-colors">Login</a>
+            <a id="mp-signup-nav" href="#" class="rounded-lg border border-white px-4 py-1.5 text-xs font-semibold text-white hover:bg-white hover:text-[#3B72B9] transition-colors">
+              Sign Up
+            </a>
+          </div>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="mobileMenuBtn" aria-label="Open navigation">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-[#1F2933] md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-[#E2E8F0]" style="background:#3B72B9;">
+      <img src="logo/MostlyPostly%20Logo%20-%20White%20Transparent.svg" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-white text-3xl leading-none" aria-label="Close navigation">×</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
+      <a href="/#post-types" class="block py-2 border-b border-[#E2E8F0] hover:text-[#3B72B9] transition-colors">Features</a>
+      <a href="/#pricing"    class="block py-2 border-b border-[#E2E8F0] hover:text-[#3B72B9] transition-colors">Pricing</a>
+      <a href="/kb.html"     class="block py-2 hover:text-[#3B72B9] transition-colors">Help</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-[#E2E8F0] pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-[#E2E8F0] py-3 rounded-full text-[#1F2933] font-medium hover:bg-[#F4F7FA] transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center py-3 rounded-full text-white font-semibold shadow-sm hover:bg-[#2E5E9E] transition-colors" style="background:#3B72B9;">Start Free Trial</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============================================================
+         HERO — FOUNDER OFFER
+    ============================================================ -->
+    <section class="relative overflow-hidden border-b border-[#E2E8F0]" style="background: linear-gradient(135deg, #FFFFFF 0%, #F8FBFF 50%, #F4F7FA 100%);">
+      <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(ellipse at top right, rgba(59,114,185,0.12) 0%, transparent 60%);"></div>
+
+      <div class="relative mx-auto max-w-3xl px-4 py-20 sm:py-28 text-center">
+
+        <div class="inline-flex items-center gap-2 rounded-full border border-[#3B72B9]/30 bg-[#EBF3FF]/70 px-3.5 py-1.5 text-xs font-semibold text-[#3B72B9] mb-6 mp-animate">
+          <span class="inline-flex h-1.5 w-1.5 rounded-full bg-[#3B72B9]"></span>
+          Founding Member Offer — Limited Spots
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight text-[#1F2933] mb-6 mp-animate mp-delay-1">
+          Be one of the first.<br>
+          <span style="color:#3B72B9;">Pay less. Forever.</span>
+        </h1>
+
+        <p class="text-lg text-[#6B7280] mb-10 max-w-xl mx-auto mp-animate mp-delay-2">
+          MostlyPostly is the AI social media assistant built for hair salons. Stylists text a photo — we write the caption, schedule the post, and publish to Instagram and Facebook automatically.
+        </p>
+
+        <!-- Offer pills -->
+        <div class="flex flex-wrap justify-center gap-3 mb-10 mp-animate mp-delay-2">
+          <span class="promo-pill">
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" stroke="#3B72B9" stroke-width="2"/><path d="M10 5v5l3 3" stroke="#3B72B9" stroke-width="2" stroke-linecap="round"/></svg>
+            30-Day Free Trial
+          </span>
+          <span class="promo-pill">
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L10 14.3l-4.8 2.6.9-5.4L2.2 7.7l5.4-.8L10 2z"/></svg>
+            $50 Off Any Plan — Locked for Life
+          </span>
+        </div>
+
+        <!-- Primary CTA -->
+        <div class="mp-animate mp-delay-3">
+          <a id="founders-cta-hero" href="#"
+             class="inline-block rounded-xl px-10 py-4 text-base font-bold text-white shadow-lg transition-colors"
+             style="background:#3B72B9;"
+             onmouseover="this.style.background='#2E5E9E'"
+             onmouseout="this.style.background='#3B72B9'">
+            Start Your 30-Day Free Trial
+          </a>
+          <p class="mt-3 text-xs text-[#9CA3AF]">No credit card required to start. Cancel anytime.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         HOW IT WORKS
+    ============================================================ -->
+    <section class="bg-white py-16 sm:py-20 border-b border-[#E2E8F0]">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-12 mp-animate">
+          <p class="text-xs font-bold uppercase tracking-widest text-[#3B72B9]">How to Claim Your Offer</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-[#1F2933]">Three steps to get started</h2>
+        </div>
+
+        <div class="grid gap-8 sm:grid-cols-3">
+
+          <div class="text-center mp-animate mp-delay-1">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full text-white font-extrabold text-lg" style="background:#3B72B9;">1</div>
+            <h3 class="font-bold text-[#1F2933] mb-2">Sign up free</h3>
+            <p class="text-sm text-[#6B7280] leading-relaxed">Create your account. No credit card needed. Your 30-day trial starts the moment you sign up.</p>
+          </div>
+
+          <div class="text-center mp-animate mp-delay-2">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full text-white font-extrabold text-lg" style="background:#3B72B9;">2</div>
+            <h3 class="font-bold text-[#1F2933] mb-2">Connect your salon</h3>
+            <p class="text-sm text-[#6B7280] leading-relaxed">Link your Instagram and Facebook. Add your stylists. Takes about 20 minutes.</p>
+          </div>
+
+          <div class="text-center mp-animate mp-delay-3">
+            <div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full text-white font-extrabold text-lg" style="background:#3B72B9;">3</div>
+            <h3 class="font-bold text-[#1F2933] mb-2">Enter <strong>FOUNDER50</strong> at checkout</h3>
+            <p class="text-sm text-[#6B7280] leading-relaxed">When your trial ends, enter your code at checkout to lock in $50 off your plan — every month, forever.</p>
+          </div>
+
+        </div>
+
+        <!-- Promo code callout -->
+        <div class="mt-14 text-center mp-animate mp-delay-4">
+          <p class="text-sm text-[#6B7280] mb-3">Your founder promo code — click to copy</p>
+          <span class="promo-code" id="promo-code-display" title="Click to copy">FOUNDER50</span>
+          <p id="copy-confirm" class="mt-2 text-xs text-[#3B72B9] font-semibold opacity-0 transition-opacity duration-300">Copied!</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SAVINGS BLOCK
+    ============================================================ -->
+    <section class="py-16 sm:py-20 border-b border-[#E2E8F0]" style="background:#F8FBFF;">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-10 mp-animate">
+          <p class="text-xs font-bold uppercase tracking-widest text-[#3B72B9]">Founding Member Savings</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-[#1F2933]">What you save, every single month</h2>
+          <p class="mt-3 text-sm text-[#6B7280]">The $50 discount applies to your first paid month. After that, you pay the regular rate — locked in at whatever plan you choose.</p>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-sm mp-animate mp-delay-1">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-[#E2E8F0]" style="background:#1F2933;">
+                <th class="px-6 py-4 text-left text-xs font-bold uppercase tracking-widest text-white/70">Plan</th>
+                <th class="px-6 py-4 text-center text-xs font-bold uppercase tracking-widest text-white/70">Regular Monthly</th>
+                <th class="px-6 py-4 text-center text-xs font-bold uppercase tracking-widest text-[#3B72B9]">Your First Month</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#E2E8F0]">
+              <tr class="hover:bg-[#F8FBFF] transition-colors">
+                <td class="px-6 py-5">
+                  <p class="font-bold text-[#1F2933]">Starter</p>
+                  <p class="text-xs text-[#6B7280] mt-0.5">4 stylists · 60 posts/mo · 1 location</p>
+                </td>
+                <td class="px-6 py-5 text-center text-[#6B7280]">$49/mo</td>
+                <td class="px-6 py-5 text-center">
+                  <span class="font-extrabold text-[#1F2933]">$0</span>
+                  <span class="text-xs text-[#6B7280] block mt-0.5">30 days free, then $49</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-[#F8FBFF] transition-colors">
+                <td class="px-6 py-5">
+                  <p class="font-bold text-[#1F2933]">Growth</p>
+                  <p class="text-xs text-[#6B7280] mt-0.5">12 stylists · 150 posts/mo · 2 locations</p>
+                </td>
+                <td class="px-6 py-5 text-center text-[#6B7280]">$149/mo</td>
+                <td class="px-6 py-5 text-center">
+                  <span class="font-extrabold text-[#1F2933]">$0</span>
+                  <span class="text-xs text-[#6B7280] block mt-0.5">30 days free, then $99 first month</span>
+                </td>
+              </tr>
+              <tr class="hover:bg-[#F8FBFF] transition-colors">
+                <td class="px-6 py-5">
+                  <p class="font-bold text-[#1F2933]">Pro</p>
+                  <p class="text-xs text-[#6B7280] mt-0.5">Unlimited stylists · 400 posts/mo · 5 locations</p>
+                </td>
+                <td class="px-6 py-5 text-center text-[#6B7280]">$249/mo</td>
+                <td class="px-6 py-5 text-center">
+                  <span class="font-extrabold text-[#1F2931]">$0</span>
+                  <span class="text-xs text-[#6B7280] block mt-0.5">30 days free, then $199 first month</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="mt-4 text-center text-xs text-[#9CA3AF]">
+          Annual plans available at additional savings. Promo code <strong>FOUNDER50</strong> applied at checkout.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHAT YOU GET
+    ============================================================ -->
+    <section class="bg-white py-16 sm:py-20 border-b border-[#E2E8F0]">
+      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+
+        <div class="text-center mb-10 mp-animate">
+          <p class="text-xs font-bold uppercase tracking-widest text-[#3B72B9]">The Platform</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-[#1F2933]">Everything your salon needs to stay active on social</h2>
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2 mp-animate mp-delay-1">
+          <div class="flex items-start gap-3 rounded-xl border border-[#E2E8F0] p-5">
+            <span class="text-xl">📸</span>
+            <div>
+              <p class="font-bold text-[#1F2933] text-sm">Text-to-post</p>
+              <p class="text-xs text-[#6B7280] mt-1">Stylists text a photo from their phone. No app download, no login required.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 rounded-xl border border-[#E2E8F0] p-5">
+            <span class="text-xl">✦</span>
+            <div>
+              <p class="font-bold text-[#1F2933] text-sm">AI captions</p>
+              <p class="text-xs text-[#6B7280] mt-1">GPT-4 writes branded captions with hashtags and CTAs in your salon's voice.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 rounded-xl border border-[#E2E8F0] p-5">
+            <span class="text-xl">✅</span>
+            <div>
+              <p class="font-bold text-[#1F2933] text-sm">Manager approval queue</p>
+              <p class="text-xs text-[#6B7280] mt-1">One-tap approve or edit before anything goes live. Full control, minimal effort.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 rounded-xl border border-[#E2E8F0] p-5">
+            <span class="text-xl">📅</span>
+            <div>
+              <p class="font-bold text-[#1F2933] text-sm">Smart scheduling</p>
+              <p class="text-xs text-[#6B7280] mt-1">Posts go out at optimal times within your defined window. No manual scheduling.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 rounded-xl border border-[#E2E8F0] p-5">
+            <span class="text-xl">📊</span>
+            <div>
+              <p class="font-bold text-[#1F2933] text-sm">Analytics</p>
+              <p class="text-xs text-[#6B7280] mt-1">Track reach, engagement, and top-performing posts across Facebook and Instagram.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 rounded-xl border border-[#E2E8F0] p-5">
+            <span class="text-xl">🏪</span>
+            <div>
+              <p class="font-bold text-[#1F2933] text-sm">Multi-location ready</p>
+              <p class="text-xs text-[#6B7280] mt-1">Manage multiple salon locations from one dashboard. Growth and Pro plans included.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER CTA
+    ============================================================ -->
+    <section class="py-16 sm:py-20 text-center" style="background:#1F2933;">
+      <div class="mx-auto max-w-2xl px-4 sm:px-6 mp-animate">
+        <p class="text-xs font-bold uppercase tracking-widest text-[#3B72B9] mb-4">Limited Founding Member Spots</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          30 days free. $50 off. Yours forever.
+        </h2>
+        <p class="text-slate-400 mb-8 max-w-md mx-auto">
+          This offer is available to the first founding members only. Once spots fill, it's gone.
+        </p>
+        <a id="founders-cta-bottom" href="#"
+           class="inline-block rounded-xl px-10 py-4 text-base font-bold text-white shadow-lg transition-colors mb-4"
+           style="background:#3B72B9;"
+           onmouseover="this.style.background='#2E5E9E'"
+           onmouseout="this.style.background='#3B72B9'">
+          Start Your 30-Day Free Trial
+        </a>
+        <p class="text-xs text-slate-500">Enter code <strong class="text-white font-mono tracking-widest">FOUNDER50</strong> at checkout to lock in $50 off.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="text-slate-300" style="background:#151D25;">
+    <div class="mx-auto max-w-6xl px-4 py-10 sm:py-12">
+      <div class="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
+        <div>
+          <img src="logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-7 w-auto brightness-0 invert opacity-80" />
+          <p class="mt-2 text-xs text-slate-500">AI-powered social posting for salons.</p>
+        </div>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-500">
+          <a href="/"                       class="hover:text-white transition-colors">Home</a>
+          <a href="/legal/terms.html"       class="hover:text-white transition-colors">Terms</a>
+          <a href="/legal/privacy.html"     class="hover:text-white transition-colors">Privacy</a>
+          <a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a>
+          <a href="mailto:support@mostlypostly.com" class="hover:text-white transition-colors">Support</a>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-slate-800 pt-5 text-xs text-slate-600">
+        © 2025 MostlyPostly — All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Env-based URLs -->
+  <script>
+  (function() {
+    fetch("/public/env-config.json")
+      .then(res => res.json())
+      .then(cfg => {
+        const host = location.hostname;
+        const env  = host.includes("localhost") ? "local" : host.includes("staging") ? "staging" : "production";
+        const base = cfg[env].appUrl;
+        const founderSignup = base + "/manager/signup?offer=founder";
+
+        document.getElementById("mp-login").href          = base + "/manager/login";
+        document.getElementById("mp-login-mobile").href   = base + "/manager/login";
+        document.getElementById("mp-signup-nav").href     = founderSignup;
+        document.getElementById("mp-signup-mobile").href  = founderSignup;
+        document.getElementById("founders-cta-hero").href   = founderSignup;
+        document.getElementById("founders-cta-bottom").href = founderSignup;
+      })
+      .catch(() => {});
+  })();
+  </script>
+
+  <!-- Promo code copy -->
+  <script>
+  (function() {
+    const el = document.getElementById("promo-code-display");
+    const confirm = document.getElementById("copy-confirm");
+    if (!el) return;
+    el.addEventListener("click", function() {
+      navigator.clipboard.writeText("FOUNDER50").then(() => {
+        confirm.style.opacity = "1";
+        setTimeout(() => { confirm.style.opacity = "0"; }, 2000);
+      });
+    });
+  })();
+  </script>
+
+  <!-- Mobile menu -->
+  <script>
+  (function() {
+    const btn   = document.getElementById("mobileMenuBtn");
+    const close = document.getElementById("mobileMenuClose");
+    const menu  = document.getElementById("mobileMenu");
+    if (!btn || !menu) return;
+    btn.addEventListener("click",   () => { menu.classList.remove("hidden"); menu.classList.add("flex"); });
+    close.addEventListener("click", () => { menu.classList.add("hidden");    menu.classList.remove("flex"); });
+    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+      menu.classList.add("hidden"); menu.classList.remove("flex");
+    }));
+  })();
+  </script>
+
+  <!-- Scroll animations -->
+  <script>
+  (function() {
+    const els = document.querySelectorAll(".mp-animate");
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("visible"); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    els.forEach(el => obs.observe(el));
+  })();
+  </script>
+
+</body>
+</html>
