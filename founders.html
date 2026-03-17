@@ -97,38 +97,16 @@
             style="filter: brightness(0) invert(1);"
           />
         </a>
-        <nav class="hidden items-center gap-5 text-xs font-medium text-white/80 md:flex" aria-label="Primary navigation">
-          <a href="/#post-types"       class="hover:text-white transition-colors">Features</a>
-          <a href="/#pricing"          class="hover:text-white transition-colors">Pricing</a>
-          <a href="/kb.html"           class="hover:text-white transition-colors">Help</a>
-          <div class="flex items-center gap-2 ml-1">
-            <a id="mp-login" href="#" class="text-white/80 hover:text-white transition-colors">Login</a>
-            <a id="mp-signup-nav" href="#" class="rounded-lg border border-white px-4 py-1.5 text-xs font-semibold text-white hover:bg-white hover:text-[#3B72B9] transition-colors">
-              Sign Up
-            </a>
-          </div>
-        </nav>
-        <button class="md:hidden text-white text-2xl" id="mobileMenuBtn" aria-label="Open navigation">☰</button>
+        <div class="flex items-center gap-3">
+          <a id="mp-login" href="#" class="text-xs font-medium text-white/80 hover:text-white transition-colors">Login</a>
+          <a id="founders-cta-nav" href="#" class="rounded-lg border border-white px-4 py-1.5 text-xs font-semibold text-white hover:bg-white hover:text-[#3B72B9] transition-colors">
+            Start Free Trial
+          </a>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-[#1F2933] md:hidden">
-    <div class="flex items-center justify-between px-6 py-4 border-b border-[#E2E8F0]" style="background:#3B72B9;">
-      <img src="logo/MostlyPostly%20Logo%20-%20White%20Transparent.svg" alt="MostlyPostly" class="h-9 w-auto" />
-      <button id="mobileMenuClose" class="text-white text-3xl leading-none" aria-label="Close navigation">×</button>
-    </div>
-    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
-      <a href="/#post-types" class="block py-2 border-b border-[#E2E8F0] hover:text-[#3B72B9] transition-colors">Features</a>
-      <a href="/#pricing"    class="block py-2 border-b border-[#E2E8F0] hover:text-[#3B72B9] transition-colors">Pricing</a>
-      <a href="/kb.html"     class="block py-2 hover:text-[#3B72B9] transition-colors">Help</a>
-    </nav>
-    <div class="px-6 pb-8 space-y-3 border-t border-[#E2E8F0] pt-4">
-      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-[#E2E8F0] py-3 rounded-full text-[#1F2933] font-medium hover:bg-[#F4F7FA] transition-colors">Login</a>
-      <a id="mp-signup-mobile" href="#" class="block w-full text-center py-3 rounded-full text-white font-semibold shadow-sm hover:bg-[#2E5E9E] transition-colors" style="background:#3B72B9;">Start Free Trial</a>
-    </div>
-  </div>
 
   <main>
 
@@ -291,6 +269,33 @@
     </section>
 
     <!-- ============================================================
+         VIDEO DEMO
+    ============================================================ -->
+    <section class="bg-white py-16 sm:py-20 border-b border-[#E2E8F0]">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center mp-animate">
+        <p class="text-xs font-bold uppercase tracking-widest text-[#3B72B9]">Manager Dashboard</p>
+        <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-[#1F2933]">See every feature in 3 minutes</h2>
+        <p class="mt-3 text-sm text-[#7A7C85] max-w-xl mx-auto">A complete walkthrough of the manager dashboard — approval queue, smart scheduling, analytics, and more.</p>
+        <a href="https://www.youtube.com/watch?v=5Te3seVkCV8" target="_blank" rel="noopener noreferrer"
+           class="mt-8 block group"
+           style="max-width:860px; margin-left:auto; margin-right:auto; border-radius:12px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,0.10); position:relative;">
+          <img
+            src="https://i.ytimg.com/vi/5Te3seVkCV8/maxresdefault.jpg"
+            alt="MostlyPostly Dashboard Tour — click to watch on YouTube"
+            width="860"
+            style="width:100%; display:block; aspect-ratio:16/9; object-fit:cover;"
+          />
+          <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(0,0,0,0.25); transition:background 0.2s;" class="group-hover:bg-black/40">
+            <div style="width:72px; height:72px; background:#FF0000; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(0,0,0,0.35);">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+        </a>
+        <p class="mt-3 text-xs text-[#7A7C85]">Opens on YouTube &rarr;</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
          WHAT YOU GET
     ============================================================ -->
     <section class="bg-white py-16 sm:py-20 border-b border-[#E2E8F0]">
@@ -409,10 +414,8 @@
         const base = cfg[env].appUrl;
         const founderSignup = base + "/manager/signup?offer=founder";
 
-        document.getElementById("mp-login").href          = base + "/manager/login";
-        document.getElementById("mp-login-mobile").href   = base + "/manager/login";
-        document.getElementById("mp-signup-nav").href     = founderSignup;
-        document.getElementById("mp-signup-mobile").href  = founderSignup;
+        document.getElementById("mp-login").href            = base + "/manager/login";
+        document.getElementById("founders-cta-nav").href    = founderSignup;
         document.getElementById("founders-cta-hero").href   = founderSignup;
         document.getElementById("founders-cta-bottom").href = founderSignup;
       })
@@ -432,21 +435,6 @@
         setTimeout(() => { confirm.style.opacity = "0"; }, 2000);
       });
     });
-  })();
-  </script>
-
-  <!-- Mobile menu -->
-  <script>
-  (function() {
-    const btn   = document.getElementById("mobileMenuBtn");
-    const close = document.getElementById("mobileMenuClose");
-    const menu  = document.getElementById("mobileMenu");
-    if (!btn || !menu) return;
-    btn.addEventListener("click",   () => { menu.classList.remove("hidden"); menu.classList.add("flex"); });
-    close.addEventListener("click", () => { menu.classList.add("hidden");    menu.classList.remove("flex"); });
-    menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
-      menu.classList.add("hidden"); menu.classList.remove("flex");
-    }));
   })();
   </script>
 
