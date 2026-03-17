@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>See How MostlyPostly Works</title>
+  <meta name="description" content="Watch how MostlyPostly works — for stylists and salon owners. Text a photo, get a caption, tap approve." />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://mostlypostly.com/watch" />
+
+  <meta property="og:title" content="See How MostlyPostly Works" />
+  <meta property="og:description" content="Text a photo. Get a caption. Tap approve. Watch the walkthrough." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mostlypostly.com/watch" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#3B72B9", mpAccentLight: "#EBF3FF",
+            mpBg: "#F8FAFC", mpCard: "#FFFFFF",
+            mpBorder: "#E2E8F0", mpMuted: "#7A7C85",
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .tab-btn.active { background: #3B72B9; color: #fff; }
+    .tab-btn { transition: background 0.15s, color 0.15s; }
+  </style>
+</head>
+
+<body class="bg-[#0D1A27] text-white antialiased">
+
+  <!-- Header -->
+  <header style="background:#3B72B9;" class="border-b border-blue-700 sticky top-0 z-30">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-80 h-auto" style="filter: brightness(0) invert(1);" />
+        </a>
+        <div class="hidden md:flex items-center gap-3">
+          <a id="mp-login" href="#" class="text-white/80 hover:text-white transition-colors text-sm font-medium">Login</a>
+          <a id="mp-signup" href="#" class="rounded-full border border-white text-white px-5 py-2 text-sm font-semibold shadow-sm hover:bg-white hover:text-[#3B72B9] transition-colors">Sign Up Free</a>
+        </div>
+        <button class="md:hidden text-white text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-mpCharcoal md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-mpBorder">
+      <img src="logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-mpMuted text-3xl leading-none">&times;</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium text-mpCharcoal">
+      <a href="/" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Home</a>
+      <a href="/about" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">About</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-[#F4F7FA] transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up Free</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Headline -->
+    <section class="pt-12 pb-8 text-center px-4">
+      <p class="text-xs font-bold uppercase tracking-widest text-[#3B72B9]">See It In Action</p>
+      <h1 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl leading-tight">
+        Watch how MostlyPostly works.
+      </h1>
+      <p class="mt-3 text-white/55 text-base max-w-md mx-auto leading-relaxed">
+        Pick your role — we'll show you exactly what your experience looks like.
+      </p>
+    </section>
+
+    <!-- Tab switcher -->
+    <section class="px-4 pb-4">
+      <div class="mx-auto max-w-xs">
+        <div class="flex rounded-full p-1 gap-1" style="background:rgba(255,255,255,0.08);">
+          <button id="tab-stylist"  class="tab-btn active flex-1 rounded-full py-2.5 text-sm font-semibold text-center" onclick="switchTab('stylist')">
+            I'm a Stylist
+          </button>
+          <button id="tab-manager" class="tab-btn flex-1 rounded-full py-2.5 text-sm font-semibold text-center text-white/60" onclick="switchTab('manager')">
+            I'm a Salon Owner
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stylist video panel -->
+    <section id="panel-stylist" class="tab-panel active px-4 pb-12">
+      <div class="mx-auto text-center mb-6" style="max-width:340px;">
+        <p class="text-white/55 text-sm leading-relaxed">
+          Text a photo from your phone. MostlyPostly writes the caption, adds hashtags, and posts it — no app, no login.
+        </p>
+      </div>
+      <!-- Vertical embed (9:16) -->
+      <div class="mx-auto rounded-2xl overflow-hidden shadow-2xl" style="max-width:340px;">
+        <div style="position:relative; padding-bottom:177.78%; height:0; overflow:hidden;">
+          <iframe
+            src="https://www.youtube.com/embed/cXv8ISzuTz0?rel=0&modestbranding=1"
+            title="MostlyPostly for Stylists — Walkthrough"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%;"
+          ></iframe>
+        </div>
+      </div>
+      <div class="text-center mt-6">
+        <a href="https://www.youtube.com/shorts/cXv8ISzuTz0" target="_blank" rel="noopener" class="text-white/40 text-xs hover:text-white/60 transition-colors">Watch on YouTube ↗</a>
+      </div>
+    </section>
+
+    <!-- Manager video panel -->
+    <section id="panel-manager" class="tab-panel px-4 pb-12">
+      <div class="mx-auto text-center mb-6" style="max-width:680px;">
+        <p class="text-white/55 text-sm leading-relaxed">
+          Review and approve posts, manage your team, track analytics, and control your posting schedule — all in one dashboard.
+        </p>
+      </div>
+      <!-- Wide embed (16:9) -->
+      <div class="mx-auto rounded-2xl overflow-hidden shadow-2xl" style="max-width:900px;">
+        <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+          <iframe
+            src="https://www.youtube.com/embed/5Te3seVkCV8?rel=0&modestbranding=1"
+            title="MostlyPostly Manager Dashboard — Walkthrough"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            style="position:absolute; top:0; left:0; width:100%; height:100%;"
+          ></iframe>
+        </div>
+      </div>
+      <div class="text-center mt-6">
+        <a href="https://www.youtube.com/watch?v=5Te3seVkCV8" target="_blank" rel="noopener" class="text-white/40 text-xs hover:text-white/60 transition-colors">Watch on YouTube ↗</a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="border-t border-white/10 py-14 px-4 text-center">
+      <p class="text-xs font-bold uppercase tracking-widest text-[#3B72B9] mb-3">Ready to get started?</p>
+      <h2 class="text-2xl font-extrabold sm:text-3xl mb-2">Stay behind the chair,<br class="hidden sm:block" /> not behind the screen.</h2>
+      <p class="text-white/55 text-sm max-w-sm mx-auto mb-8 leading-relaxed">
+        MostlyPostly handles the captions, hashtags, scheduling, and posting — so you can focus on your clients.
+      </p>
+      <a id="cta-signup" href="#" class="inline-block rounded-full bg-[#3B72B9] text-white px-8 py-3 text-sm font-bold shadow-lg hover:bg-[#2d5a96] transition-colors">
+        Start Your Free Trial →
+      </a>
+      <p class="mt-4 text-white/35 text-xs">7-day free trial · No credit card required</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-8 px-4 text-center text-white/35 text-xs">
+    <p>&copy; 2026 MostlyPostly. All rights reserved.</p>
+    <div class="mt-2 flex justify-center gap-5">
+      <a href="/legal/privacy.html" class="hover:text-white/60 transition-colors">Privacy</a>
+      <a href="/legal/terms.html" class="hover:text-white/60 transition-colors">Terms</a>
+      <a href="/legal/sms-consent.html" class="hover:text-white/60 transition-colors">SMS Consent</a>
+    </div>
+  </footer>
+
+  <script>
+    // ── Tab switcher ──────────────────────────────────────────────────────────
+    function switchTab(tab) {
+      ['stylist', 'manager'].forEach(t => {
+        document.getElementById('panel-' + t).classList.toggle('active', t === tab);
+        const btn = document.getElementById('tab-' + t);
+        btn.classList.toggle('active', t === tab);
+        btn.classList.toggle('text-white/60', t !== tab);
+      });
+    }
+
+    // Auto-select tab based on ?for= param (e.g. mostlypostly.com/watch?for=stylist)
+    const params = new URLSearchParams(window.location.search);
+    const forParam = params.get('for');
+    if (forParam === 'manager') switchTab('manager');
+
+    // ── Mobile menu ───────────────────────────────────────────────────────────
+    const menu     = document.getElementById('mobileMenu');
+    const openBtn  = document.getElementById('mobileMenuBtn');
+    const closeBtn = document.getElementById('mobileMenuClose');
+    openBtn.addEventListener('click',  () => { menu.classList.remove('hidden'); menu.classList.add('flex'); });
+    closeBtn.addEventListener('click', () => { menu.classList.add('hidden');    menu.classList.remove('flex'); });
+
+    // ── App URLs ──────────────────────────────────────────────────────────────
+    const APP = 'https://app.mostlypostly.com';
+    document.querySelectorAll('#mp-login, #mp-login-mobile').forEach(el => el.href = APP + '/manager/login');
+    document.querySelectorAll('#mp-signup, #mp-signup-mobile, #cta-signup').forEach(el => el.href = APP + '/manager/signup');
+  </script>
+
+</body>
+</html>
