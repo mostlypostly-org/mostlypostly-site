@@ -1430,7 +1430,7 @@
       });
       ["mp-signup","mp-signup-mobile"].forEach(id => {
         const el = document.getElementById(id);
-        if (el) el.href = `${base}/manager/signup`;
+        if (el) el.href = `#pricing`;
       });
 
       // Pricing plan buttons — pass plan hint through to billing
@@ -1445,9 +1445,9 @@
         el.href = `${base}/manager/signup`;
       });
 
-      // Hero CTA
+      // Hero CTA — scroll to pricing so user picks a plan before signing up
       const heroCta = document.getElementById('mp-hero-cta');
-      if (heroCta) heroCta.href = `${base}/manager/signup`;
+      if (heroCta) heroCta.href = `#pricing`;
     })
     .catch(() => {});
   </script>
