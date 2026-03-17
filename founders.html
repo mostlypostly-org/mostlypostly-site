@@ -203,70 +203,230 @@
     </section>
 
     <!-- ============================================================
-         SAVINGS BLOCK
+         PRICING — FOUNDER RATES
     ============================================================ -->
-    <section class="py-16 sm:py-20 border-b border-[#E2E8F0]" style="background:#F8FBFF;">
-      <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+    <section id="pricing" class="py-16 sm:py-24 border-b border-[#E2E8F0]" style="background:#F8FBFF;">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 
         <div class="text-center mb-10 mp-animate">
-          <p class="text-xs font-bold uppercase tracking-widest text-[#3B72B9]">Founding Member Savings</p>
-          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-[#1F2933]">What you save, every single month</h2>
-          <p class="mt-3 text-sm text-[#6B7280]">The $50 discount applies to your first paid month. After that, you pay the regular rate — locked in at whatever plan you choose.</p>
+          <p class="text-xs font-bold uppercase tracking-widest text-[#3B72B9]">Founder Pricing</p>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight text-[#1F2933]">Pick your plan. Pay less, forever.</h2>
+          <p class="mt-3 text-sm text-[#6B7280] max-w-xl mx-auto">30 days free on us. Then enter <strong class="font-mono text-[#2E5E9E]">FOUNDER50</strong> at checkout for $50 off your first paid month — on any plan.</p>
         </div>
 
-        <div class="overflow-hidden rounded-2xl border border-[#E2E8F0] bg-white shadow-sm mp-animate mp-delay-1">
-          <table class="w-full text-sm">
-            <thead>
-              <tr class="border-b border-[#E2E8F0]" style="background:#1F2933;">
-                <th class="px-6 py-4 text-left text-xs font-bold uppercase tracking-widest text-white/70">Plan</th>
-                <th class="px-6 py-4 text-center text-xs font-bold uppercase tracking-widest text-white/70">Regular Monthly</th>
-                <th class="px-6 py-4 text-center text-xs font-bold uppercase tracking-widest text-[#3B72B9]">Your First Month</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-[#E2E8F0]">
-              <tr class="hover:bg-[#F8FBFF] transition-colors">
-                <td class="px-6 py-5">
-                  <p class="font-bold text-[#1F2933]">Starter</p>
-                  <p class="text-xs text-[#6B7280] mt-0.5">4 stylists · 60 posts/mo · 1 location</p>
-                </td>
-                <td class="px-6 py-5 text-center text-[#6B7280]">$49/mo</td>
-                <td class="px-6 py-5 text-center">
-                  <span class="font-extrabold text-[#1F2933]">$0</span>
-                  <span class="text-xs text-[#6B7280] block mt-0.5">30 days free, then $49</span>
-                </td>
-              </tr>
-              <tr class="hover:bg-[#F8FBFF] transition-colors">
-                <td class="px-6 py-5">
-                  <p class="font-bold text-[#1F2933]">Growth</p>
-                  <p class="text-xs text-[#6B7280] mt-0.5">12 stylists · 150 posts/mo · 2 locations</p>
-                </td>
-                <td class="px-6 py-5 text-center text-[#6B7280]">$149/mo</td>
-                <td class="px-6 py-5 text-center">
-                  <span class="font-extrabold text-[#1F2933]">$0</span>
-                  <span class="text-xs text-[#6B7280] block mt-0.5">30 days free, then $99 first month</span>
-                </td>
-              </tr>
-              <tr class="hover:bg-[#F8FBFF] transition-colors">
-                <td class="px-6 py-5">
-                  <p class="font-bold text-[#1F2933]">Pro</p>
-                  <p class="text-xs text-[#6B7280] mt-0.5">Unlimited stylists · 400 posts/mo · 5 locations</p>
-                </td>
-                <td class="px-6 py-5 text-center text-[#6B7280]">$249/mo</td>
-                <td class="px-6 py-5 text-center">
-                  <span class="font-extrabold text-[#1F2931]">$0</span>
-                  <span class="text-xs text-[#6B7280] block mt-0.5">30 days free, then $199 first month</span>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- Billing toggle -->
+        <div class="flex items-center justify-center gap-3 mb-10 mp-animate">
+          <span id="f-lbl-monthly" class="text-sm font-semibold text-[#1F2933]">Monthly</span>
+          <button
+            id="f-billing-toggle"
+            role="switch"
+            aria-checked="false"
+            onclick="toggleFounderBilling()"
+            class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-[#CBD5E1] bg-white transition-colors"
+            style="outline:none;">
+            <span id="f-toggle-knob"
+              class="inline-block h-4 w-4 rounded-full bg-[#CBD5E1] shadow transition-transform"
+              style="transform:translateX(2px); margin-top:2px;"></span>
+          </button>
+          <span id="f-lbl-annual" class="text-sm text-[#6B7280]">
+            Annual <span class="inline-block rounded-full bg-[#EBF3FF] px-2 py-0.5 text-[10px] font-bold text-[#3B72B9] ml-1">Save ~10%</span>
+          </span>
         </div>
 
-        <p class="mt-4 text-center text-xs text-[#9CA3AF]">
-          Annual plans available at additional savings. Promo code <strong>FOUNDER50</strong> applied at checkout.
-        </p>
+        <!-- Pricing cards -->
+        <div class="grid gap-6 lg:grid-cols-3">
+
+          <!-- STARTER -->
+          <div class="mp-animate mp-delay-1 relative rounded-2xl border border-[#E2E8F0] bg-white p-8 shadow-sm flex flex-col">
+            <div class="mt-1">
+              <h3 class="text-base font-bold text-[#1F2933]">Starter</h3>
+              <p class="mt-1 text-xs text-[#6B7280]">Perfect for a single-location salon getting started.</p>
+            </div>
+
+            <!-- Founder price -->
+            <div class="mt-5">
+              <p class="text-xs text-[#6B7280] mb-1">Regular price</p>
+              <div class="flex items-baseline gap-2">
+                <span id="f-reg-starter" class="text-xl font-bold text-[#9CA3AF] line-through">$99</span>
+                <span class="text-xs text-[#9CA3AF]">/mo</span>
+              </div>
+              <div class="mt-2 flex items-baseline gap-2">
+                <span class="text-[10px] font-bold uppercase tracking-wide text-[#3B72B9] bg-[#EBF3FF] rounded px-1.5 py-0.5 mr-1">Founder</span>
+                <span id="f-price-starter" class="text-4xl font-extrabold text-[#1F2933]">$49</span>
+                <span class="text-sm text-[#6B7280]">first month</span>
+              </div>
+              <p id="f-annual-note-starter" class="mt-1 text-xs text-[#6B7280] hidden">Billed annually · first year from <strong class="text-[#1F2933]">$39/mo</strong> with FOUNDER50</p>
+              <p id="f-monthly-note-starter" class="mt-1 text-xs text-[#6B7280]">Then $99/mo after. Cancel anytime.</p>
+            </div>
+
+            <ul class="mt-6 space-y-2.5 text-sm text-[#1F2933] flex-1">
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong>60 posts</strong> per month</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Up to <strong>4 stylists</strong></span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong>1 location</strong></span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>AI captions, hashtags &amp; CTAs</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Manager approval workflow</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Facebook &amp; Instagram publishing</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>SMS + Telegram channels</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Brand tone, hashtags &amp; booking URL</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>1 manager seat</span></li>
+              <li class="flex items-start gap-2.5 text-[#9CA3AF]"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#F3F4F6] text-[10px] font-bold text-[#9CA3AF]">+</span><span>Overage: $2.50 per 10 posts</span></li>
+            </ul>
+
+            <a id="founders-signup-starter" href="#"
+               class="mt-7 block w-full rounded-full border-2 border-[#3B72B9] bg-transparent py-3 text-center text-sm font-bold text-[#3B72B9] hover:bg-[#EBF3FF] transition-colors">
+              Claim Founder Spot &rarr;
+            </a>
+          </div>
+
+          <!-- GROWTH — highlighted -->
+          <div class="mp-animate mp-delay-2 relative rounded-2xl border-2 border-[#3B72B9] p-8 shadow-xl flex flex-col" style="background:#1F2933;">
+            <div class="absolute -top-3 left-6">
+              <span class="rounded-full px-3 py-1 text-[10px] font-bold text-white uppercase tracking-wide shadow-sm" style="background:#3B72B9;">Most Popular</span>
+            </div>
+
+            <div class="mt-3">
+              <h3 class="text-base font-bold text-white">Growth</h3>
+              <p class="mt-1 text-xs text-slate-400">For growing salons with an active team.</p>
+            </div>
+
+            <div class="mt-5">
+              <p class="text-xs text-slate-500 mb-1">Regular price</p>
+              <div class="flex items-baseline gap-2">
+                <span id="f-reg-growth" class="text-xl font-bold text-slate-500 line-through">$149</span>
+                <span class="text-xs text-slate-500">/mo</span>
+              </div>
+              <div class="mt-2 flex items-baseline gap-2">
+                <span class="text-[10px] font-bold uppercase tracking-wide text-[#3B72B9] bg-[#3B72B9]/20 rounded px-1.5 py-0.5 mr-1">Founder</span>
+                <span id="f-price-growth" class="text-4xl font-extrabold text-white">$99</span>
+                <span class="text-sm text-slate-400">first month</span>
+              </div>
+              <p id="f-annual-note-growth" class="mt-1 text-xs text-slate-400 hidden">Billed annually · first year from <strong class="text-white">$84/mo</strong> with FOUNDER50</p>
+              <p id="f-monthly-note-growth" class="mt-1 text-xs text-slate-400">Then $149/mo after. Cancel anytime.</p>
+            </div>
+
+            <ul class="mt-6 space-y-2.5 text-sm text-slate-200 flex-1">
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3B72B9]/20 text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong class="text-white">150 posts</strong> per month</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3B72B9]/20 text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Up to <strong class="text-white">12 stylists</strong></span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3B72B9]/20 text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong class="text-white">1–2 locations</strong> (+$49/additional)</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3B72B9]/20 text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Everything in Starter</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3B72B9]/20 text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong class="text-white">2 manager seats</strong></span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3B72B9]/20 text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Future messaging channels</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#3B72B9]/20 text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Priority support</span></li>
+              <li class="flex items-start gap-2.5 text-slate-500"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-white/10 text-[10px] font-bold text-slate-400">+</span><span>Overage: $2.00 per 10 posts</span></li>
+            </ul>
+
+            <a id="founders-signup-growth" href="#"
+               class="mt-7 block w-full rounded-full py-3 text-center text-sm font-bold text-white hover:opacity-90 transition-opacity shadow-lg"
+               style="background:#3B72B9;">
+              Claim Founder Spot &rarr;
+            </a>
+          </div>
+
+          <!-- PRO -->
+          <div class="mp-animate mp-delay-3 relative rounded-2xl border border-[#E2E8F0] bg-white p-8 shadow-sm flex flex-col">
+            <div class="absolute -top-3 left-6">
+              <span class="rounded-full bg-[#EBF3FF] border border-[#E2E8F0] px-3 py-1 text-[10px] font-bold text-[#2E5E9E] uppercase tracking-wide shadow-sm">Vendor Integration</span>
+            </div>
+
+            <div class="mt-3">
+              <h3 class="text-base font-bold text-[#1F2933]">Pro</h3>
+              <p class="mt-1 text-xs text-[#6B7280]">Multi-location salons and brand-aligned teams.</p>
+            </div>
+
+            <div class="mt-5">
+              <p class="text-xs text-[#6B7280] mb-1">Regular price</p>
+              <div class="flex items-baseline gap-2">
+                <span id="f-reg-pro" class="text-xl font-bold text-[#9CA3AF] line-through">$249</span>
+                <span class="text-xs text-[#9CA3AF]">/mo</span>
+              </div>
+              <div class="mt-2 flex items-baseline gap-2">
+                <span class="text-[10px] font-bold uppercase tracking-wide text-[#3B72B9] bg-[#EBF3FF] rounded px-1.5 py-0.5 mr-1">Founder</span>
+                <span id="f-price-pro" class="text-4xl font-extrabold text-[#1F2933]">$199</span>
+                <span class="text-sm text-[#6B7280]">first month</span>
+              </div>
+              <p id="f-annual-note-pro" class="mt-1 text-xs text-[#6B7280] hidden">Billed annually · first year from <strong class="text-[#1F2933]">$174/mo</strong> with FOUNDER50</p>
+              <p id="f-monthly-note-pro" class="mt-1 text-xs text-[#6B7280]">Then $249/mo after. Cancel anytime.</p>
+            </div>
+
+            <ul class="mt-6 space-y-2.5 text-sm text-[#1F2933] flex-1">
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong>400 posts</strong> per month</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong>Unlimited stylists</strong></span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong>Up to 5 locations</strong> (+$49/additional)</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Everything in Growth</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong>Unlimited manager seats</strong></span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>All messaging channels</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong>Vendor brand integration</strong> — Aveda, Wella, Redken &amp; more</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span><strong>Salon software integration</strong> — connect Zenoti</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Multi-location analytics</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#EBF3FF] text-[10px] font-bold text-[#3B72B9]">&#10003;</span><span>Dedicated onboarding</span></li>
+              <li class="flex items-start gap-2.5 text-[#9CA3AF]"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#F3F4F6] text-[10px] font-bold text-[#9CA3AF]">+</span><span>Overage: $1.50 per 10 posts</span></li>
+            </ul>
+
+            <a id="founders-signup-pro" href="#"
+               class="mt-7 block w-full rounded-full border-2 border-[#3B72B9] bg-transparent py-3 text-center text-sm font-bold text-[#3B72B9] hover:bg-[#EBF3FF] transition-colors">
+              Claim Founder Spot &rarr;
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Bottom note -->
+        <div class="mt-8 rounded-2xl border border-[#E2E8F0] bg-white px-6 py-5 text-center mp-animate">
+          <p class="text-sm text-[#6B7280]">
+            All plans start with a <strong class="text-[#1F2933]">30-day free trial</strong> — no credit card required.
+            Enter <strong class="font-mono text-[#2E5E9E]">FOUNDER50</strong> at checkout to lock in $50 off your first paid month.
+            Cancel or change plans anytime.
+          </p>
+        </div>
 
       </div>
     </section>
+
+    <script>
+    (function() {
+      let fIsAnnual = false;
+      window.toggleFounderBilling = function() {
+        fIsAnnual = !fIsAnnual;
+        const knob    = document.getElementById('f-toggle-knob');
+        const toggle  = document.getElementById('f-billing-toggle');
+        const lblA    = document.getElementById('f-lbl-annual');
+        const lblM    = document.getElementById('f-lbl-monthly');
+
+        knob.style.transform = fIsAnnual ? 'translateX(20px)' : 'translateX(2px)';
+        toggle.setAttribute('aria-checked', fIsAnnual);
+        toggle.style.backgroundColor = fIsAnnual ? '#3B72B9' : '';
+        toggle.style.borderColor     = fIsAnnual ? '#3B72B9' : '';
+        knob.style.backgroundColor   = fIsAnnual ? '#fff' : '';
+        lblM.classList.toggle('font-semibold', !fIsAnnual);
+        lblM.classList.toggle('text-[#1F2933]', !fIsAnnual);
+        lblM.classList.toggle('text-[#6B7280]', fIsAnnual);
+        lblA.classList.toggle('font-semibold', fIsAnnual);
+        lblA.classList.toggle('text-[#1F2933]', fIsAnnual);
+        lblA.classList.toggle('text-[#6B7280]', !fIsAnnual);
+
+        // Regular prices (strikethrough)
+        document.getElementById('f-reg-starter').textContent = fIsAnnual ? '$89' : '$99';
+        document.getElementById('f-reg-growth').textContent  = fIsAnnual ? '$134' : '$149';
+        document.getElementById('f-reg-pro').textContent     = fIsAnnual ? '$224' : '$249';
+
+        // Founder first-month prices (regular minus $50)
+        document.getElementById('f-price-starter').textContent = fIsAnnual ? '$39' : '$49';
+        document.getElementById('f-price-growth').textContent  = fIsAnnual ? '$84' : '$99';
+        document.getElementById('f-price-pro').textContent     = fIsAnnual ? '$174' : '$199';
+
+        // Show/hide annual vs monthly notes
+        ['starter','growth','pro'].forEach(function(t) {
+          document.getElementById('f-annual-note-' + t).classList.toggle('hidden', !fIsAnnual);
+          document.getElementById('f-monthly-note-' + t).classList.toggle('hidden', fIsAnnual);
+        });
+
+        // Update "then X/mo after" in monthly notes
+        document.getElementById('f-monthly-note-starter').textContent = fIsAnnual ? '' : 'Then $99/mo after. Cancel anytime.';
+        document.getElementById('f-monthly-note-growth').textContent  = fIsAnnual ? '' : 'Then $149/mo after. Cancel anytime.';
+        document.getElementById('f-monthly-note-pro').textContent     = fIsAnnual ? '' : 'Then $249/mo after. Cancel anytime.';
+      };
+    })();
+    </script>
 
     <!-- ============================================================
          VIDEO DEMO
@@ -418,6 +578,9 @@
         document.getElementById("founders-cta-nav").href    = founderSignup;
         document.getElementById("founders-cta-hero").href   = founderSignup;
         document.getElementById("founders-cta-bottom").href = founderSignup;
+        document.getElementById("founders-signup-starter").href = base + "/manager/signup?offer=founder&plan=starter";
+        document.getElementById("founders-signup-growth").href  = base + "/manager/signup?offer=founder&plan=growth";
+        document.getElementById("founders-signup-pro").href     = base + "/manager/signup?offer=founder&plan=pro";
       })
       .catch(() => {});
   })();
