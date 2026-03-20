@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reordering Your Post Queue — MostlyPostly Help Center</title>
+  <meta name="description" content="Learn how to drag and drop your scheduled posts into a new order without changing posting times." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://mostlypostly.com/kb/post-queue" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#3B72B9", mpAccentLight: "#EBF3FF",
+            mpBg: "#FFFFFF", mpCard: "#FFFFFF",
+            mpBorder: "#E2E8F0", mpMuted: "#6B7280",
+          }
+        }
+      }
+    };
+  </script>
+  <style>body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }</style>
+</head>
+
+<body class="bg-mpBg text-mpCharcoal antialiased">
+
+  <header class="border-b border-mpBorder sticky top-0 z-30" style="background:#3B72B9;">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-56 h-auto" style="filter: brightness(0) invert(1);" />
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-white/80 md:flex">
+          <a href="/#post-types"       class="hover:text-white transition-colors">Features</a>
+          <a href="/#connect"          class="hover:text-white transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="hover:text-white transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="hover:text-white transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="hover:text-white transition-colors">Pricing</a>
+          <a href="/about"             class="hover:text-white transition-colors">About</a>
+          <div class="flex items-center gap-3 ml-1">
+            <a id="mp-login" href="#" class="text-white/80 hover:text-white transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-lg border border-white px-4 py-1.5 text-xs font-semibold text-white hover:bg-white hover:text-[#3B72B9] transition-colors">Sign Up</a>
+          </div>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-mpCharcoal md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-mpBorder">
+      <img src="../logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-mpMuted text-3xl leading-none">&times;</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
+      <a href="/#post-types"       class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Features</a>
+      <a href="/#connect"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Connect</a>
+      <a href="/#stylist-workflow" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">How It Works</a>
+      <a href="/#brand-dna"        class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Brand Tools</a>
+      <a href="/#pricing"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Pricing</a>
+      <a href="/about"             class="block py-2 hover:text-mpAccent transition-colors">About</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-mpBg transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+    </div>
+  </div>
+
+  <main style="background:#FFFFFF;">
+
+    <!-- Breadcrumb -->
+    <div class="mx-auto max-w-3xl px-4 pt-8">
+      <nav class="text-xs text-mpMuted mb-6">
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">Help Center</a>
+        <span class="mx-2">›</span>
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">For Owners &amp; Managers</a>
+        <span class="mx-2">›</span>
+        <span class="text-mpCharcoal">Reordering Your Post Queue</span>
+      </nav>
+    </div>
+
+    <!-- Article -->
+    <article class="mx-auto max-w-3xl px-4 pb-16">
+      <h1 class="text-3xl font-extrabold text-mpCharcoal mb-2">Reordering Your Post Queue</h1>
+      <p class="text-mpMuted text-sm mb-10 pb-8 border-b border-mpBorder">How to drag and drop your approved scheduled posts into a new order — without changing the times they go live.</p>
+
+      <!-- Section 1: Overview -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Overview</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">The Post Queue gives you a visual, drag-and-drop view of every approved post waiting to be published. You can rearrange the order posts go out — for example, moving a seasonal promotion ahead of a standard hair photo — without touching any of the scheduled times.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">This is useful when you have several posts queued and want to control which content goes out first — especially before a sale, event, or holiday weekend. Your posting schedule stays exactly as you configured it; only the sequence changes.</p>
+
+      <!-- Section 2: How It Works -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">How It Works</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Think of it like shuffling a deck of cards without changing the times they're dealt. Your posting schedule has a set of time slots — say, Tuesday at 10am, Wednesday at 2pm, Thursday at 11am. Each approved post occupies one of those slots.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">When you drag a post to a new position in the queue, MostlyPostly reassigns the existing time slots to match the new order. If you move a post from position 3 to position 1, it now takes the earliest available time slot. The other posts shift down. No new times are created and none are removed — just redistributed.</p>
+
+      <div class="rounded-xl p-4 mb-6" style="background:#EBF3FF;border-left:3px solid #3B72B9;">
+        <p class="text-sm font-semibold text-mpCharcoal mb-1">Good to know</p>
+        <p class="text-sm text-mpCharcoal leading-relaxed">Only posts with a scheduled time (status: approved and waiting to publish) appear in the queue. Drafts, pending-approval posts, and already-published posts are not shown here.</p>
+      </div>
+
+      <!-- Section 3: Step-by-Step -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Step-by-Step</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Here's how to reorder your upcoming posts:</p>
+      <ol class="space-y-4 mb-6">
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">1</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Open the Post Queue from the sidebar</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Log into your manager dashboard and click <strong>Post Queue</strong> in the left sidebar — it's the second item, just below Dashboard.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">2</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Review your approved posts in schedule order</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">All approved posts with a scheduled time appear as cards, sorted chronologically. Each card shows a thumbnail, post type badge (e.g. Standard, Promotion), stylist name, a caption preview, and the current scheduled time.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">3</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Drag a post card to its new position</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Click and hold the drag handle (the grip icon on the left edge of each card), then drag it up or down to the position you want. The other cards shift to make room as you drag.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">4</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">The new order saves automatically</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">After you drop the card into place, the queue saves the new order within half a second. No button to click. The scheduled times displayed on each card update immediately to reflect the reassignment.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">5</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Confirm the times look right</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Review the updated times on each card to make sure the order is what you intended. The post at position 1 will go out at the earliest time slot, position 2 at the next, and so on.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Section 4: FAQ -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Frequently Asked Questions</h2>
+
+      <p class="text-sm font-semibold text-mpCharcoal mt-5 mb-1">Does reordering change my posting times?</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">No. Reordering only changes which post goes in which time slot — the slots themselves stay exactly as your scheduler is configured. Your posting window, spacing rules, and frequency settings are all untouched.</p>
+
+      <p class="text-sm font-semibold text-mpCharcoal mt-5 mb-1">Can I reorder posts that are already published?</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">No. The Post Queue only shows posts that are approved and waiting to be published. Once a post has gone live, it moves to your post history and can no longer be reordered.</p>
+
+      <p class="text-sm font-semibold text-mpCharcoal mt-5 mb-1">What if I only have one scheduled post?</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">There's nothing to reorder with a single post — reordering requires at least two approved scheduled posts. Submit more content to grow your queue, then you can rearrange the sequence.</p>
+
+      <!-- Related Articles -->
+      <div class="mt-12 pt-8 border-t border-mpBorder">
+        <h3 class="text-sm font-bold text-mpCharcoal mb-4">Related Articles</h3>
+        <div class="space-y-2">
+          <a href="/kb/dashboard-guide.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Understanding Your Dashboard &amp; Menus
+          </a>
+          <a href="/kb/manager-approvals.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Approving &amp; Denying Posts
+          </a>
+          <a href="/kb/promotions.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> Creating a Promotion Post
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-mpCharcoal text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:py-14">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div class="max-w-sm">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-8 w-auto brightness-0 invert opacity-90" />
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">AI-powered social posting for salons. Spend more time behind the chair, not behind the screen.</p>
+        </div>
+        <div class="grid flex-1 grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Product</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/#post-types"  class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#pricing"     class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/vendors.html" class="hover:text-white transition-colors">Vendor Partners</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Company</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/about"        class="hover:text-white transition-colors">About</a></li>
+              <li><a href="mailto:partnerships@mostlypostly.com" class="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="mailto:support@mostlypostly.com"      class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/legal/terms.html"      class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/legal/privacy.html"    class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-5 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MostlyPostly &mdash; All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html"    class="hover:text-slate-300 transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-slate-300 transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300 transition-colors">SMS Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const btn   = document.getElementById("mobileMenuBtn");
+    const close = document.getElementById("mobileMenuClose");
+    const menu  = document.getElementById("mobileMenu");
+    if (btn)   btn.onclick   = () => menu.classList.remove("hidden");
+    if (close) close.onclick = () => menu.classList.add("hidden");
+  </script>
+
+  <script>
+    fetch("/public/env-config.json")
+      .then(r => r.json())
+      .then(cfg => {
+        const host = location.hostname;
+        const env  = host.includes("localhost") ? "local" : host.includes("staging") ? "staging" : "production";
+        const base = cfg[env].appUrl;
+        ["mp-login","mp-login-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/login`; });
+        ["mp-signup","mp-signup-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/signup`; });
+      }).catch(() => {});
+  </script>
+</body>
+</html>

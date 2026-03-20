@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- REPLACE: Article title — e.g. "Reordering Your Post Queue — MostlyPostly Help Center" -->
+  <title>[ARTICLE TITLE] — MostlyPostly Help Center</title>
+  <!-- REPLACE: meta description — 1-2 sentences, plain language, ≤155 chars -->
+  <meta name="description" content="[META DESCRIPTION]" />
+  <meta name="robots" content="index,follow" />
+  <!-- REPLACE: canonical slug — e.g. https://mostlypostly.com/kb/post-queue -->
+  <link rel="canonical" href="https://mostlypostly.com/kb/[SLUG]" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#3B72B9", mpAccentLight: "#EBF3FF",
+            mpBg: "#FFFFFF", mpCard: "#FFFFFF",
+            mpBorder: "#E2E8F0", mpMuted: "#6B7280",
+          }
+        }
+      }
+    };
+  </script>
+  <style>body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }</style>
+</head>
+
+<body class="bg-mpBg text-mpCharcoal antialiased">
+
+  <header class="border-b border-mpBorder sticky top-0 z-30" style="background:#3B72B9;">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-56 h-auto" style="filter: brightness(0) invert(1);" />
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-white/80 md:flex">
+          <a href="/#post-types"       class="hover:text-white transition-colors">Features</a>
+          <a href="/#connect"          class="hover:text-white transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="hover:text-white transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="hover:text-white transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="hover:text-white transition-colors">Pricing</a>
+          <a href="/about"             class="hover:text-white transition-colors">About</a>
+          <div class="flex items-center gap-3 ml-1">
+            <a id="mp-login" href="#" class="text-white/80 hover:text-white transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-lg border border-white px-4 py-1.5 text-xs font-semibold text-white hover:bg-white hover:text-[#3B72B9] transition-colors">Sign Up</a>
+          </div>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-mpCharcoal md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-mpBorder">
+      <img src="../logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-mpMuted text-3xl leading-none">&times;</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
+      <a href="/#post-types"       class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Features</a>
+      <a href="/#connect"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Connect</a>
+      <a href="/#stylist-workflow" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">How It Works</a>
+      <a href="/#brand-dna"        class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Brand Tools</a>
+      <a href="/#pricing"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Pricing</a>
+      <a href="/about"             class="block py-2 hover:text-mpAccent transition-colors">About</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-mpBg transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+    </div>
+  </div>
+
+  <main style="background:#FFFFFF;">
+
+    <!-- Breadcrumb -->
+    <div class="mx-auto max-w-3xl px-4 pt-8">
+      <nav class="text-xs text-mpMuted mb-6">
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">Help Center</a>
+        <span class="mx-2">›</span>
+        <!-- REPLACE: Category name — e.g. "For Owners & Managers" or "Getting Started" -->
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">[CATEGORY NAME]</a>
+        <span class="mx-2">›</span>
+        <!-- REPLACE: Article title (short form) -->
+        <span class="text-mpCharcoal">[ARTICLE TITLE]</span>
+      </nav>
+    </div>
+
+    <!-- Article -->
+    <article class="mx-auto max-w-3xl px-4 pb-16">
+      <!-- REPLACE: Full article title displayed as H1 -->
+      <h1 class="text-3xl font-extrabold text-mpCharcoal mb-2">[ARTICLE TITLE]</h1>
+      <!-- REPLACE: One-sentence article subtitle / lead — what this article covers -->
+      <p class="text-mpMuted text-sm mb-10 pb-8 border-b border-mpBorder">[ARTICLE SUBTITLE — one plain-English sentence describing what the reader will learn]</p>
+
+      <!-- ============================================================
+           SECTION 1: Overview
+           What the feature does and why it matters.
+           2-3 short paragraphs. Non-technical. Manager-friendly.
+      ============================================================ -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Overview</h2>
+      <!-- REPLACE: Overview paragraphs -->
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">[Overview paragraph 1 — what is this feature and what problem does it solve?]</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">[Overview paragraph 2 — why does it matter / what value does it provide?]</p>
+
+      <!-- ============================================================
+           SECTION 2: How It Works
+           Plain-English explanation of the mechanism.
+           No technical implementation details. Focus on what the user
+           experiences and what the system does behind the scenes.
+      ============================================================ -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">How It Works</h2>
+      <!-- REPLACE: How It Works paragraphs -->
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">[How It Works paragraph 1 — explain the mechanism in plain English]</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">[How It Works paragraph 2 — any important behaviors or constraints the user should know]</p>
+
+      <!-- Optional: Pro tip callout box — include if there's a key insight worth highlighting -->
+      <!--
+      <div class="rounded-xl p-4 mb-6" style="background:#EBF3FF;border-left:3px solid #3B72B9;">
+        <p class="text-sm font-semibold text-mpCharcoal mb-1">Pro Tip</p>
+        <p class="text-sm text-mpCharcoal leading-relaxed">[Tip text]</p>
+      </div>
+      -->
+
+      <!-- ============================================================
+           SECTION 3: Step-by-Step
+           Numbered walkthrough using blue circle numbers.
+           Each step: bold action title + short explanation sentence.
+           Aim for 4-7 steps. Every step should be a distinct action.
+      ============================================================ -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Step-by-Step</h2>
+      <!-- REPLACE: intro sentence -->
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">[Intro sentence — e.g. "Here's how to use this feature:"]</p>
+      <ol class="space-y-4 mb-6">
+        <!-- REPLACE: Steps — copy/paste this <li> block for each step -->
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">1</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">[Step 1 action title]</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">[Step 1 explanation — one or two sentences]</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">2</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">[Step 2 action title]</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">[Step 2 explanation]</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">3</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">[Step 3 action title]</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">[Step 3 explanation]</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">4</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">[Step 4 action title]</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">[Step 4 explanation]</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">5</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">[Step 5 action title]</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">[Step 5 explanation]</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- ============================================================
+           SECTION 4: FAQ
+           3-5 questions. Use bold for questions, normal paragraph for
+           answers. Keep answers short (1-3 sentences).
+      ============================================================ -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Frequently Asked Questions</h2>
+
+      <!-- REPLACE: FAQ questions and answers — copy/paste this block for each Q&A -->
+      <p class="text-sm font-semibold text-mpCharcoal mt-5 mb-1">[Question 1?]</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">[Answer 1]</p>
+
+      <p class="text-sm font-semibold text-mpCharcoal mt-5 mb-1">[Question 2?]</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">[Answer 2]</p>
+
+      <p class="text-sm font-semibold text-mpCharcoal mt-5 mb-1">[Question 3?]</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">[Answer 3]</p>
+
+      <!-- ============================================================
+           RELATED ARTICLES
+           2-4 links to related KB articles. Use → arrow pattern.
+           Always link to real files (even if they don't exist yet —
+           they will be created when those features are documented).
+      ============================================================ -->
+      <div class="mt-12 pt-8 border-t border-mpBorder">
+        <h3 class="text-sm font-bold text-mpCharcoal mb-4">Related Articles</h3>
+        <div class="space-y-2">
+          <!-- REPLACE: Related article links -->
+          <a href="/kb/[related-1].html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> [Related Article 1 Title]
+          </a>
+          <a href="/kb/[related-2].html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> [Related Article 2 Title]
+          </a>
+          <a href="/kb/[related-3].html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>→</span> [Related Article 3 Title]
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-mpCharcoal text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:py-14">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div class="max-w-sm">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-8 w-auto brightness-0 invert opacity-90" />
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">AI-powered social posting for salons. Spend more time behind the chair, not behind the screen.</p>
+        </div>
+        <div class="grid flex-1 grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Product</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/#post-types"  class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#pricing"     class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/vendors.html" class="hover:text-white transition-colors">Vendor Partners</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Company</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/about"        class="hover:text-white transition-colors">About</a></li>
+              <li><a href="mailto:partnerships@mostlypostly.com" class="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="mailto:support@mostlypostly.com"      class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/legal/terms.html"      class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/legal/privacy.html"    class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-5 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MostlyPostly &mdash; All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html"    class="hover:text-slate-300 transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-slate-300 transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300 transition-colors">SMS Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const btn   = document.getElementById("mobileMenuBtn");
+    const close = document.getElementById("mobileMenuClose");
+    const menu  = document.getElementById("mobileMenu");
+    if (btn)   btn.onclick   = () => menu.classList.remove("hidden");
+    if (close) close.onclick = () => menu.classList.add("hidden");
+  </script>
+
+  <script>
+    fetch("/public/env-config.json")
+      .then(r => r.json())
+      .then(cfg => {
+        const host = location.hostname;
+        const env  = host.includes("localhost") ? "local" : host.includes("staging") ? "staging" : "production";
+        const base = cfg[env].appUrl;
+        ["mp-login","mp-login-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/login`; });
+        ["mp-signup","mp-signup-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/signup`; });
+      }).catch(() => {});
+  </script>
+</body>
+</html>
