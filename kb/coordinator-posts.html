@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coordinator Posting — MostlyPostly Help Center</title>
+  <meta name="description" content="Learn how to use the Coordinator role in MostlyPostly to post on behalf of your stylists — via SMS, portal confirmation, or the direct upload form." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://mostlypostly.com/kb/coordinator-posts" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          colors: {
+            mpCharcoal: "#2B2D35", mpCharcoalDark: "#1a1c22",
+            mpAccent: "#3B72B9", mpAccentLight: "#EBF3FF",
+            mpBg: "#FFFFFF", mpCard: "#FFFFFF",
+            mpBorder: "#E2E8F0", mpMuted: "#6B7280",
+          }
+        }
+      }
+    };
+  </script>
+  <style>body { font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif; }</style>
+</head>
+
+<body class="bg-mpBg text-mpCharcoal antialiased">
+
+  <header class="border-b border-mpBorder sticky top-0 z-30" style="background:#3B72B9;">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-3">
+        <a href="/" class="flex items-center" aria-label="MostlyPostly home">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="w-56 h-auto" style="filter: brightness(0) invert(1);" />
+        </a>
+        <nav class="hidden items-center gap-7 text-sm font-medium text-white/80 md:flex">
+          <a href="/#post-types"       class="hover:text-white transition-colors">Features</a>
+          <a href="/#connect"          class="hover:text-white transition-colors">Connect</a>
+          <a href="/#stylist-workflow" class="hover:text-white transition-colors">How It Works</a>
+          <a href="/#brand-dna"        class="hover:text-white transition-colors">Brand Tools</a>
+          <a href="/#pricing"          class="hover:text-white transition-colors">Pricing</a>
+          <a href="/about"             class="hover:text-white transition-colors">About</a>
+          <div class="flex items-center gap-3 ml-1">
+            <a id="mp-login" href="#" class="text-white/80 hover:text-white transition-colors">Login</a>
+            <a id="mp-signup" href="#" class="rounded-lg border border-white px-4 py-1.5 text-xs font-semibold text-white hover:bg-white hover:text-[#3B72B9] transition-colors">Sign Up</a>
+          </div>
+        </nav>
+        <button class="md:hidden text-white text-2xl" id="mobileMenuBtn" aria-label="Open navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 hidden flex-col bg-white text-mpCharcoal md:hidden">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-mpBorder">
+      <img src="../logo/mostlypostly_mp_lettermark_logo_transparent.png" alt="MostlyPostly" class="h-9 w-auto" />
+      <button id="mobileMenuClose" class="text-mpMuted text-3xl leading-none">&times;</button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-6 py-6 space-y-5 text-base font-medium">
+      <a href="/#post-types"       class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Features</a>
+      <a href="/#connect"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Connect</a>
+      <a href="/#stylist-workflow" class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">How It Works</a>
+      <a href="/#brand-dna"        class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Brand Tools</a>
+      <a href="/#pricing"          class="block py-2 border-b border-mpBorder hover:text-mpAccent transition-colors">Pricing</a>
+      <a href="/about"             class="block py-2 hover:text-mpAccent transition-colors">About</a>
+    </nav>
+    <div class="px-6 pb-8 space-y-3 border-t border-mpBorder pt-4">
+      <a id="mp-login-mobile"  href="#" class="block w-full text-center border border-mpBorder py-3 rounded-full text-mpCharcoal font-medium hover:bg-mpBg transition-colors">Login</a>
+      <a id="mp-signup-mobile" href="#" class="block w-full text-center bg-mpCharcoal py-3 rounded-full text-white font-semibold shadow-sm hover:bg-mpCharcoalDark transition-colors">Sign Up</a>
+    </div>
+  </div>
+
+  <main style="background:#FFFFFF;">
+
+    <!-- Breadcrumb -->
+    <div class="mx-auto max-w-3xl px-4 pt-8">
+      <nav class="text-xs text-mpMuted mb-6">
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">Help Center</a>
+        <span class="mx-2">›</span>
+        <a href="/kb.html" class="hover:text-mpAccent transition-colors">For Owners &amp; Managers</a>
+        <span class="mx-2">›</span>
+        <span class="text-mpCharcoal">Coordinator Posting</span>
+      </nav>
+    </div>
+
+    <!-- Article -->
+    <article class="mx-auto max-w-3xl px-4 pb-16">
+      <h1 class="text-3xl font-extrabold text-mpCharcoal mb-2">Coordinator Posting</h1>
+      <p class="text-mpMuted text-sm mb-10 pb-8 border-b border-mpBorder">How coordinators can submit posts on behalf of any stylist — via SMS, portal confirmation, or the direct upload form — while keeping attribution accurate and the feed authentic.</p>
+
+      <!-- Section 1 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Overview</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">The Coordinator role lets a designated team member — like a front desk staff or salon manager — submit social media posts on behalf of any stylist. Every post still carries the right stylist's name and attribution so the content feels authentic to your audience.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Coordinators are especially useful in busy salons where stylists are fully booked and don't have a free hand to text photos themselves. A front desk coordinator can snap the photo, submit it, and the post goes out under the stylist's name — no interruptions to the client service experience.</p>
+
+      <!-- Section 2 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">How It Works</h2>
+      <ul class="space-y-3 mb-6">
+        <li class="flex gap-3 text-sm text-mpMuted leading-relaxed">
+          <span class="text-mpAccent font-bold flex-shrink-0 mt-0.5">•</span>
+          <span>A coordinator is a team member added with the <strong class="text-mpCharcoal">"Coordinator"</strong> role from Team &rarr; Add Team Member.</span>
+        </li>
+        <li class="flex gap-3 text-sm text-mpMuted leading-relaxed">
+          <span class="text-mpAccent font-bold flex-shrink-0 mt-0.5">•</span>
+          <span>When a coordinator texts a photo to the salon number, MostlyPostly asks <strong class="text-mpCharcoal">"Who is this for?"</strong> and uses AI to match the stylist name from your reply.</span>
+        </li>
+        <li class="flex gap-3 text-sm text-mpMuted leading-relaxed">
+          <span class="text-mpAccent font-bold flex-shrink-0 mt-0.5">•</span>
+          <span>The coordinator receives a <strong class="text-mpCharcoal">portal confirmation link</strong> to verify the stylist attribution before the post is submitted.</span>
+        </li>
+        <li class="flex gap-3 text-sm text-mpMuted leading-relaxed">
+          <span class="text-mpAccent font-bold flex-shrink-0 mt-0.5">•</span>
+          <span>Coordinators can also upload photos directly from the dashboard via the <strong class="text-mpCharcoal">"Upload a Post"</strong> button on the Post Queue page.</span>
+        </li>
+        <li class="flex gap-3 text-sm text-mpMuted leading-relaxed">
+          <span class="text-mpAccent font-bold flex-shrink-0 mt-0.5">•</span>
+          <span>Every coordinator-submitted post shows a <strong class="text-mpCharcoal">"via [Coordinator] on behalf of [Stylist]"</strong> badge in your queue, approval list, and database view — so it's always clear who submitted what.</span>
+        </li>
+      </ul>
+
+      <div class="rounded-xl p-4 mb-8" style="background:#EBF3FF;border-left:3px solid #3B72B9;">
+        <p class="text-sm font-semibold text-mpCharcoal mb-1">Good to know</p>
+        <p class="text-sm text-mpCharcoal leading-relaxed">The attribution badge is internal only. On the actual social media post, guests see the stylist's name and handle in the caption — not the coordinator's. The experience stays personal.</p>
+      </div>
+
+      <!-- Section 3 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Step-by-Step: Posting via SMS</h2>
+      <ol class="space-y-4 mb-6">
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">1</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Text a photo to the salon number</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Send from the coordinator's registered phone number. MostlyPostly recognizes you as a coordinator based on your number.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">2</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">MostlyPostly asks "Who is this for?"</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">If you include the stylist's name in your original message (e.g. "This is for Jasmine"), the AI will detect it automatically. Otherwise you'll be prompted to reply with the stylist's name.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">3</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Reply with the stylist's name</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">MostlyPostly fuzzy-matches against your team roster — partial names and common nicknames all work.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">4</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Open the confirmation link</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">You'll receive a portal link via text. Open it to verify the matched stylist and confirm the post. You can change the stylist from a dropdown if the match was incorrect.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">5</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Post enters the approval queue</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">The post is submitted with the coordinator attribution badge and enters the normal approval queue — just like any stylist-submitted post.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Section 4 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Step-by-Step: Posting via Upload Form</h2>
+      <ol class="space-y-4 mb-6">
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">1</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Log in to the manager dashboard</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Use your coordinator email and password at <a href="https://app.mostlypostly.com/manager/login" class="text-mpAccent hover:underline">app.mostlypostly.com/manager/login</a>.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">2</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Click "Upload a Post"</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">The button appears in the top-right area of the Post Queue page.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">3</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Select the stylist</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Choose from the dropdown list of active stylists at your location.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">4</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Upload the photo</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">Select a photo from your device. Standard JPEG or PNG photos work best.</p>
+          </div>
+        </li>
+        <li class="flex gap-3">
+          <span class="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white" style="background:#3B72B9;">5</span>
+          <div>
+            <p class="text-sm font-semibold text-mpCharcoal">Caption is generated automatically</p>
+            <p class="text-xs text-mpMuted mt-0.5 leading-relaxed">MostlyPostly's AI writes a caption using the salon's tone of voice and the selected stylist's profile. The post is saved as pending with your name as the coordinator.</p>
+          </div>
+        </li>
+      </ol>
+
+      <!-- Section 5 -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Coordinator Leaderboard</h2>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Coordinators appear on the <strong class="text-mpCharcoal">Performance &rarr; Coordinators</strong> tab with a ranked leaderboard showing posts submitted and points earned.</p>
+      <p class="text-sm text-mpMuted leading-relaxed mb-4">Coordinators earn half-points compared to stylists — since they're supporting the content pipeline rather than generating original work from their own client services. It's a recognition of their contribution without displacing the stylists on the main leaderboard.</p>
+
+      <div class="rounded-xl p-4 mb-8" style="background:#EBF3FF;border-left:3px solid #3B72B9;">
+        <p class="text-sm font-semibold text-mpCharcoal mb-1">Flood warning</p>
+        <p class="text-sm text-mpCharcoal leading-relaxed">If more than 3 coordinator posts are submitted within 7 days, the portal confirmation page shows an amber warning — a gentle reminder to check in with your manager before continuing at high volume.</p>
+      </div>
+
+      <!-- Section 6: FAQ -->
+      <h2 class="text-xl font-bold text-mpCharcoal mt-10 mb-3">Frequently Asked Questions</h2>
+
+      <div class="space-y-6 mb-6">
+        <div>
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Can any manager be a coordinator?</p>
+          <p class="text-sm text-mpMuted leading-relaxed">No — the coordinator role is a specific role assigned at the team level. Owners and managers post directly under their own name; only team members with the Coordinator role can post on behalf of a specific stylist.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Will the post show the right stylist name on social media?</p>
+          <p class="text-sm text-mpMuted leading-relaxed">Yes — the stylist's name and handle appear in the caption on Facebook and Instagram. Only the internal dashboard and database view show the coordinator attribution badge.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">What if the AI picks the wrong stylist?</p>
+          <p class="text-sm text-mpMuted leading-relaxed">The portal confirmation step lets you correct the attribution before the post is submitted. Use the stylist dropdown on the confirmation page to switch to the correct name — then submit.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">Is there a limit on coordinator posts?</p>
+          <p class="text-sm text-mpMuted leading-relaxed">Coordinator posts count toward your salon's monthly post limit, same as any other post. A flood warning appears on the confirmation page if more than 3 posts are submitted within 7 days, prompting you to check in with your manager.</p>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-mpCharcoal mb-1">How do I add a coordinator to my team?</p>
+          <p class="text-sm text-mpMuted leading-relaxed">Go to Team &rarr; Add Team Member. Select the <strong class="text-mpCharcoal">Coordinator</strong> role from the role dropdown, fill in their name, phone number, and email, and save. They'll receive a welcome message with their login details.</p>
+        </div>
+      </div>
+
+      <!-- Related articles -->
+      <div class="mt-12 pt-8 border-t border-mpBorder">
+        <h3 class="text-sm font-bold text-mpCharcoal mb-4">Related Articles</h3>
+        <div class="space-y-2">
+          <a href="/kb/adding-stylists.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>&rarr;</span> Adding Your Stylists
+          </a>
+          <a href="/kb/manager-approvals.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>&rarr;</span> Approving &amp; Denying Posts
+          </a>
+          <a href="/kb/post-queue.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>&rarr;</span> Reordering Your Post Queue
+          </a>
+          <a href="/kb/dashboard-guide.html" class="flex items-center gap-2 text-sm text-mpMuted hover:text-mpAccent transition-colors">
+            <span>&rarr;</span> Understanding Your Dashboard &amp; Menus
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="bg-mpCharcoal text-slate-300">
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:py-14">
+      <div class="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+        <div class="max-w-sm">
+          <img src="../logo/MostlyPostly%20Logo%20-%20Primary%20(Trimmed).png" alt="MostlyPostly" class="h-8 w-auto brightness-0 invert opacity-90" />
+          <p class="mt-3 text-sm text-slate-400 leading-relaxed">AI-powered social posting for salons. Spend more time behind the chair, not behind the screen.</p>
+        </div>
+        <div class="grid flex-1 grid-cols-2 gap-8 text-sm sm:grid-cols-3">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Product</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/#post-types"  class="hover:text-white transition-colors">Features</a></li>
+              <li><a href="/#pricing"     class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/vendors.html" class="hover:text-white transition-colors">Vendor Partners</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Company</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/about"        class="hover:text-white transition-colors">About</a></li>
+              <li><a href="mailto:partnerships@mostlypostly.com" class="hover:text-white transition-colors">Partner With Us</a></li>
+              <li><a href="mailto:support@mostlypostly.com"      class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</p>
+            <ul class="mt-3 space-y-2">
+              <li><a href="/legal/terms.html"      class="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="/legal/privacy.html"    class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="/legal/sms-consent.html" class="hover:text-white transition-colors">SMS Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 border-t border-slate-700 pt-5 text-xs text-slate-500 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span id="year"></span> MostlyPostly &mdash; All Rights Reserved.</p>
+        <div class="flex gap-4">
+          <a href="/legal/privacy.html"    class="hover:text-slate-300 transition-colors">Privacy</a>
+          <a href="/legal/terms.html"      class="hover:text-slate-300 transition-colors">Terms</a>
+          <a href="/legal/sms-consent.html" class="hover:text-slate-300 transition-colors">SMS Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const btn   = document.getElementById("mobileMenuBtn");
+    const close = document.getElementById("mobileMenuClose");
+    const menu  = document.getElementById("mobileMenu");
+    if (btn)   btn.onclick   = () => menu.classList.remove("hidden");
+    if (close) close.onclick = () => menu.classList.add("hidden");
+  </script>
+
+  <script>
+    fetch("/public/env-config.json")
+      .then(r => r.json())
+      .then(cfg => {
+        const host = location.hostname;
+        const env  = host.includes("localhost") ? "local" : host.includes("staging") ? "staging" : "production";
+        const base = cfg[env].appUrl;
+        ["mp-login","mp-login-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/login`; });
+        ["mp-signup","mp-signup-mobile"].forEach(id => { const el = document.getElementById(id); if (el) el.href = `${base}/manager/signup`; });
+      }).catch(() => {});
+  </script>
+</body>
+</html>
