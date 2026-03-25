@@ -1132,7 +1132,7 @@
             <p class="text-sm text-mpMuted leading-relaxed">
               You're running a one-person business. MostlyPostly works as your personal marketing assistant — snap a photo after every service, and your feed fills itself. No agency, no monthly retainer, no extra hour in your day.
             </p>
-            <p class="text-xs font-semibold text-mpAccent">From $49/mo — less than one missed booking.</p>
+            <p class="text-xs font-semibold text-mpAccent">From $39/mo — less than one missed booking.</p>
           </div>
 
           <!-- Small Team Salons -->
@@ -1395,11 +1395,44 @@
               <span id="toggle-knob" class="inline-block h-4 w-4 rounded-full bg-white transition-transform" style="transform:translateX(20px);"></span>
             </button>
           </span>
-          <span id="lbl-annual" class="text-sm font-semibold text-mpCharcoal">Annual <span class="ml-1 rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-bold text-mpAccent uppercase tracking-wide">Save 10%</span></span>
+          <span id="lbl-annual" class="text-sm font-semibold text-mpCharcoal">Annual <span class="ml-1 rounded-full bg-mpAccentLight px-2 py-0.5 text-[10px] font-bold text-mpAccent uppercase tracking-wide">Save 20%</span></span>
         </div>
 
         <!-- Pricing cards -->
-        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+          <!-- SOLO -->
+          <div class="mp-animate mp-delay-1 relative rounded-2xl border border-[#E2E8F0] bg-white p-8 shadow-sm flex flex-col">
+            <div class="mt-3">
+              <h3 class="text-base font-bold text-mpCharcoal">Solo</h3>
+              <p class="mt-1 text-xs text-mpMuted">For independent stylists and booth renters.</p>
+            </div>
+
+            <!-- Price -->
+            <div class="mt-5">
+              <div class="flex items-baseline gap-2">
+                <span id="price-solo" class="text-4xl font-extrabold text-mpCharcoal">$31</span>
+                <span class="text-sm text-mpMuted">/mo</span>
+              </div>
+              <p id="annual-note-solo" class="mt-1 text-xs text-mpMuted">Billed as <strong class="text-mpCharcoal">$374.40/yr</strong> — save $93.60 vs monthly</p>
+            </div>
+
+            <ul class="mt-6 space-y-2.5 text-sm text-mpCharcoal flex-1">
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span><strong>20 posts</strong> per month</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span><strong>1 stylist</strong></span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span><strong>1 location</strong></span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>AI captions, hashtags &amp; CTAs</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>Facebook &amp; Instagram publishing</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>SMS + Telegram channels</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>Brand tone, hashtags &amp; booking URL</span></li>
+              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>You are the manager — no approval step needed</span></li>
+              <li class="flex items-start gap-2.5 text-mpMuted"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpBorder text-[10px] font-bold text-mpMuted">+</span><span>Overage: $3.00 per 10 additional posts</span></li>
+            </ul>
+
+            <a id="mp-signup-solo" href="#" class="mt-7 block w-full rounded-full border-2 border-mpAccent bg-transparent py-3 text-center text-sm font-bold text-mpAccent hover:bg-[#EBF3FF] transition-colors">
+              Start Free Trial &rarr;
+            </a>
+          </div>
 
           <!-- STARTER -->
           <div class="mp-animate mp-delay-1 relative rounded-2xl border border-[#E2E8F0] bg-white p-8 shadow-sm flex flex-col">
@@ -1411,10 +1444,10 @@
             <!-- Price -->
             <div class="mt-5">
               <div class="flex items-baseline gap-2">
-                <span id="price-starter" class="text-4xl font-extrabold text-mpCharcoal">$89</span>
+                <span id="price-starter" class="text-4xl font-extrabold text-mpCharcoal">$63</span>
                 <span class="text-sm text-mpMuted">/mo</span>
               </div>
-              <p id="annual-note-starter" class="mt-1 text-xs text-mpMuted">Billed as <strong class="text-mpCharcoal">$1,068/yr</strong> — save $120 vs monthly</p>
+              <p id="annual-note-starter" class="mt-1 text-xs text-mpMuted">Billed as <strong class="text-mpCharcoal">$756/yr</strong> — save $192 vs monthly</p>
             </div>
 
             <ul class="mt-6 space-y-2.5 text-sm text-mpCharcoal flex-1">
@@ -1448,10 +1481,10 @@
 
             <div class="mt-5">
               <div class="flex items-baseline gap-2">
-                <span id="price-growth" class="text-4xl font-extrabold text-white">$134</span>
+                <span id="price-growth" class="text-4xl font-extrabold text-white">$119</span>
                 <span class="text-sm text-slate-400">/mo</span>
               </div>
-              <p id="annual-note-growth" class="mt-1 text-xs text-slate-400">Billed as <strong class="text-white">$1,609/yr</strong> — save $179 vs monthly</p>
+              <p id="annual-note-growth" class="mt-1 text-xs text-slate-400">Billed as <strong class="text-white">$1,428/yr</strong> — save $360 vs monthly</p>
               <p class="mt-1.5 text-[11px] text-mpAccent font-semibold invisible">&#8203;</p>
             </div>
 
@@ -1484,10 +1517,10 @@
 
             <div class="mt-5">
               <div class="flex items-baseline gap-2">
-                <span id="price-pro" class="text-4xl font-extrabold text-mpCharcoal">$224</span>
+                <span id="price-pro" class="text-4xl font-extrabold text-mpCharcoal">$199</span>
                 <span class="text-sm text-mpMuted">/mo</span>
               </div>
-              <p id="annual-note-pro" class="mt-1 text-xs text-mpMuted">Billed as <strong class="text-mpCharcoal">$2,689/yr</strong> — save $299 vs monthly</p>
+              <p id="annual-note-pro" class="mt-1 text-xs text-mpMuted">Billed as <strong class="text-mpCharcoal">$2,388/yr</strong> — save $600 vs monthly</p>
               <p class="mt-1.5 text-[11px] text-mpMuted invisible">&#8203;</p>
             </div>
 
@@ -1546,11 +1579,12 @@
         lblAnnual.classList.toggle('font-semibold', isAnnual);
         lblAnnual.classList.toggle('text-mpMuted', !isAnnual);
 
-        document.getElementById('price-starter').textContent = isAnnual ? '$89' : '$99';
-        document.getElementById('price-growth').textContent  = isAnnual ? '$134' : '$149';
-        document.getElementById('price-pro').textContent     = isAnnual ? '$224' : '$249';
+        document.getElementById('price-solo').textContent    = isAnnual ? '$31' : '$39';
+        document.getElementById('price-starter').textContent = isAnnual ? '$63' : '$79';
+        document.getElementById('price-growth').textContent  = isAnnual ? '$119' : '$149';
+        document.getElementById('price-pro').textContent     = isAnnual ? '$199' : '$249';
 
-        ['starter','growth','pro'].forEach(t => {
+        ['solo','starter','growth','pro'].forEach(t => {
           document.getElementById('annual-note-' + t).style.display = isAnnual ? '' : 'none';
         });
       }
@@ -1633,7 +1667,7 @@
       });
 
       // Pricing plan buttons — pass plan hint through to billing
-      const planMap = { "mp-signup-starter": "starter", "mp-signup-growth": "growth", "mp-signup-pro": "pro" };
+      const planMap = { "mp-signup-solo": "solo", "mp-signup-starter": "starter", "mp-signup-growth": "growth", "mp-signup-pro": "pro" };
       Object.entries(planMap).forEach(([id, plan]) => {
         const el = document.getElementById(id);
         if (el) el.href = `${base}/manager/signup?plan=${plan}`;
