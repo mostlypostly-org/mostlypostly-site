@@ -1399,40 +1399,7 @@
         </div>
 
         <!-- Pricing cards -->
-        <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-
-          <!-- SOLO -->
-          <div class="mp-animate mp-delay-1 relative rounded-2xl border border-[#E2E8F0] bg-white p-8 shadow-sm flex flex-col">
-            <div class="mt-3">
-              <h3 class="text-base font-bold text-mpCharcoal">Solo</h3>
-              <p class="mt-1 text-xs text-mpMuted">For independent stylists and booth renters.</p>
-            </div>
-
-            <!-- Price -->
-            <div class="mt-5">
-              <div class="flex items-baseline gap-2">
-                <span id="price-solo" class="text-4xl font-extrabold text-mpCharcoal">$31</span>
-                <span class="text-sm text-mpMuted">/mo</span>
-              </div>
-              <p id="annual-note-solo" class="mt-1 text-xs text-mpMuted">Billed as <strong class="text-mpCharcoal">$374.40/yr</strong> — save $93.60 vs monthly</p>
-            </div>
-
-            <ul class="mt-6 space-y-2.5 text-sm text-mpCharcoal flex-1">
-              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span><strong>20 posts</strong> per month</span></li>
-              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span><strong>1 stylist</strong></span></li>
-              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span><strong>1 location</strong></span></li>
-              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>AI captions, hashtags &amp; CTAs</span></li>
-              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>Facebook &amp; Instagram publishing</span></li>
-              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>SMS + Telegram channels</span></li>
-              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>Brand tone, hashtags &amp; booking URL</span></li>
-              <li class="flex items-start gap-2.5"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[10px] font-bold text-mpAccent">&#10003;</span><span>You are the manager — no approval step needed</span></li>
-              <li class="flex items-start gap-2.5 text-mpMuted"><span class="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-mpBorder text-[10px] font-bold text-mpMuted">+</span><span>Overage: $3.00 per 10 additional posts</span></li>
-            </ul>
-
-            <a id="mp-signup-solo" href="#" class="mt-7 block w-full rounded-full border-2 border-mpAccent bg-transparent py-3 text-center text-sm font-bold text-mpAccent hover:bg-[#EBF3FF] transition-colors">
-              Start Free Trial &rarr;
-            </a>
-          </div>
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
 
           <!-- STARTER -->
           <div class="mp-animate mp-delay-1 relative rounded-2xl border border-[#E2E8F0] bg-white p-8 shadow-sm flex flex-col">
@@ -1545,8 +1512,31 @@
 
         </div>
 
+        <!-- Solo callout — secondary, below main plans -->
+        <div class="mp-animate mt-6 flex flex-col sm:flex-row items-center justify-between gap-5 rounded-2xl border border-mpBorder bg-white px-7 py-5">
+          <div class="flex items-center gap-4">
+            <div class="shrink-0 text-xl">✂️</div>
+            <div>
+              <p class="text-sm font-bold text-mpCharcoal">Just you? We have a plan for that.</p>
+              <p class="text-xs text-mpMuted mt-0.5">The <strong class="text-mpCharcoal">Solo</strong> plan is built for independent stylists and booth renters — 20 posts/mo, no team, no manager approval. Just snap and post.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-5 shrink-0">
+            <div class="text-right">
+              <div class="flex items-baseline gap-1 justify-end">
+                <span id="price-solo" class="text-2xl font-extrabold text-mpCharcoal">$31</span>
+                <span class="text-xs text-mpMuted">/mo</span>
+              </div>
+              <p id="annual-note-solo" class="text-[11px] text-mpMuted">Billed as <strong class="text-mpCharcoal">$374.40/yr</strong></p>
+            </div>
+            <a id="mp-signup-solo" href="#" class="whitespace-nowrap rounded-full border-2 border-mpAccent bg-transparent px-5 py-2.5 text-sm font-bold text-mpAccent hover:bg-[#EBF3FF] transition-colors">
+              Start Free Trial &rarr;
+            </a>
+          </div>
+        </div>
+
         <!-- Bottom strip — annual note + enterprise -->
-        <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-mpBorder bg-[#F4F7FA] px-6 py-5">
+        <div class="mt-5 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl border border-mpBorder bg-[#F4F7FA] px-6 py-5">
           <div>
             <p class="text-sm font-bold text-mpCharcoal">Need more volume or a vendor partnership?</p>
             <p class="text-xs text-mpMuted mt-0.5">Major beauty brand partners can deploy MostlyPostly across their entire salon network. <a href="mailto:partnerships@mostlypostly.com" class="text-mpAccent font-semibold hover:underline">Let's talk &rarr;</a></p>
