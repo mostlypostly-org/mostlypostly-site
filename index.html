@@ -1172,7 +1172,7 @@
               <p class="font-bold text-mpCharcoal text-base">No matter the size — posting runs on autopilot.</p>
               <p class="text-sm text-mpMuted mt-1">Stylists text photos. AI writes the captions. You approve. It posts. That's it.</p>
             </div>
-            <a id="salon-types-cta" href="#" class="shrink-0 rounded-lg px-6 py-3 text-sm font-bold text-white shadow-sm transition-colors" style="background:#3B72B9;" onmouseover="this.style.background='#2E5E9E'" onmouseout="this.style.background='#3B72B9'">
+            <a id="salon-types-cta" href="#solo-plan" class="shrink-0 rounded-lg px-6 py-3 text-sm font-bold text-white shadow-sm transition-colors" style="background:#3B72B9;" onmouseover="this.style.background='#2E5E9E'" onmouseout="this.style.background='#3B72B9'">
               Start Free Trial
             </a>
           </div>
@@ -1513,25 +1513,44 @@
         </div>
 
         <!-- Solo callout — secondary, below main plans -->
-        <div class="mp-animate mt-6 flex flex-col sm:flex-row items-center justify-between gap-5 rounded-2xl border border-mpBorder bg-white px-7 py-5">
-          <div class="flex items-center gap-4">
-            <div class="shrink-0 text-xl">✂️</div>
-            <div>
-              <p class="text-sm font-bold text-mpCharcoal">Just you? We have a plan for that.</p>
-              <p class="text-xs text-mpMuted mt-0.5">The <strong class="text-mpCharcoal">Solo</strong> plan is built for independent stylists and booth renters — 20 posts/mo, no team, no manager approval. Just snap and post.</p>
-            </div>
-          </div>
-          <div class="flex items-center gap-5 shrink-0">
-            <div class="text-right">
-              <div class="flex items-baseline gap-1 justify-end">
-                <span id="price-solo" class="text-2xl font-extrabold text-mpCharcoal">$31</span>
-                <span class="text-xs text-mpMuted">/mo</span>
+        <div id="solo-plan" class="mp-animate mt-6 rounded-2xl border border-mpBorder bg-white px-7 py-6">
+          <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-6">
+
+            <!-- Left: identity + features -->
+            <div class="flex-1">
+              <div class="flex items-center gap-2.5 mb-3">
+                <span class="text-lg">✂️</span>
+                <div>
+                  <p class="text-sm font-bold text-mpCharcoal">Just you? We have a plan for that.</p>
+                  <p class="text-xs text-mpMuted">The <strong class="text-mpCharcoal">Solo</strong> plan is built for independent stylists and booth renters.</p>
+                </div>
               </div>
-              <p id="annual-note-solo" class="text-[11px] text-mpMuted">Billed as <strong class="text-mpCharcoal">$374.40/yr</strong></p>
+              <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-1.5 text-xs text-mpCharcoal">
+                <li class="flex items-center gap-2"><span class="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[9px] font-bold text-mpAccent">&#10003;</span><span><strong>20 posts</strong> per month</span></li>
+                <li class="flex items-center gap-2"><span class="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[9px] font-bold text-mpAccent">&#10003;</span><span>AI captions, hashtags &amp; CTAs</span></li>
+                <li class="flex items-center gap-2"><span class="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[9px] font-bold text-mpAccent">&#10003;</span><span><strong>1 stylist</strong> · <strong>1 location</strong></span></li>
+                <li class="flex items-center gap-2"><span class="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[9px] font-bold text-mpAccent">&#10003;</span><span>Facebook &amp; Instagram publishing</span></li>
+                <li class="flex items-center gap-2"><span class="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[9px] font-bold text-mpAccent">&#10003;</span><span>You are the manager — no approval step</span></li>
+                <li class="flex items-center gap-2"><span class="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[9px] font-bold text-mpAccent">&#10003;</span><span>SMS + Telegram channels</span></li>
+                <li class="flex items-center gap-2"><span class="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-mpAccentLight text-[9px] font-bold text-mpAccent">&#10003;</span><span>Brand tone, hashtags &amp; booking URL</span></li>
+                <li class="flex items-center gap-2"><span class="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-mpBorder text-[9px] font-bold text-mpMuted">+</span><span class="text-mpMuted">Overage: $3.00 per 10 additional posts</span></li>
+              </ul>
             </div>
-            <a id="mp-signup-solo" href="#" class="whitespace-nowrap rounded-full border-2 border-mpAccent bg-transparent px-5 py-2.5 text-sm font-bold text-mpAccent hover:bg-[#EBF3FF] transition-colors">
-              Start Free Trial &rarr;
-            </a>
+
+            <!-- Right: price + CTA -->
+            <div class="flex sm:flex-col items-center sm:items-end gap-4 sm:gap-3 shrink-0">
+              <div class="text-right">
+                <div class="flex items-baseline gap-1 justify-end">
+                  <span id="price-solo" class="text-2xl font-extrabold text-mpCharcoal">$31</span>
+                  <span class="text-xs text-mpMuted">/mo</span>
+                </div>
+                <p id="annual-note-solo" class="text-[11px] text-mpMuted">Billed as <strong class="text-mpCharcoal">$374.40/yr</strong></p>
+              </div>
+              <a id="mp-signup-solo" href="#" class="whitespace-nowrap rounded-full border-2 border-mpAccent bg-transparent px-5 py-2.5 text-sm font-bold text-mpAccent hover:bg-[#EBF3FF] transition-colors">
+                Start Free Trial &rarr;
+              </a>
+            </div>
+
           </div>
         </div>
 
